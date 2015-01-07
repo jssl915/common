@@ -192,7 +192,7 @@
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.3</version>
-			<scope>system</scope>
+			<scope>system</scope> 
 			<systemPath>${project.basedir}/lib/ojdbc6-11.2.0.3.jar</systemPath>
 		</dependency>
 		

@@ -1,4 +1,4 @@
 f:
-cd F:\common\com_Service
+cd F:\myProject\.git\my\com_Service
 mvn clean install 
 
