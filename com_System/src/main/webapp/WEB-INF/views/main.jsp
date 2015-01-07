@@ -24,11 +24,10 @@ $(function() {
 	});
 	
 	loadWestTree();
-	_tabElement =$('#make-tab').omTabs({height : "fit"});
-	_ifh = $('#center-panel').height() - $("#tabUL").height() - $('#footer').height()+3;
+	_ifh = $('#center-panel').height() - $("#tabUL").height()-17;
+	_tabElement =$('#make-tab').omTabs({height : 'fit'});
+	$('#indexF').height(_ifh);
  	$("#west-panel").omScrollbar({thick: 10});
- 	$('#indexP').height(_ifh+5);
- 	$('#indexF').height(_ifh);
  });
 
 function showOmtabs(){document.location.reload();}
@@ -131,7 +130,7 @@ function changeMenuStatus(status) {
 <div id="center-panel">
  	<div id="make-tab">
 	    <ul id="tabUL"><li><a href="#indexP"><img class="homeicon" src="${img}/home.gif"/><span>&nbsp;我的主页</span></a></li></ul>
-	   	<div id="indexP"><iframe name="indexF" id="indexF" src=<c:url value="/index/right"/>></iframe></div>
+	   	<div id="indexP"><iframe name="indexF" id="indexF" marginheight="0" marginwidth="0" hspeace="0" vspace="0" frameborder="0"  src=<c:url value="/index/right"/>></iframe></div>
  	</div> 
 </div>
 
