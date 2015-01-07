@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- 设置成 true就可以启动缓存，一般的修改要1分钟才能生效（因为设置的flushInterval="60000" ）
+			 如果是在一个xxxxMapper.xml里面修改的数据库的数据,就直接清空本mapper的缓存 -->
+		<setting name="cacheEnabled" value="false"/>
+		<setting name="useGeneratedKeys" value="false"/>
+	</settings>
+	<plugins>
+		<plugin interceptor="com.system.util.DiclectStatementHandlerInterceptor" />
+		<plugin interceptor="com.system.util.DiclectResultSetHandlerInterceptor" />
+	</plugins>
+</configuration> 
