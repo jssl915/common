@@ -90,7 +90,14 @@ function showMenuAdd(){
 		$.omMessageBox.alert({content:'请在左边节点树上选择父节点！' });
 		return
 	}
-	showAdd('/system/prg/menu/showAdd?menuPid='+menuPid,600,220);
+	$.post("getMenu", {"menuId":menuPid},
+	   function(msg){
+		if(msg.menuLevel==2){
+			$.omMessageBox.alert({content:'请不要选择第三级菜单!'});
+		}else{
+			showAdd('/system/prg/menu/showAdd?menuPid='+menuPid,600,220);
+		}
+   }, "json");
 }
 </script>
 </html>

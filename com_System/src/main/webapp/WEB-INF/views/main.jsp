@@ -53,12 +53,16 @@ function loadWestTree(){
 			}
 			treeHtmlArray.push('</div>');
 			$('#menuTree').html(treeHtmlArray.join(''));
+			var allLi = $('.aside').find('li');
 			$('li a').click(function(e) {
 				var $a = $(this);
 				if($a.hasClass('open')) {
 					$a.removeClass('open').next().slideUp();
 					$a.addClass('close');
 					return
+				}else{
+					allLi.filter('.selected').removeClass('selected');
+					$a.parent().addClass('selected');
 				}
 				if($a.hasClass('close')) {
 					$a.removeClass('close').next().slideUp();
