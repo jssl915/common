@@ -3,7 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set  var="ctx"  value="<%= request.getContextPath() %>" />
 <c:set  var="js"   value="${ctx}/static/js"/>
-<c:set  var="css"  value="${ctx}/static/css/css${v}"/>
+<c:set  var="css"  value="${ctx}/static/css"/>
+<c:set  var="img"  value="${ctx}/static/images"/>
 <script type="text/javascript" src="${js}/operamasks/2.0/js/jquery.min.js"></script>
 <script type="text/javascript" src="${js}/operamasks/2.0/js/operamasks-ui.min.js"></script>
 <script type="text/javascript" src="${js}/artDialog/jquery.artDialog.js?skin=idialog"></script>
