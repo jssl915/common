@@ -73,8 +73,10 @@ public class SecurityController extends BaseController{
 			session.setAttribute("user", user);
 			String pageRows = SysProperties.getProperty("PAGE_ROWS");
 			String initPwd = SysProperties.getProperty("INIT_PWD");
+			String v = SysProperties.getProperty("BACKGROUND");
 			session.setAttribute("pageRows", pageRows);
 			session.setAttribute("initPwd", initPwd);
+			session.setAttribute("v", v);
 			writeToPage(AjaxUtils.toJson(true), response);
 		}
 	}

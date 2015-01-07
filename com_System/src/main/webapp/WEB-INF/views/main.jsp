@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>主页</title>
 <link href="${css}/main.css" rel="stylesheet" type="text/css"/>
+<title>主页</title>
 <script>
 var _tabElement,_ifh;
 $(function() {
-	var img_collapse = '${img}/accordion-collapse.gif';
-	var img_expand = '${img}/accordion-expand.gif';;
+	var img_collapse = '${css}/images/accordion-collapse.gif';
+	var img_expand = '${css}/images/accordion-expand.gif';;
 	$('body').omBorderLayout({
 		panels: [{id: "north-panel",header: false,region: "north",height:'75px',resizable: true}, 
 		         {id: "south-panel",header: false,region: "south"}, 
@@ -108,10 +108,10 @@ function changeMenuStatus(status) {
  }
 </script>
 </head>
-<body>
+<body id="main">
 <div id="north-panel">
 	<div class="logo2">网站后台管理系统</div>
-	<div class="rightbj"><img src="${img}/top_rightbj.png"/></div>
+	<div class="rightbj"><img src="${css}/images/top_rightbj.png"/></div>
 	<div class="userinfo">管理员：<span><shiro:principal/></span> 您好,欢迎您登录使用</div>
 	<div class ="top_right">
 		<a href="#" onclick="showOmtabs()">返回主页</a>&nbsp;｜&nbsp;
@@ -121,7 +121,7 @@ function changeMenuStatus(status) {
 </div>
 <div id="center-panel">
  	<div id="make-tab">
-	    <ul id="tabUL"><li><a href="#indexP"><img class="homeicon" src="${img}/home.gif"/><span>&nbsp;我的主页</span></a></li></ul>
+	    <ul id="tabUL"><li><a href="#indexP"><img class="homeicon" src="${css}/images/home.gif"/><span>&nbsp;我的主页</span></a></li></ul>
 	   	<div id="indexP"><iframe name="indexF" id="indexF" src=<c:url value="/index/right"/>></iframe></div>
  	</div> 
 </div>
