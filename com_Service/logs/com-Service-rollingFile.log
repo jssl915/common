@@ -1,0 +1,165 @@
+2015-01-07 09:36:57,834 ERROR [org.apache.ibatis.executor.BaseExecutor] - Could not get a databaseId from dataSource
+java.sql.SQLRecoverableException: IO ´íÎó: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:458)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver(SimpleDriverDataSource.java:140)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:149)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:119)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseProductName(VendorDatabaseIdProvider.java:76)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseName(VendorDatabaseIdProvider.java:61)
+	at org.apache.ibatis.mapping.VendorDatabaseIdProvider.getDatabaseId(VendorDatabaseIdProvider.java:49)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:445)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getTypeForFactoryBean(AbstractBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:710)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:519)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:320)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:861)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:818)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at com.system.util.CyContextLoaderListener.contextInitialized(CyContextLoaderListener.java:22)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:733)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:233)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1222)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:676)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:455)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:90)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:261)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:59)
+	at runjettyrun.Bootstrap.main(Bootstrap.java:82)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:392)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:434)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:687)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:247)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1102)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:320)
+	... 65 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:150)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:370)
+	... 70 more
+2015-01-07 09:36:58,356 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-01-07 09:36:58,357 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-01-07 09:36:58,357 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-01-07 09:36:58,357 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-01-07 09:36:58,357 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-01-07 09:38:45,542 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-01-07 09:38:45,542 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-01-07 09:38:45,543 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-01-07 09:38:45,543 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-01-07 09:38:45,543 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-01-07 09:38:45,673 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@7a51858e]
+2015-01-07 09:38:45,678 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT 
+2015-01-07 09:38:45,778 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-01-07 09:38:46,036 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@1264e314]
+2015-01-07 09:38:46,037 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==>  Preparing: select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DETAIL WHERE DETAIL_STATUS = ? 
+2015-01-07 09:38:46,038 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-01-07 09:38:46,127 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-07 09:38:46,127 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistRetrieve called (key=WFrameOScache_CACHE_DICT)
+2015-01-07 09:38:46,127 DEBUG [com.opensymphony.oscache.base.Cache] - No cache entry exists for key='WFrameOScache_CACHE_DICT', creating
+2015-01-07 09:38:46,128 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistStore called (key=WFrameOScache_CACHE_DICT)
+2015-01-07 09:39:57,700 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@10ab5cd0]
+2015-01-07 09:39:57,700 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? AND USER_STATUS = ? 
+2015-01-07 09:39:57,701 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String), 1(Integer)
+2015-01-07 09:39:57,766 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@742e4245]
+2015-01-07 09:39:57,766 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? 
+2015-01-07 09:39:57,767 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String)
+2015-01-07 09:39:57,851 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@49c8dbd]
+2015-01-07 09:39:57,852 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_Log_ID.NEXTVAL FROM DUAL 
+2015-01-07 09:39:57,852 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-07 09:39:57,869 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@49c8dbd]
+2015-01-07 09:39:57,869 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-07 09:39:57,869 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 3201(Long), null, /com_System/system/login(String), 2015-01-07 09:39:57(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-07 09:39:59,424 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3b66942d]
+2015-01-07 09:39:59,424 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-07 09:39:59,424 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 0(Long)
+2015-01-07 09:39:59,622 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3b66942d]
+2015-01-07 09:39:59,623 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where menu_status=1 and (menu_id = 0 or menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id=?) or menu_id in (select menu_id from T_S_MENU where menu_id in (select menu_pid from T_S_MENU where menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id = ?))) ) order by MENU_ORDER asc 
+2015-01-07 09:39:59,623 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==> Parameters: 42(Long), 42(Long)
+2015-01-07 09:40:00,235 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@147dfcae]
+2015-01-07 09:40:00,235 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_Log_ID.NEXTVAL FROM DUAL 
+2015-01-07 09:40:00,235 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-07 09:40:00,236 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@147dfcae]
+2015-01-07 09:40:00,237 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-07 09:40:00,237 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 3202(Long), null, /com_System/index/tree(String), 2015-01-07 09:40:00(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-07 09:40:01,959 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@78e7a6e9]
+2015-01-07 09:40:01,959 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-07 09:40:01,959 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-01-07 09:40:02,133 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-07 09:40:02,211 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@2dfc1636]
+2015-01-07 09:40:02,211 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_Log_ID.NEXTVAL FROM DUAL 
+2015-01-07 09:40:02,211 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-07 09:40:02,213 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@2dfc1636]
+2015-01-07 09:40:02,213 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-07 09:40:02,213 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 3203(Long), null, /system/prg/user/init(String), 2015-01-07 09:40:02(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-07 09:40:02,784 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@77eaca0e]
+2015-01-07 09:40:02,785 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select * from ( select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc ) where rownum <= 30 
+2015-01-07 09:40:02,785 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-01-07 09:40:02,822 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@1ebd02c]
+2015-01-07 09:40:02,822 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-01-07 09:40:02,822 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 
+2015-01-07 09:40:57,615 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@1665e34c]
+2015-01-07 09:40:57,616 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-07 09:40:57,617 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-01-07 09:40:57,663 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-07 09:40:57,779 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@35b2f8b]
+2015-01-07 09:40:57,779 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_Log_ID.NEXTVAL FROM DUAL 
+2015-01-07 09:40:57,780 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-07 09:40:57,782 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@35b2f8b]
+2015-01-07 09:40:57,782 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-07 09:40:57,783 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 3204(Long), null, /system/prg/user/init(String), 2015-01-07 09:40:57(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-07 09:40:58,139 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@5256d88b]
+2015-01-07 09:40:58,140 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select * from ( select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc ) where rownum <= 30 
+2015-01-07 09:40:58,140 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-01-07 09:40:58,180 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@41a81a86]
+2015-01-07 09:40:58,180 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-01-07 09:40:58,180 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 

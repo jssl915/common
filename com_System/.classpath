@@ -50,6 +50,6 @@
 	<classpathentry kind="var" path="M2_REPO/junit/junit/4.6/junit-4.6.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/poi/poi/3.9/poi-3.9.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/googlecode/xmemcached/xmemcached/1.4.3/xmemcached-1.4.3.jar" sourcepath="M2_REPO/com/googlecode/xmemcached/xmemcached/1.4.3/xmemcached-1.4.3-sources.jar"/>
-	<classpathentry kind="lib" path="F:/common/com_Service/target/com-service-api.jar" sourcepath="/com_Service"/>
+	<classpathentry kind="lib" path="F:/myProject/.git/my/com_Service/target/com-service-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
