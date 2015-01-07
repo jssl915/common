@@ -26,8 +26,8 @@
 		</tr>
 	   </table>
 	   <div class="editBtn">
-			<button type="button" onclick="save()">&nbsp;保存&nbsp;</button>
-			<button type="button" onclick="javascript:art.dialog.close();">&nbsp;关闭&nbsp;</button>
+			<button type="button" onclick="save()" class="button">&nbsp;保存&nbsp;</button>
+			<button type="button" onclick="javascript:art.dialog.close();" class="button">&nbsp;关闭&nbsp;</button>
 		</div>
 	</div>
 </div>

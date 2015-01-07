@@ -7,6 +7,7 @@ html, body{width: 100%; height: 100%; padding: 0; margin: 0;}
 #north-panel .userinfo span{border-bottom:1px solid white; padding-bottom:1px; text-decoration:none;}
 .homeicon{border:0;height:16px; vertical-align:middle; background-repeat:no-repeat;}
 .homeicon span{vertical-align:middle;}
+#indexP{margin:0;padding:0;}
 #indexF{border:0;frameborder:no;width:100%}
 .aside{width:180px;position:absolute;}
 a{color:#0965b8;text-decoration:none;cursor:pointer;}

@@ -17,8 +17,8 @@
 			<td>修改时间：</td>
 			<td><input id="updateTimeStart" name="updateTimeStart"  type="date" />
 			至 <input id="updateTimeEnd" name="updateTimeEnd"  type="date"/></td>
-			<td><button id="queryBtn" type="button">查询</button></td>
-			<td><button id="clearBtn" type="button">清空</button></td>
+			<td><button id="queryBtn" type="button" class="button">查询</button></td>
+			<td><button id="clearBtn" type="button" class="button">清空</button></td>
 		</tr>
 	   </table>
 	</div>

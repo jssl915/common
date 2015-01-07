@@ -32,8 +32,8 @@
 		</tr>				
 		</table>		
 	   <div class="editBtn" style="position:absolute;left:0;right:0;bottom:10px;margin:10px auto;">
-			<button type="button" onclick="doSubmit()">保存</button>
-			<button type="button" onclick="javascript:art.dialog.close();">关闭</button>
+			<button type="button" class="button" onclick="doSubmit()">保存</button>
+			<button type="button" class="button" onclick="javascript:art.dialog.close();">关闭</button>
 		</div>
   </div>
 </div>

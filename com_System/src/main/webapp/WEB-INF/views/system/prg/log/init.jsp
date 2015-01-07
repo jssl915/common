@@ -19,8 +19,8 @@
 			<td>访问时间：</td>
 			<td colspan="3"><input id="createTimeStart" name="createTimeStart" type="date" />
 			至 <input id="createTimeEnd" name="createTimeEnd"  type="date"/></td>
-			<td><button id="queryBtn" type="button">查询</button></td>
-			<td><button id="clearBtn" type="button">清空</button></td>
+			<td><button id="queryBtn" type="button" class="button">查询</button></td>
+			<td><button id="clearBtn" type="button" class="button">清空</button></td>
 	   </tr>
 	   </table>
 	</div>

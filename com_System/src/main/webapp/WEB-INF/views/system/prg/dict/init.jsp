@@ -21,8 +21,8 @@ a:hover{text-decoration:underline;color:red;cursor:pointer}
 				<tr>
 					<td>字典名称：</td>
 					<td><input type="text" id="dictName" name="dictName"></td>
-					<td><button id="queryBtn" type="button">查询</button></td>
-					<td><button id="clearBtn" type="button">清空</button></td>
+					<td><button id="queryBtn" type="button" class="button">查询</button></td>
+					<td><button id="clearBtn" type="button" class="button">清空</button></td>
 				</tr>
 			   </table>
 			</div>

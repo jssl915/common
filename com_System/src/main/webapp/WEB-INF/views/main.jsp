@@ -25,8 +25,9 @@ $(function() {
 	
 	loadWestTree();
 	_tabElement =$('#make-tab').omTabs({height : "fit"});
-	_ifh = $('#center-panel').height() - $("#tabUL").height() - $('#footer').height();
+	_ifh = $('#center-panel').height() - $("#tabUL").height() - $('#footer').height()+3;
  	$("#west-panel").omScrollbar({thick: 10});
+ 	$('#indexP').height(_ifh+5);
  	$('#indexF').height(_ifh);
  });
 
@@ -128,6 +129,6 @@ function changeMenuStatus(status) {
 
 <div id="west-panel"><div id="menuTree"></div></div>
 
-<div id="south-panel" style="position:relative;top:-6px"><div id="footer">Copyright &copy; 2014.</div></div>
+<div id="south-panel"><div id="footer">Copyright &copy; 2014.</div></div>
 </body>
 </html>

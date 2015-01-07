@@ -15,8 +15,8 @@
 	<div class="editBtn" style="position:absolute;bottom:0px;margin:10px auto;">
 		<input type="hidden" name="roleId" value="${roleId}" />
 		<input type="hidden" name="menuIds" id="menuIds"/>
-		<button type="button" onclick="doSubmit()">保存</button>
-		<button type="button" onclick="javascript:art.dialog.close();">关闭</button>
+		<button type="button" class="button" onclick="doSubmit()">保存</button>
+		<button type="button" class="button" onclick="javascript:art.dialog.close();">关闭</button>
 	</div>
 	</form>
 </div>

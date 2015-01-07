@@ -29,8 +29,8 @@
 	   </table>
 	   <div id="errorMessage"></div>
 	   <div class="editBtn">
-			<button type="button" onclick="doSubmit()">&nbsp;保存&nbsp;</button>
-			<button type="button" onclick="javascript:art.dialog.close();">&nbsp;关闭&nbsp;</button>
+			<button type="button" class="button" onclick="doSubmit()">&nbsp;保存&nbsp;</button>
+			<button type="button" class="button" onclick="javascript:art.dialog.close();">&nbsp;关闭&nbsp;</button>
 		</div>
 	</div>
 </div>
