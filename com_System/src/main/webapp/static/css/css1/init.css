@@ -4,7 +4,7 @@ html,body{width:100%;height:100%;padding:0;margin:0;}
 .search .om-panel-header{position:relative;padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;}
 .search .om-panel-header:hover{cursor:pointer;}
 .search .om-panel-header .up{position:absolute;right:5px;bottom:0;top:0;height:18px;margin:auto 0;width:20px;background:url("../../js/operamasks/2.0/css/default/images/ui-toolbar-btn.png") no-repeat scroll -22px 0 transparent;}
-.search .om-panel-header .down{position:absolute;right:5px;bottom:0;top:0;height:18px;margin:auto 0;width:20px;background:url("../js/operamasks/2.0/css/default/images/ui-toolbar-btn.png") no-repeat scroll -2px 0 transparent;}
+.search .om-panel-header .down{position:absolute;right:5px;bottom:0;top:0;height:18px;margin:auto 0;width:20px;background:url("../../js/operamasks/2.0/css/default/images/ui-toolbar-btn.png") no-repeat scroll -2px 0 transparent;}
 .search .searchDiv{border-left:1px solid #86a3c4;border-right:1px solid #86a3c4;background:#fff;padding:6px 0;}
 .searchTable td{height:30px;}
 .searchTable td:nth-child(2n-1){text-align:right;width:80px;}
