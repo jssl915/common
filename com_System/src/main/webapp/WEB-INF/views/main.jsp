@@ -111,6 +111,11 @@ function changeMenuStatus(status) {
 		height:220
 	});
  }
+ function changeSkin(){
+	 $.post(ctx+"/system/changeSkin",function(msg){
+		 window.location.href=ctx+"system/main";
+	   }, "json");
+ }
 </script>
 </head>
 <body id="main">
@@ -119,6 +124,7 @@ function changeMenuStatus(status) {
 	<div class="rightbj"><img src="${css}/images/top_rightbj.png"/></div>
 	<div class="userinfo">管理员：<span><shiro:principal/></span> 您好,欢迎您登录使用</div>
 	<div class ="top_right">
+		<a href="#" onclick="changeSkin()">换肤</a>&nbsp;|&nbsp;
 		<a href="#" onclick="showOmtabs()">返回主页</a>&nbsp;｜&nbsp;
 		<a href="#" onclick="changePasWord()">修改密码</a>&nbsp;|&nbsp;
 		<a href="<c:url value="/system/logout"/>">系统注销</a>

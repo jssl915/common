@@ -73,7 +73,7 @@ public class SecurityController extends BaseController{
 			session.setAttribute("user", user);
 			String pageRows = SysProperties.getProperty("PAGE_ROWS");
 			String initPwd = SysProperties.getProperty("INIT_PWD");
-			String v = SysProperties.getProperty("BACKGROUND");
+			String v = SysProperties.getProperty("SKIN");
 			session.setAttribute("pageRows", pageRows);
 			session.setAttribute("initPwd", initPwd);
 			session.setAttribute("v", v);
@@ -111,5 +111,11 @@ public class SecurityController extends BaseController{
 	@RequestMapping("/main")
 	public String main() {
 		return "main";
+	}
+	@RequestMapping("/changeSkin")
+	public void changeSkin(HttpServletRequest request, HttpServletResponse response) {
+		String v = (String)request.getSession().getAttribute("v");
+		request.getSession().setAttribute("v", v=="1"?"2":"1");
+		writeToPage(AjaxUtils.toJson(true), response);
 	}
 }
