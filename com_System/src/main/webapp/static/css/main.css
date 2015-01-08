@@ -27,8 +27,14 @@ ol,ul{list-style-type:none;list-style-position:outside;list-style-image:none;pad
 .top_right{position:absolute;bottom:4px; right:10px;z-index:1;color:#F7F6F6;}
 .top_right a{color:#F7F6F6;font-weight:bold;}
 .top_right a:hover{color:#ffd200;}
-.om-borderlayout .om-borderlayout-region-body {background-color: #D2E0F2;}
+.om-borderlayout .om-borderlayout-region-body{background-color: #D2E0F2;}
 .om-widget-content {background: none;border: 0px solid #86A3C4;color: #222222;}
 #center-panel .om-panel-body{padding: 0;} 
-.om-panel-header{height:auto;line-height:auto;padding:5px 5px 6px 6px;};
+.om-panel-header .om-panel-title{position:relative;}
+.om-panel-header{height:28px;line-height:28px;padding:0};
+
+/* .om-panel-header .om-panel-title .up{background: url("../js/operamasks/2.0/css/default/images/borderlayout/tools.gif") no-repeat scroll 0 -30px transparent;;height:15px;line-height:15px};
+.om-panel-header .om-panel-title .down{background: url("../js/operamasks/2.0/css/default/images/borderlayout/tools.gif") no-repeat scroll 0 -30px transparent;;height:15px;line-height:15px};
+.om-panel-tool{ position: absolute;right: 5px;top:6px}; */
+
 

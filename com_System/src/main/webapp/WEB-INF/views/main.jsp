@@ -10,17 +10,17 @@
 <script>
 var _tabElement,_ifh;
 $(function() {
-	var img_collapse = '${img}/accordion-collapse.gif';
-	var img_expand = '${img}/accordion-expand.gif';;
+	var down = '<c:url value="/static/images/accordion-collapse.gif"/>';
+	var up = '<c:url value="/static/images/accordion-expand.gif"/>';
 	$('body').omBorderLayout({
-		panels: [{id: "north-panel",header: false,region: "north",height:'75px',resizable: true}, 
+		panels: [{id: "north-panel",header: false,region: "north",height:'75px',resizable: true,collapsible:true}, 
 		         {id: "south-panel",header: false,region: "south"}, 
 		         {id: "center-panel",header: false,region: "center"}, 
-		         {id: "west-panel",resizable: true,collapsible: false,
-						title: "<img style='cursor: pointer;' src='" + img_expand + "' onclick='changeMenuStatus(1)'><img style='cursor: pointer;' src='" + img_collapse + "' onclick='changeMenuStatus(0)'> ",
-						expandToBottom: true,header: true,region: "west",width:182
+		         {id: "west-panel",resizable: true,collapsible:true,
+						title: "&nbsp;<img style='cursor: pointer;' src='"+up + "' onclick='change(1)'> <img style='cursor: pointer;' src='" + down + "' onclick='change(0)'> ",
+						expandToBottom:true,header:true,region:"west",width:182
 				}],
-		spacing:0 
+		spacing:0
 	});
 	
 	loadWestTree();
@@ -91,7 +91,7 @@ function openTab(menuId){
 	   }, "json");
 }
 
-function changeMenuStatus(status) {
+function change(status) {
 	if(1 == status) {
 		var aa = $("ul.nav").find('li a.close');
 		aa.removeClass('close').next().slideUp();
