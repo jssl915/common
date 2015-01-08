@@ -124,13 +124,13 @@ function changeMenuStatus(status) {
 	<div class ="top_right">
 		<a href="#" onclick="showOmtabs()">返回主页</a>&nbsp;｜&nbsp;
 		<a href="#" onclick="changePasWord()">修改密码</a>&nbsp;|&nbsp;
-		<a href="<c:url value="/system/logout"/>">系统注销</a>
+		<a href="<c:url value='/system/logout'/>">系统注销</a>
 	</div>
 </div>
 <div id="center-panel">
  	<div id="make-tab">
 	    <ul id="tabUL"><li><a href="#indexP"><img class="homeicon" src="${img}/home.gif"/><span>&nbsp;我的主页</span></a></li></ul>
-	   	<div id="indexP"><iframe name="indexF" id="indexF" marginheight="0" marginwidth="0" hspeace="0" vspace="0" frameborder="0"  src=<c:url value="/index/right"/>></iframe></div>
+	   	<div id="indexP"><iframe name="indexF" id="indexF" src=<c:url value="/index/right"/>></iframe></div>
  	</div> 
 </div>
 

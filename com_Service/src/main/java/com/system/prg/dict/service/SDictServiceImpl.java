@@ -1,5 +1,6 @@
 package com.system.prg.dict.service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.system.prg.dict.entity.SDict;
+import com.system.prg.dict.mapper.SDetailMapper;
 import com.system.prg.dict.mapper.SDictMapper;
 import com.system.prg.util.BusinessException;
 import com.system.prg.util.DateUtils;
@@ -21,6 +23,8 @@ public class SDictServiceImpl implements SDictService {
 
 	@Autowired
 	SDictMapper mapper;
+	@Autowired
+	SDetailMapper sDetailMapper;
 
 	@Override
 	public SDict insert(SDict record) {
@@ -63,6 +67,9 @@ public class SDictServiceImpl implements SDictService {
 
 	@Override
 	public void deleteByPrimaryKey(Long dictId) {
+		Map<String, Object> condititon = new HashMap<String, Object>();
+		condititon.put("dictId", dictId);
+		sDetailMapper.deleteByCondition(condititon);
 		mapper.deleteByPrimaryKey(dictId);
 		SystemCache.reCacheDict();
 	}

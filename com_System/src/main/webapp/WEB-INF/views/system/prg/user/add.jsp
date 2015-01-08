@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 </head>
 <body>
 <form id="form1" action="insert">
@@ -25,7 +26,7 @@
 		</tr>
 	   </table>
 	   <div class="editBtn">
-			<button type="submit" class="button">&nbsp;保存&nbsp;</button>
+			<button id="aaa" type="submit" class="button">&nbsp;保存&nbsp;</button>
 			<button type="button" class="button" onclick="javascript:art.dialog.close();">&nbsp;关闭&nbsp;</button>
 		</div>
 	</div>
@@ -42,12 +43,11 @@ $(function(){
     			data:{userName:function(){return $("#userName").val();}}
         	}},
         	userPwd:{required:true,minlength:6,maxlength:32},
-            realName:{maxlength:32}
+            realName:{required:true,maxlength:32}
         },
-        errorPlacement:function(error, element) {errorPlacement(error,element);}, 
-        showErrors: function(errorMap, errorList){showErrors(errorMap,errorList,this);}
+        errorPlacement:function(error, element){errorPlacement(error,element);}, 
+        showErrors:function(errorMap, errorList){showErrors(errorMap,errorList,this);}
     });
 })
-
 </script>
 </html>

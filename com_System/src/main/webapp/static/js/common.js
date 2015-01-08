@@ -163,68 +163,35 @@ function refreshGrid(id) {
 	});
 }
 
-//显示校验信息的容器，本示例使用<span class="errorMsg" />做为容器，建议使用容器来避免和其它组件的dom元素交叉的问题
-//比如使用omCombo的时候如果不使用容器将会导致样式错乱，根本原因是combo是在input外面包裹一层span再添加样式组成，而校验
-//框架默认会再input后面加label标签从而导致combo组件样式混乱。
-function errorPlacement(error, element) { 
+//表单验证方法
+function errorPlacement (error,element){
 	if(error.html()){
-	    $(element).parents().map(function(){
-	        if(this.tagName.toLowerCase()=='td'){ 
-	        	if($(this).children().eq(1).length==0){
-	        		$(this).append('<span class="errorMsg"></span>');
-	        	}
-	        	var attentionElement = $(this).children().eq(1);
-	            attentionElement.html(error);
-	            attentionElement.css('display','none'); //覆盖默认显示方法，先隐藏消息，等鼠标移动上去再显示
-	            attentionElement.prev().addClass("error-border");
-	            attentionElement.prev().children("input").addClass("x-form-invalid");
-	            if(attentionElement.prev().children().length <= 0){
-	                attentionElement.prev().addClass("x-form-invalid");
-	            }
-	        }
-	    });
-	}
-	//给输入框绑定鼠标经过事件，鼠标移动过去才显示校验信息
-    $('.errorMsg').prev().bind('mouseover',function(e){
-        //要有错误才显示
-        if($(this).next().html().length > 0 && $(this).next().find("label").html().length > 0){
-        	$(this).next().css('display','inline').css({'top':e.pageY+10 , 'left':e.pageX-10});
-        	if($(this).next().find("label").css('display') == 'none'){
-        	    $(this).next().hide();
-        	}
-        }
-    }).bind('mouseout',function(){
-        $(this).next().css('display','none');
-    });
+        $(element).parents().map(function(){
+            if(this.tagName.toLowerCase()=='td'){
+            	$(this).children().omTooltip({
+    		        trackMouse : true,
+    		        anchor : true,
+    		        offset:[-2,15],
+    		        html:'<span style="color:red;">'+error.html()+'</span>'
+                });
+            }
+        });
+    }
+
 }
-//控制错误显示隐藏的方法，当自定义了显示方式之后一定要在这里做处理。
-function showErrors(errorMap, errorList, validObj) {
-	if(errorList && errorList.length > 0){
-	    $.each(errorList,function(index,obj){
-	        var msg = this.message;
-	        $(obj.element).parents().map(function(){
+function showErrors(errorMap, errorList,vDom) {
+	if(!(errorList && errorList.length > 0)){
+		 $(vDom.currentElements).parents().map(function(){
 	            if(this.tagName.toLowerCase()=='td'){
-	                var attentionElement =  $(this).children().eq(1);
-	                attentionElement.show();
-	                attentionElement.html(msg);
+	            	$(this).children().omTooltip('destroy');
 	            }
 	        });
-	    });
-	}else{
-	    $(validObj.currentElements).parents().map(function(){
-	        if(this.tagName.toLowerCase()=='td'){
-	            $(this).children().eq(0).removeClass("error-border");
-	        }else{
-	            $(this).removeClass("error-border");
-	        }
-	        $(this).children().eq(0).removeClass("x-form-invalid");
-	    });
 	}
-	validObj.defaultShowErrors();
+    vDom.defaultShowErrors();
 }
 
 $.validator.messages={
-    required: "此字段不能为空",
+	required: "此字段不能为空",
 	remote: "此字段已经存在",
 	email: "邮箱非法",
 	url: "网址非法",
