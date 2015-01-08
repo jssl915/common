@@ -13,19 +13,16 @@ $(function() {
 	var down = '<c:url value="/static/images/accordion-collapse.gif"/>';
 	var up = '<c:url value="/static/images/accordion-expand.gif"/>';
 	$('body').omBorderLayout({
-		panels: [{id: "north-panel",header: false,region: "north",height:'75px',resizable: true,collapsible:true}, 
-		         {id: "south-panel",header: false,region: "south"}, 
-		         {id: "center-panel",header: false,region: "center"}, 
-		         {id: "west-panel",resizable: true,collapsible:true,
-						title: "&nbsp;<img style='cursor: pointer;' src='"+up + "' onclick='change(1)'> <img style='cursor: pointer;' src='" + down + "' onclick='change(0)'> ",
-						expandToBottom:true,header:true,region:"west",width:182
-				}],
-		spacing:0
+		panels: [{id: "north-panel",header:false,region: "north",height:'75px'}, 
+		         {id: "south-panel",header:false,region: "south"}, 
+		         {id: "center-panel",header:false,region: "center"}, 
+		         {id: "west-panel",header:true,region:"west",width:182,collapsible:true,
+					title: "&nbsp;<img style='cursor: pointer;' src='"+up + "' onclick='change(1)'> <img style='cursor: pointer;' src='" + down + "' onclick='change(0)'> "
+				}]
 	});
-	
 	loadWestTree();
 	_ifh = $('#center-panel').height() - $("#tabUL").height()-17;
-	_tabElement =$('#make-tab').omTabs({height : 'fit'});
+	_tabElement =$('#make-tab').omTabs({height:'fit'});
 	$('#indexF').height(_ifh);
  	$("#west-panel").omScrollbar({thick: 10});
  });
@@ -109,11 +106,6 @@ function change(status) {
 		height:220
 	});
  }
- function changeSkin(){
-	 $.post(ctx+"/system/changeSkin",function(msg){
-		 window.location.href=ctx+"system/main";
-	   }, "json");
- }
 </script>
 </head>
 <body id="main">
@@ -130,7 +122,7 @@ function change(status) {
 <div id="center-panel">
  	<div id="make-tab">
 	    <ul id="tabUL"><li><a href="#indexP"><img class="homeicon" src="${img}/home.gif"/><span>&nbsp;我的主页</span></a></li></ul>
-	   	<div id="indexP"><iframe name="indexF" id="indexF" src=<c:url value="/index/right"/>></iframe></div>
+	   	<div id="indexP"><iframe name="indexF" id="indexF" src=<c:url value="/index/right"/>></iframe></div> 
  	</div> 
 </div>
 
