@@ -30,14 +30,12 @@ public class IndexController extends BaseController {
 		String menuTree = sMenuService.listUserTree(sUser.getUserId(),false);
 		writeToPage(menuTree, response);
 	}
-	@RequestMapping(value = "right")
-	public String right() throws BusinessException {
-		return "right";
-	}
+	
 	@RequestMapping(value = "password")
 	public String password() throws BusinessException{
 		return "password";
 	}
+	
 	@RequestMapping(value = "checkUserPwd")
 	public void checkUserPwd(HttpServletRequest request, HttpServletResponse response) throws BusinessException{
 		SUser sUser = (SUser)request.getSession().getAttribute("user");
