@@ -23,6 +23,7 @@
 <script>
 $(function(){
   	$(".treeDiv").css("height","420px");
+  	$(".treeDiv").omScrollbar({thick: 10});
     $("#navtree").omTree({
     	dataSource :${resourceTree},
         showCheckbox: true
