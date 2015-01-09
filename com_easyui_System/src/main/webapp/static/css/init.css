@@ -14,7 +14,8 @@ html,body{width:100%;height:100%;padding:0;margin:0;}
 .searchTable button:hover{cursor:pointer;background:-webkit-linear-gradient(top,#70bfef,#4097ce);background:-moz-linear-gradient(top,#70bfef,#4097ce);background:linear-gradient(top,#70bfef,#4097ce);}
 .operate{font-size:12px;position:relative}
 .operate .om-panel-header{background: none repeat scroll 0 0 #e0ecff;padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:1px solid #95b8e7;}
-.panel-body-noborder{height:100%}
+.datagrid-toolbar{paddiong:0}
+
 
 .dialogPage{height:100%;font-size:14px;}
 .dialogPage .om-panel-header{padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:1px solid #95b8e7;}

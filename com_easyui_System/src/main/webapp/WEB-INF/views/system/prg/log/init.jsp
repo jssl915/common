@@ -6,23 +6,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
+<div id="toolbar">
 <form id="list" action="list">
-<div class="easyui-accordion" data-options="border:false" style="width:100%">
-	<div title="查询条件" style="overflow:auto;padding:10px;">
-		<table class="searchTable">
+<div id="search" class="operate" onclick="hide()">
+	<div class="om-panel-header">查询条件</div>
+	<table class="searchTable">
 		<tr>
-		<td>访问人：</td>
-		<td><input type="text" id="userName" name="userName"></td>
-		<td>访问IP：</td>
-		<td><input type="text" id="userIp" name="userIp"></td>
+			<td>访问人：</td>
+			<td><input type="text" id="userName" name="userName"></td>
+			<td>访问IP：</td>
+			<td><input type="text" id="userIp" name="userIp"></td>
 			<td><button id="queryBtn" type="button" class="button">查询</button></td>
 			<td><button id="clearBtn" type="button" class="button">清空</button></td>
 		</tr>
-	   </table>
-	</div>
+   </table>
 </div>
 </form>
-
+	
 <div class="operate">
 	<div class="om-panel-header">系统日志管理列表</div>
 	<div class="icon">
@@ -31,8 +31,8 @@
 		</ul>
 	</div>
 </div>
-
-<table id="grid" data-options="border:false"></table>
+</div>
+<table id="grid" data-options="fit:true,border:false"></table>
 </body>
 <script type="text/javascript">
 $(function() {
@@ -44,6 +44,7 @@ $(function() {
 		rownumbers : true,
 		pagination : true,
 		singleSelect : true,
+		toolbar : '#toolbar',
 	    columns : [[{title : '访问人',field:'userName',width:150}, 
                     {title : '访问URL',field:'actionUrl',width:200}, 
                     {title : '访问IP', field : 'userIp',width:150}, 
@@ -54,6 +55,10 @@ $(function() {
 });
 function exportExcel(){
 	window.location.href = ctx + '/system/prg/log/exportExcel';
+}
+function hide(){
+	$('.searchTable').hide();
+	$('#grid').datagrid('resize');
 }
 
 </script>

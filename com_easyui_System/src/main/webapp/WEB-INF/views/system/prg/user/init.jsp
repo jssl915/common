@@ -9,20 +9,19 @@
 </style>
 </head>
 <body>
+<div id="toolbar">
 <form id="list" action="list">
-<div class="easyui-accordion" data-options="border:false">
-	<div title="查询条件" style="overflow:auto;padding:10px;">
-		<table class="searchTable">
-		<tr>
-			<td>系统登录名：</td>
-			<td><input type="text" id="userName" name="userName"></td>
-			<td>真实姓名：</td>
-			<td><input type="text" id="realName" name="realName"></td>
-			<td><button id="queryBtn" type="button" class="button">查询</button></td>
-			<td><button id="clearBtn" type="button" class="button">清空</button></td>
-		</tr>
-	   </table>
-	</div>
+<div id="p" class="easyui-panel" title="查询条件" data-options="collapsible:true"> 
+  <table class="searchTable">
+	<tr>
+		<td>系统登录名：</td>
+		<td><input type="text" id="userName" name="userName"></td>
+		<td>真实姓名：</td>
+		<td><input type="text" id="realName" name="realName"></td>
+		<td><button id="queryBtn" type="button" class="button">查询</button></td>
+		<td><button id="clearBtn" type="button" class="button">清空</button></td>
+	</tr>
+   </table>
 </div>
 </form>
 <div class="operate">
@@ -36,7 +35,8 @@
 		</ul>
 	</div>
 </div>
-<table id="grid" data-options="border:false"></table>
+</div>
+<table id="grid" data-options="fit:true,border:false"></table>
 </body>
 <script type="text/javascript">
 $(function() {
@@ -48,6 +48,7 @@ $(function() {
 		rownumbers : true,
 		pagination : true,
 		singleSelect : true,
+		toolbar : '#toolbar',
 	    columns : [[ {width : '150',title : '系统登录名',field : 'userName'},
 	                 {width : '150',title : '真实姓名',field : 'realName'},
 	                 {width : '100',title : '状态',field : 'userStatus'},
@@ -55,6 +56,17 @@ $(function() {
 					 {width : '150',title : '创建时间',field : 'createTime'}]
 	    		]
 	}); 
+	$('#p').panel({   
+	    onCollapse:function(){   
+	    	$('#grid').datagrid('resize');
+	    },
+	    onExpand:function(){
+	    	$('#grid').datagrid('resize');
+	    }
+	});
+	$(window).resize(function () {
+        $('#grid').datagrid('resize');
+    });   
 });
 </script>
 </html>
