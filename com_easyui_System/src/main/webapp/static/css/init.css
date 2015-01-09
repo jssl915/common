@@ -1,11 +1,8 @@
 @charset "utf-8";*{padding:0;margin:0;}
 html,body{width:100%;height:100%;padding:0;margin:0;}
-.search{font-size:12px;}
-.search .om-panel-header{position:relative;padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;}
-.search .om-panel-header:hover{cursor:pointer;}
-.search .om-panel-header .up{position:absolute;right:5px;bottom:0;top:0;height:18px;margin:auto 0;width:20px;background:url("../js/operamasks/2.0/css/default/images/ui-toolbar-btn.png") no-repeat scroll -22px 0 transparent;}
-.search .om-panel-header .down{position:absolute;right:5px;bottom:0;top:0;height:18px;margin:auto 0;width:20px;background:url("../js/operamasks/2.0/css/default/images/ui-toolbar-btn.png") no-repeat scroll -2px 0 transparent;}
-.search .searchDiv{border-left:1px solid #86a3c4;border-right:1px solid #86a3c4;background:#fff;padding:6px 0;}
+.accordion .accordion-header-selected {background: none repeat scroll 0 0 #e0ecff;}
+.accordion .accordion-header-selected .panel-title {color: #15428b;}
+
 .searchTable td{height:30px;}
 .searchTable td:nth-child(2n-1){text-align:right;width:80px;}
 .searchTable td input[type='text']{border:1px solid #86A3C4;width:218px;height:18px;padding-left:2px;}
@@ -16,11 +13,11 @@ html,body{width:100%;height:100%;padding:0;margin:0;}
 .searchTable button{border:1px solid #1e7db9;border-radius:5px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;color:#fff;font-weight:bold;line-height:22px;overflow:hidden;position:relative;text-align:center;text-shadow:1px 1px 1px #333;width:80px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;background:-webkit-linear-gradient(top,#42a4e0,#2e88c0);background:-moz-linear-gradient(top,#42a4e0,#2e88c0);background:linear-gradient(top,#42a4e0,#2e88c0);margin-left:20px;}
 .searchTable button:hover{cursor:pointer;background:-webkit-linear-gradient(top,#70bfef,#4097ce);background:-moz-linear-gradient(top,#70bfef,#4097ce);background:linear-gradient(top,#70bfef,#4097ce);}
 .operate{font-size:12px;position:relative}
-.operate .om-panel-header{padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:0}
-.om-widget-content{border-top:0}
-.om-grid div.hDiv{border-top:1px solid #c8c4bf;}
+.operate .om-panel-header{background: none repeat scroll 0 0 #e0ecff;padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:1px solid #95b8e7;}
+.panel-body-noborder{height:100%}
+
 .dialogPage{height:100%;font-size:14px;}
-.dialogPage .om-panel-header{padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:0;}
+.dialogPage .om-panel-header{padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:1px solid #95b8e7;}
 .editDiv{border:1px solid #86a3c4;background:#fff;}
 .editTable{margin:20px auto;text-align:center}
 .editTable td{height:30px;}

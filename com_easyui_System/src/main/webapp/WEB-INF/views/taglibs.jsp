@@ -11,6 +11,7 @@
 <script type="text/javascript" src="${js}/easyui1.4.1/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="${js}/artDialog/jquery.artDialog.js?skin=idialog"></script>
 <script type="text/javascript" src="${js}/artDialog/plugins/iframeTools.js"></script>
+<link href="${css}/init.css" rel="stylesheet" type="text/css" />
 <script>
 $(function(){ctx= <c:url value = "/" />})
 </script>

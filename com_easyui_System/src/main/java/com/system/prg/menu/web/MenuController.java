@@ -20,8 +20,8 @@ import com.system.prg.menu.entity.SMenu;
 import com.system.prg.menu.service.SMenuService;
 import com.system.prg.user.service.SUserService;
 import com.system.prg.util.AjaxUtils;
-import com.system.prg.util.BaseController;
 import com.system.prg.util.BusinessException;
+import com.system.util.BaseController;
 import com.system.util.ComUtil;
 
 @Controller

@@ -18,8 +18,8 @@ import com.system.prg.dict.entity.SDetail;
 import com.system.prg.dict.service.SDetailService;
 import com.system.prg.dict.service.SDictService;
 import com.system.prg.util.AjaxUtils;
-import com.system.prg.util.BaseController;
 import com.system.prg.util.BusinessException;
+import com.system.util.BaseController;
 
 @Controller
 @Scope("session")

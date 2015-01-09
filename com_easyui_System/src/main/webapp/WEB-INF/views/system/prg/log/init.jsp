@@ -7,21 +7,17 @@
 </head>
 <body>
 <form id="list" action="list">
-<div class="search">
-	<div class="om-panel-header">查询条件<span class="up"></span></div>
-	<div class="searchDiv">
+<div class="easyui-accordion" data-options="border:false" style="width:100%">
+	<div title="查询条件" style="overflow:auto;padding:10px;">
 		<table class="searchTable">
 		<tr>
-			<td>访问人：</td>
-			<td><input type="text" id="userName" name="userName"></td>
-			<td>访问IP：</td>
-			<td><input type="text" id="userIp" name="userIp"></td>
-			<td>访问时间：</td>
-			<td colspan="3"><input id="createTimeStart" name="createTimeStart" type="date" />
-			至 <input id="createTimeEnd" name="createTimeEnd"  type="date"/></td>
+		<td>访问人：</td>
+		<td><input type="text" id="userName" name="userName"></td>
+		<td>访问IP：</td>
+		<td><input type="text" id="userIp" name="userIp"></td>
 			<td><button id="queryBtn" type="button" class="button">查询</button></td>
 			<td><button id="clearBtn" type="button" class="button">清空</button></td>
-	   </tr>
+		</tr>
 	   </table>
 	</div>
 </div>
@@ -36,22 +32,25 @@
 	</div>
 </div>
 
-<table id="grid"></table>
+<table id="grid" data-options="border:false"></table>
 </body>
 <script type="text/javascript">
 $(function() {
-   $('#grid').omGrid({
-       dataSource : 'list',
-       limit:'${pageRows}',
-       showIndex : false,
-       singleSelect : false,
-       colModel : [{header : '访问人',name:'userName',width:150,align:'center',sort:'clientSide'}, 
-                   {header : '访问URL',name:'actionUrl',width:200,align:'center',sort:'clientSide'}, 
-                   {header : '访问IP', name : 'userIp',width:150,align:'center',sort:'clientSide'}, 
-                   {header : '访问时间', name : 'logTime',width:200,align:'center',sort:'clientSide'} 
+	$('#grid').datagrid({   
+	    url:'list', 
+	    pageSize :10,
+		pageList : [10, 20, 30, 40, 50, 100, 200, 300, 400, 500, 1000 ],
+		striped : true,
+		rownumbers : true,
+		pagination : true,
+		singleSelect : true,
+	    columns : [[{title : '访问人',field:'userName',width:150}, 
+                    {title : '访问URL',field:'actionUrl',width:200}, 
+                    {title : '访问IP', field : 'userIp',width:150}, 
+                    {title : '访问时间', field : 'logTime',width:200} 
                    ]
-   });
-   resizeHeight();
+	    		]
+	}); 
 });
 function exportExcel(){
 	window.location.href = ctx + '/system/prg/log/exportExcel';
