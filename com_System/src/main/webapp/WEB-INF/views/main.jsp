@@ -17,14 +17,15 @@ $(function() {
 		         {id: "south-panel",header:false,region: "south"}, 
 		         {id: "center-panel",header:false,region: "center"}, 
 		         {id: "west-panel",header:true,region:"west",width:182,collapsible:true,
-					title: "&nbsp;<img style='cursor: pointer;' src='"+up + "' onclick='change(1)'> <img style='cursor: pointer;' src='" + down + "' onclick='change(0)'> "
+					title: "&nbsp;<img style='cursor: pointer;' src='"+up+"' onclick='change(1)'><img style='cursor:pointer;' src='"+down+"' onclick='change(0)'> "
 				}]
 	});
 	loadWestTree();
-	_ifh = $('#center-panel').height() - $("#tabUL").height()-17;
+	_ifh = $('#center-panel').height() - $("#tabUL").height()-14;
 	_tabElement =$('#make-tab').omTabs({height:'fit'});
 	$('#indexF').height(_ifh);
  	$("#west-panel").omScrollbar({thick: 10});
+ 	$('.om-tabs-panels').css('overflow','hidden');
  });
 
 function showOmtabs(){document.location.reload();}
@@ -80,7 +81,7 @@ function openTab(menuId){
 				_tabElement.omTabs('add',{
 		            title : text, 
 		            tabId :'menu'+menuId,
-		            content : "<iframe id='"+menuId+"' border=0 frameBorder='no' name='inner-frame' src='"+url+"' height='"+_ifh+"' width='100%'></iframe>",
+		            content : "<iframe id='"+menuId+"' frameBorder='no' width='100%' src='"+url+"' height='"+_ifh+"'></iframe>",
 		            closable : true
 		        });
 			}
@@ -122,7 +123,7 @@ function change(status) {
 <div id="center-panel">
  	<div id="make-tab">
 	    <ul id="tabUL"><li><a href="#indexP"><img class="homeicon" src="${img}/home.gif"/><span>&nbsp;我的主页</span></a></li></ul>
-	   	<div id="indexP"><iframe name="indexF" id="indexF" src=<c:url value="/index/right"/>></iframe></div> 
+	   	<div id="indexP"><iframe id="indexF" width='100%' style="border:0;background:url(${img}/bj.jpg) 50px 0;"></iframe></div> 
  	</div> 
 </div>
 
