@@ -54,7 +54,7 @@ public class BaseController {
 				orderByClause = getColumn(property) + " "+ request.getParameter("order");
 			}
 		}
-		int start = Integer.parseInt(currPageStr);
+		int start = Integer.parseInt(currPageStr)-1;
 		int limit = Integer.parseInt(pageSizeStr);
 		po.setExeQuery(po.isExeQuery());
 		po.setPageSize(limit);
@@ -81,6 +81,7 @@ public class BaseController {
 		GridDataModel model = new GridDataModel();
 		model.setRows(list);
 		model.setTotal(this.po.getTotalCount());
+		System.out.println(JsonMapper.buildNormalMapper().toJson(model));
 		writeToPage(JsonMapper.buildNormalMapper().toJson(model), response);
 	}
 

@@ -50,7 +50,16 @@ function openTab(menuId){
 	            closable : true
 	        };
 			var tabs = $('#eTab');
-			tabs.tabs('exists', text)?tabs.tabs('select', text):tabs.tabs('add', opts);
+			//tabs.tabs('exists', text)?tabs.tabs('select', text):tabs.tabs('add', opts);
+			if(tabs.tabs('exists', text)){
+				tabs.tabs('select', text);
+				var tab = tabs.tabs('getSelected');  // 获取选择的面板
+				tabs.tabs('update', {tab:tab,options:opts});
+
+			}else{
+				tabs.tabs('add', opts);
+			}
+
 	   }, "json");
 }
 function loadWestTree(){
