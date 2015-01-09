@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.system.prg.dict.entity.SDict;
 import com.system.prg.dict.service.SDictService;
 import com.system.prg.util.AjaxUtils;
-import com.system.prg.util.BaseController;
 import com.system.prg.util.BusinessException;
+import com.system.util.BaseController;
 
 @Controller
 @Scope("session")

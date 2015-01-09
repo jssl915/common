@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.system.prg.log.entity.SLog;
 import com.system.prg.log.service.SLogService;
 import com.system.prg.util.AjaxUtils;
-import com.system.prg.util.BaseController;
 import com.system.prg.util.BusinessException;
 import com.system.prg.util.DateUtils;
+import com.system.util.BaseController;
 import com.system.util.ComUtil;
 
 @Controller

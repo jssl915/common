@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.system.prg.user.entity.SUser;
 import com.system.prg.user.service.SUserService;
 import com.system.prg.util.AjaxUtils;
-import com.system.prg.util.BaseController;
+import com.system.util.BaseController;
 import com.system.util.SysProperties;
 @Controller
 @Scope("session")

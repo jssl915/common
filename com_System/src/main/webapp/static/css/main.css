@@ -10,7 +10,7 @@ html, body{width: 100%; height: 100%; padding: 0; margin: 0;}
 .aside{width:180px;position:absolute;}
 a{color:#0965b8;text-decoration:none;cursor:pointer;}
 ol,ul{list-style-type:none;list-style-position:outside;list-style-image:none;padding:0px;margin:0px;}
-.aside .nav li.selected{background-color:#9fd3ff;font-weight:bold;width:178px}
+.aside .nav li.selected{background-color:#9fd3ff;font-weight:bold;width:179px}
 .aside .nav li.selected a{color:#3C3C3C;}
 .aside .nav li a{height:29px;line-height:29px;color:#076b9f;font-weight:bold;padding-left:20px;display:inline-block;}
 .aside .nav li a:hover{color:red;}
@@ -30,9 +30,5 @@ ol,ul{list-style-type:none;list-style-position:outside;list-style-image:none;pad
 #center-panel .om-panel-body{padding: 0;} 
 .om-panel-header .om-panel-title{position:relative;}
 .om-panel-header{height:28px;line-height:28px;padding:0};
-
-/* .om-panel-header .om-panel-title .up{background: url("../js/operamasks/2.0/css/default/images/borderlayout/tools.gif") no-repeat scroll 0 -30px transparent;;height:15px;line-height:15px};
-.om-panel-header .om-panel-title .down{background: url("../js/operamasks/2.0/css/default/images/borderlayout/tools.gif") no-repeat scroll 0 -30px transparent;;height:15px;line-height:15px};
-.om-panel-tool{ position: absolute;right: 5px;top:6px}; */
 
 
