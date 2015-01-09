@@ -7,6 +7,8 @@ html, body{width: 100%; height: 100%; padding: 0; margin: 0;}
 #north-panel .userinfo span{border-bottom:1px solid white; padding-bottom:1px; text-decoration:none;}
 .homeicon{border:0;height:16px; vertical-align:middle; background-repeat:no-repeat;}
 .homeicon span{vertical-align:middle;}
+#indexP{margin:0;padding:0;}
+#indexF{border:0;frameborder:no;width:100%}
 .aside{width:180px;position:absolute;}
 a{color:#0965b8;text-decoration:none;cursor:pointer;}
 ol,ul{list-style-type:none;list-style-position:outside;list-style-image:none;padding:0px;margin:0px;}
@@ -21,14 +23,18 @@ ol,ul{list-style-type:none;list-style-position:outside;list-style-image:none;pad
 .zi_menu_bg{background:url('../images/zimenu_bj.png') repeat-y;display:block;}
 .menu_line{background:url('../images/menuline.png') no-repeat ;height:1px; width:167px; display:block;margin-left:5px;}
 .menu_foot{background:url('../images/menu_foot.png') no-repeat ;height:3px; width:180px; display:block;margin-top:2px}  
-#footer{text-align:center;color:#000000;height:20px;line-height:20px;}
+#footer{text-align:center;color:#000000;height:17px;line-height:17px;padding-bottom:3px;}
 .top_right{position:absolute;bottom:4px; right:10px;z-index:1;color:#F7F6F6;}
 .top_right a{color:#F7F6F6;font-weight:bold;}
 .top_right a:hover{color:#ffd200;}
 .om-borderlayout .om-borderlayout-region-body{background-color: #D2E0F2;}
 .om-widget-content {background: none;border: 0px solid #86A3C4;color: #222222;}
-#center-panel .om-panel-body{padding: 0;overflow:hidden} 
+#center-panel .om-panel-body{padding: 0;} 
 .om-panel-header .om-panel-title{position:relative;}
 .om-panel-header{height:28px;line-height:28px;padding:0};
+
+/* .om-panel-header .om-panel-title .up{background: url("../js/operamasks/2.0/css/default/images/borderlayout/tools.gif") no-repeat scroll 0 -30px transparent;;height:15px;line-height:15px};
+.om-panel-header .om-panel-title .down{background: url("../js/operamasks/2.0/css/default/images/borderlayout/tools.gif") no-repeat scroll 0 -30px transparent;;height:15px;line-height:15px};
+.om-panel-tool{ position: absolute;right: 5px;top:6px}; */
 
 

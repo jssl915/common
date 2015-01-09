@@ -1,7 +1,7 @@
 @charset "utf-8";
 *{padding:0; margin:0;}
 body{background:#2B82D2}
-.login_content{position:fixed;left:0;right:0;top:0;bottom:0;margin:auto;width:652px;height:354px;}
+.login_content{position:fixed;left:0;right:0;top:0;bottom:0;margin:auto;width:700px;height:300px;}
 .top_left{position:absolute;top:0;left:0;background:url(ileft.gif);width:15px;height:43px;}
 .top_center{position:absolute;top:0;left:15px;background:url(i_topbg2.gif);width:620px;height:43px;}
 .top_right{position:absolute;top:0;left:635px;background:url(iright.gif);width:16px;height:43px;}
