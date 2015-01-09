@@ -1,0 +1,14 @@
+$(function(){
+	$('#toolbar').css('padding',0);
+	$('.easyui-panel').panel({   
+	    onCollapse:function(){   
+	    	$('#grid').datagrid('resize');
+	    },
+	    onExpand:function(){
+	    	$('#grid').datagrid('resize');
+	    },
+	    onBeforeExpand:function(){
+	    	$('#search').height('auto');
+	    }
+	}); 
+});
