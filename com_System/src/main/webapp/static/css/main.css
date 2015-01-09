@@ -21,7 +21,7 @@ ol,ul{list-style-type:none;list-style-position:outside;list-style-image:none;pad
 .zi_menu_bg{background:url('../images/zimenu_bj.png') repeat-y;display:block;}
 .menu_line{background:url('../images/menuline.png') no-repeat ;height:1px; width:167px; display:block;margin-left:5px;}
 .menu_foot{background:url('../images/menu_foot.png') no-repeat ;height:3px; width:180px; display:block;margin-top:2px}  
-#footer{text-align:center;color:#000000;height:17px;line-height:17px;padding-bottom:3px;}
+#footer{text-align:center;color:#000000;height:20px;line-height:20px;}
 .top_right{position:absolute;bottom:4px; right:10px;z-index:1;color:#F7F6F6;}
 .top_right a{color:#F7F6F6;font-weight:bold;}
 .top_right a:hover{color:#ffd200;}
