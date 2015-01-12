@@ -35,19 +35,6 @@
 </body>
 <script type="text/javascript">
 $(function(){
-	$('#userOrder').omNumberField({allowDecimals:false,allowNegative:false});
-    $("#form1").validate({
-        rules:{
-        	userName:{required:true,maxlength:32,remote:{
-    			url:"checkUserName",
-    			data:{userName:function(){return $("#userName").val();}}
-        	}},
-        	userPwd:{required:true,minlength:6,maxlength:32},
-            realName:{required:true,maxlength:32}
-        },
-        errorPlacement:function(error, element){errorPlacement(error,element);}, 
-        showErrors:function(errorMap, errorList){showErrors(errorMap,errorList,this);}
-    });
 })
 </script>
 </html>

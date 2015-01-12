@@ -6,11 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
+<div id="toolbar">
 <form id="list" action="list">
-<div class="search">
-	<div class="om-panel-header">查询条件<span class="up"></span></div>
-	<div class="searchDiv">
-		<table class="searchTable">
+<div id="search" class="easyui-panel" title="查询条件" data-options="fit:true,collapsible:true,border:0"> 
+  <table class="searchTable">
 		<tr>
 			<td>角色名称：</td>
 			<td><input type="text" id="roleName" name="roleName"></td>
@@ -21,7 +20,6 @@
 			<td><button id="clearBtn" type="button" class="button">清空</button></td>
 		</tr>
 	   </table>
-	</div>
 </div>
 </form>
 <div class="operate">
@@ -36,29 +34,33 @@
 		</ul>
 	</div>
 </div>
-
-<table id="grid"></table>
+</div>
+<table id="grid" data-options="fit:true,border:false"></table>
 </body>
 <script type="text/javascript">
-$(function() {
-       $('#grid').omGrid({
-           dataSource:'list',
-           limit:'${pageRows}',
-           showIndex : false,
-           singleSelect : false,
-           colModel : [{header : '角色名称',name:'roleName',width:150,align:'center',sort:'clientSide'}, 
-                       {header : '角色描述', name : 'roleDesc',width:200,align:'center',sort:'clientSide'}, 
-                       {header : '排序', name : 'roleOrder',width:200,align:'center',sort:'clientSide'}, 
-                       {header : '创建时间', name : 'createTime',width:200,align:'center',sort:'clientSide'},
-                       {header : '修改时间', name : 'updateTime',width:200,align:'center',sort:'clientSide'}]
-       });
-       resizeHeight();
+$(function() {      
+	$('#grid').datagrid({   
+	    url:'list', 
+	    pageSize :10,
+		pageList : [10, 20, 30, 40, 50, 100, 200, 300, 400, 500, 1000 ],
+		striped : true,
+		rownumbers : true,
+		pagination : true,
+		toolbar : '#toolbar',
+	    columns : [[ {width : '150', field : 'ck',checkbox:true},
+	                 {width : '200',title : '角色名称',field : 'roleName'},
+	                 {width : '200',title : '角色描述',field : 'roleDesc'},
+	                 {width : '200',title : '排序',field : 'roleOrder'},
+	                 {width : '200',title : '创建时间',field : 'createTime'},
+					 {width : '200',title : '修改时间',field : 'updateTime'}]
+	    		]
+	}); 
 });
 function bindMenu(){
 	menuTree = true;
-	var selections = $('#grid').omGrid('getSelections', true);
-	if (selections.length != 1) {
-		$.omMessageBox.alert({content : '只能选择一行记录'});
+	var selections = $('#grid').datagrid('getSelections');
+	if (selections.length != 1) {		
+		$.messager.alert('提示:','只能选择一行记录!'); 
 		return false;
 	}
 	var id = selections[0].roleId;
@@ -69,16 +71,16 @@ function bindMenu(){
 	});
 }
 function bindUser(){
-	var selections = $('#grid').omGrid('getSelections', true);
-	if (selections.length != 1) {
-		$.omMessageBox.alert({content : '只能选择一行记录'});
+	var selections = $('#grid').datagrid('getSelections');
+	if (selections.length != 1) {		
+		$.messager.alert('提示:','只能选择一行记录!'); 
 		return false;
 	}
 	var id = selections[0].roleId;
 	$.dialog.open(ctx+'system/prg/role/userDialog?roleId='+id, {
 		lock: true,
 		width:600,
-		height:450
+		height:460
 	});
 }
 </script>

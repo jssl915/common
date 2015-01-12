@@ -9,6 +9,7 @@
 <link href="${js}/easyui1.4.1/themes/icon.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="${js}/easyui1.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="${js}/easyui1.4.1/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="${js}/easyui1.4.1/easyui-lang-zh_CN.js"></script>
 <script type="text/javascript" src="${js}/artDialog/jquery.artDialog.js?skin=idialog"></script>
 <script type="text/javascript" src="${js}/artDialog/plugins/iframeTools.js"></script>
 <script type="text/javascript" src="${js}/common.js"></script>

@@ -6,14 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<div class="treeDiv"><ul id="navtree"></ul></div>
-<div style="margin-left: 200px">
-<form id="list" action="list">
-<div class="search">
-	<div class="om-panel-header">查询条件<span class="up"></span></div>
-	<div class="searchDiv">
-		<input type="hidden" id="menuId" name="menuId">
-		<table class="searchTable">
+<div id="toolbar" >	
+	<form id="list" action="list">
+	<div id="search" class="easyui-panel" title="查询条件" data-options="fit:true,collapsible:true,border:0"> 
+	  <input type="hidden" id="menuId" name="menuId">
+	  <table class="searchTable">
 		<tr>
 			<td>菜单名：</td>
 			<td><input type="text" id="menuName" name="menuName"></td>
@@ -23,77 +20,79 @@
 		</tr>
 		<tr>
 			<td>状态：</td>
-			<td><input type="combo" id="menuStatus" name="menuStatus"></td>
+			<td><input type="text" id="menuName" name="menuName"></td>
 			<td>修改时间：</td>
-			<td><input id="updateTimeStart" name="updateTimeStart"  type="date" />
-			至 <input id="updateTimeEnd" name="updateTimeEnd"  type="date"/></td>
+			<td><input id="updateTimeStart" name="updateTimeStart" type="date" class="easyui-datebox"></input>
+				至 <input id="updateTimeEnd" name="updateTimeEnd" type="date" class="easyui-datebox"/>
+			</td>  
 			<td><button id="clearBtn" type="button" class="button">清空</button></td>
 		</tr>
+				
 	   </table>
 	</div>
-</div>
-</form>
-<div class="operate">
-	<div class="om-panel-header">菜单管理列表</div>
-	<div class="icon">
-		<ul>
-    		<li><a href="#" onclick="showMenuAdd();"><span class="menu1"></span>添加</a></li>
-    		<li><a href="#" onclick="showEdit('/system/prg/menu/showEdit','menuId',600,220);"><span class="menu13"></span>修改</a></li>
-    		<li><a href="#" onclick="removeRow('menuId');"><span class="menu11"></span>删除</a></li>
-		</ul>
+	</form>
+	<div class="operate">
+		<div class="om-panel-header">菜单管理列表</div>
+		<div class="icon">
+			<ul>
+	    		<li><a href="#" onclick="showMenuAdd();"><span class="menu1"></span>添加</a></li>
+	    		<li><a href="#" onclick="showEdit('/system/prg/menu/showEdit','menuId',600,220);"><span class="menu13"></span>修改</a></li>
+	    		<li><a href="#" onclick="removeRow('menuId');"><span class="menu11"></span>删除</a></li>
+			</ul>
+		</div>
 	</div>
 </div>
+<table id="grid" data-options="fit:true,border:false"></table>
 
-<table id="grid"></table>
-</div>
 </body>
 <script type="text/javascript">
-$(function() {
-	 refleshTree=true,menuTree=true;
-	 var contentHeight = $(window).height() - $('#header').height() - $('#footer').height()-3;
-   	 $(".treeDiv").css("height",contentHeight+"px");
-   	 $(".treeDiv").omScrollbar({thick: 10});
-   	 $("#navtree").omTree({
-            dataSource:'tree',
-            onSelect: function(nodedata){
-           		 $("#menuId").val(nodedata.id);
-           		 $("#queryBtn").click();
-            }
-        });
-       $('#grid').omGrid({
-           dataSource:'list',
-           limit:'${pageRows}',
-           showIndex : false,
-           singleSelect : false,
-           colModel : [{header : '菜单名',name:'menuName',width:100,align:'center',sort:'clientSide'}, 
-                       {header : '菜单URL',name:'menuUrl',width:200,align:'center',sort:'clientSide'}, 
-                       {header : '菜单级别',name:'menuLevel',width:80,align:'center',sort:'clientSide'}, 
-                       {header : '排序',name:'menuOrder',width:60,align:'center',sort:'clientSide'}, 
-                       {header : '状态', name : 'menuStatus',width:60,align:'center',sort:'clientSide',renderer:function(v) {return JSON.parse('${statusMap}')[v]}}, 
-                       {header : '修改时间', name : 'updateTime',width:180,align:'center',sort:'clientSide'}]
-       });
-       resizeHeight();
-       $('#menuLevel').omNumberField({
-           allowDecimals : false,
-           allowNegative : false
-       });
-       $('#menuStatus').omCombo({
-           dataSource:JSON.parse('${statusCombo}'),
-       	   width:220,
-		   editable:false
-       });
+$(function() {	
+	 refleshTree=true
+     $('#grid').datagrid({   
+ 	    url:'list', 
+ 	    pageSize :10,
+ 		pageList : [10, 20, 30, 40, 50, 100, 200, 300, 400, 500, 1000 ],
+ 		striped : true,
+ 		rownumbers : true,
+ 		pagination : true,
+ 		toolbar : '#toolbar',
+ 	    columns : [[ {width : '50', field : 'ck',checkbox:true},
+ 	                 {width : '100',title : '菜单名',field : 'menuName'},
+ 	                 {width : '100',title : '菜单URL',field : 'menuUrl'},
+ 	                 {width : '100',title : '菜单级别',field : 'menuOrder'},
+ 	                 {width : '100',title : '排序',field : 'menuLevel'},
+ 					 {width : '100',title : '状态',field : 'menuStatus'},
+ 					 {width : '200',title : '修改时间',field : 'updateTime'}]
+ 	    		]
+ 	}); 
+    //加载下拉树
+    loadTree();   
 });
+function loadTree(){
+	 $('.panel.datagrid.easyui-fluid').css({position:'absolute',left:'200px'});  
+	 $('body').append('<div class="treeDiv"><ul id="navtree"></ul></div>');
+	 $('.panel-tool').css('margin-right','200px');
+	 $('.operate').css('margin-right','200px');
+	 $('#navtree').tree({   
+	    url:'tree',
+	    onClick: function(node){
+	    	$("#menuId").val(node.id);
+      		$("#queryBtn").click();
+		}
+
+	});  
+}
 
 function showMenuAdd(){
 	var menuPid = $("#menuId").val();
-	if(menuPid==''){
-		$.omMessageBox.alert({content:'请在左边节点树上选择父节点！' });
+	if(menuPid==''){		
+		$.messager.alert('提示:','请在左边节点树上选择父节点！'); 
 		return
 	}
 	$.post("getMenu", {"menuId":menuPid},
 	   function(msg){
-		if(msg.menuLevel==2){
-			$.omMessageBox.alert({content:'请不要选择第三级菜单!'});
+		if(msg.menuLevel==2){			
+			$.messager.alert('提示:','请不要选择第三级菜单！'); 
 		}else{
 			showAdd('/system/prg/menu/showAdd?menuPid='+menuPid,600,220);
 		}

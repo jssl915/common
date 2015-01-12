@@ -9,16 +9,15 @@ html,body{width:100%;height:100%;padding:0;margin:0;}
 .searchTable td input[type='text']:focus{border:1px solid #2966B1;padding-left:2px;}
 .searchTable select{border:1px solid #86A3C4;width:223px;height:22px}
 .searchTable select:focus{border:1px solid #2966B1;}
-.searchTable td input[type='date']{width:75px;}
+.searchTable td input[type='date']{width:95px;}
 .searchTable button{border:1px solid #1e7db9;border-radius:5px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;color:#fff;font-weight:bold;line-height:22px;overflow:hidden;position:relative;text-align:center;text-shadow:1px 1px 1px #333;width:80px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;background:-webkit-linear-gradient(top,#42a4e0,#2e88c0);background:-moz-linear-gradient(top,#42a4e0,#2e88c0);background:linear-gradient(top,#42a4e0,#2e88c0);margin-left:20px;}
 .searchTable button:hover{cursor:pointer;background:-webkit-linear-gradient(top,#70bfef,#4097ce);background:-moz-linear-gradient(top,#70bfef,#4097ce);background:linear-gradient(top,#70bfef,#4097ce);}
 .operate{font-size:12px;position:relative}
 .operate .om-panel-header{background: none repeat scroll 0 0 #e0ecff;padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:1px solid #95b8e7;}
 .datagrid-toolbar{paddiong:0}
 
-
 .dialogPage{height:100%;font-size:14px;}
-.dialogPage .om-panel-header{padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:1px solid #95b8e7;}
+.dialogPage .om-panel-header{background: none repeat scroll 0 0 #e0ecff;padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:0;}
 .editDiv{border:1px solid #86a3c4;background:#fff;}
 .editTable{margin:20px auto;text-align:center}
 .editTable td{height:30px;}
@@ -36,7 +35,7 @@ html,body{width:100%;height:100%;padding:0;margin:0;}
 .dialogPage button{border:1px solid #1e7db9;border-radius:5px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;color:#fff;font-weight:bold;line-height:22px;overflow:hidden;position:relative;text-align:center;text-shadow:1px 1px 1px #333;width:80px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;background:-webkit-linear-gradient(top,#42a4e0,#2e88c0);background:-moz-linear-gradient(top,#42a4e0,#2e88c0);background:linear-gradient(top,#42a4e0,#2e88c0);margin-left:20px;}
 .dialogPage button:hover{cursor:pointer;background:-webkit-linear-gradient(top,#70bfef,#4097ce);background:-moz-linear-gradient(top,#70bfef,#4097ce);background:linear-gradient(top,#70bfef,#4097ce);}
 .editBtn{text-align:center;margin:0 auto 20px;}
-.treeDiv{width:199px;border-width:1px;position:absolute;background:#fff;border:1px solid #86a3c4;}
+.treeDiv{width:199px;height:100%;position:absolute;background:#fff;border-right:1px solid #86a3c4;}
 .required{color:red}
 ol,ul,li{list-style:none;}
 .clearfix{overflow:hidden;zoom:1;}

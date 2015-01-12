@@ -48,6 +48,7 @@ public class UserController extends BaseController {
 				po.getCondition().put("realName", user.getRealName());
 				po.getCondition().put("createTimeStart",request.getParameter("createTimeStart"));
 				po.getCondition().put("createTimeEnd",request.getParameter("createTimeEnd"));
+				System.out.println(request.getParameter("createTimeStart")+" "+request.getParameter("createTimeEnd"));
 				po.getCondition().put("updateTimeStart",request.getParameter("updateTimeStart"));
 				po.getCondition().put("updateTimeEnd",request.getParameter("updateTimeEnd"));
 				List<SUser> modelList = sUserService.pageList(po);
