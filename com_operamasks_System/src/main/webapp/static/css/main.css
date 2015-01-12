@@ -14,8 +14,11 @@ ol,ul{list-style-type:none;list-style-position:outside;list-style-image:none;pad
 .aside .nav li.selected a{color:#3C3C3C;}
 .aside .nav li a{height:29px;line-height:29px;color:#076b9f;font-weight:bold;padding-left:20px;display:inline-block;}
 .aside .nav li a:hover{color:red;}
-.aside .nav li a.open{height:30px;line-height:30px;color:#1d75ce;padding-left:10px;font-weight:bolder;background-image:url('../images/zhankai.png');display:block;font-family:Georgia;font-size:14px;background-repeat:no-repeat;}
-.aside .nav li a.close{height:30px;line-height:30px;color:#1d75ce;padding-left:10px;font-weight:bolder;background-image:url('../images/shouqi.png');display:block;font-family:Georgia;font-size:14px;background-repeat:no-repeat;}
+.aside .nav li a.open{height:30px;line-height:30px;color:#1d75ce;padding-left:10px;font-weight:bolder;border-right: 1px solid #95b8e7;width:169px;background-image:url('../js/operamasks/2.0/css/default/images/panel/om-panel-header-bg-d.png');display:block;font-family:Georgia;font-size:14px;}
+.aside .nav li a.close{height:30px;line-height:30px;color:#1d75ce;padding-left:10px;font-weight:bolder;border-right: 1px solid #95b8e7;width:169px;background-image:url('../js/operamasks/2.0/css/default/images/panel/om-panel-header-bg-d.png');display:block;font-family:Georgia;font-size:14px;}
+.aside .nav li a.open .menu_icon_r{background:url('../images/-.png');width:9px;height:9px;margin:10px 7px 4px 0; float:right;}
+.aside .nav li a.close .menu_icon_r{background:url('../images/+.png');width:9px;height:9px;margin:10px 7px 4px 0; float:right;}
+ 
 .menu_icon{background:url('../images/icon.png') no-repeat -176px 0px;height:16px; width:16px; display:block; margin:8px 5px 4px 0; float:left;}
 .zi_menu_icon{background:url('../images/zimenu_icon.png') no-repeat 0 0px;; height:6px; width:9px; display:block; float:left;margin-top:12px;margin-right:10px} 
 .zi_menu_bg{background:url('../images/zimenu_bj.png') repeat-y;display:block;}

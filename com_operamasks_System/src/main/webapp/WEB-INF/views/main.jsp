@@ -16,7 +16,7 @@ $(function() {
 		panels: [{id: "north-panel",header:false,region: "north",height:'75px'}, 
 		         {id: "south-panel",header:false,region: "south"}, 
 		         {id: "center-panel",header:false,region: "center"}, 
-		         {id: "west-panel",header:true,region:"west",width:182,collapsible:true,
+		         {id: "west-panel",header:true,region:"west",width:180,collapsible:true,
 					title: "&nbsp;<img style='cursor: pointer;' src='"+up+"' onclick='change(1)'><img style='cursor:pointer;' src='"+down+"' onclick='change(0)'> "
 				}]
 	});
@@ -38,7 +38,7 @@ function loadWestTree(){
 			treeHtmlArray.push('<div class="aside">');
 			for(var i=0;i<oneMenus.length;i++){
 				var oneMenu = oneMenus[i];
-				treeHtmlArray.push('<ul class="nav"><li><a href="#" class="open"><span class="menu_icon"></span>'+oneMenu.text+'</a><ul class="zi_menu_bg" style="display: block;">');
+				treeHtmlArray.push('<ul class="nav"><li><a href="#" class="open"><span class="menu_icon"></span>'+oneMenu.text+'<span class="menu_icon_r"></span></a><ul class="zi_menu_bg" style="display: block;">');
 				var twoMenus = oneMenu.children;
 				if(twoMenus!=undefined){
 					for(var j=0;j<twoMenus.length;j++){
