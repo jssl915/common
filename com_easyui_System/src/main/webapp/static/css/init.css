@@ -2,7 +2,7 @@
 html,body{width:100%;height:100%;padding:0;margin:0;}
 .accordion .accordion-header-selected {background: none repeat scroll 0 0 #e0ecff;}
 .accordion .accordion-header-selected .panel-title {color: #15428b;}
-
+.searchTable{margin:5px 0;}
 .searchTable td{height:30px;}
 .searchTable td:nth-child(2n-1){text-align:right;width:80px;}
 .searchTable td input[type='text']{border:1px solid #86A3C4;width:218px;height:18px;padding-left:2px;}

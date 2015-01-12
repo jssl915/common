@@ -11,7 +11,7 @@
 <body>
 <div id="toolbar">
 <form id="list" action="list">
-<div id="p" class="easyui-panel" title="查询条件" data-options="collapsible:true"> 
+<div id="search" class="easyui-panel" title="查询条件" data-options="fit:true,collapsible:true,border:0"> 
   <table class="searchTable">
 	<tr>
 		<td>系统登录名：</td>
@@ -56,17 +56,6 @@ $(function() {
 					 {width : '150',title : '创建时间',field : 'createTime'}]
 	    		]
 	}); 
-	$('#p').panel({   
-	    onCollapse:function(){   
-	    	$('#grid').datagrid('resize');
-	    },
-	    onExpand:function(){
-	    	$('#grid').datagrid('resize');
-	    }
-	});
-	$(window).resize(function () {
-        $('#grid').datagrid('resize');
-    });   
 });
 </script>
 </html>
