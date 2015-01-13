@@ -20,7 +20,7 @@ ol,ul{list-style-type:none;list-style-position:outside;list-style-image:none;pad
 .aside .nav li a.close .menu_icon_r{background:url('../images/+.png');width:9px;height:9px;margin:10px 7px 4px 0; float:right;}
  
 .menu_icon{background:url('../images/icon.png') no-repeat -176px 0px;height:16px; width:16px; display:block; margin:8px 5px 4px 0; float:left;}
-.zi_menu_icon{background:url('../images/zimenu_icon.png') no-repeat 0 0px;; height:6px; width:9px; display:block; float:left;margin-top:12px;margin-right:10px} 
+.zi_menu_icon{background:url('../images/zimenu_icon.png') no-repeat 0 0px; height:6px; width:9px; display:block; float:left;margin-top:12px;margin-right:10px} 
 .zi_menu_bg{background:url('../images/zimenu_bj.png') repeat-y;display:block;}
 .menu_line{background:url('../images/menuline.png') no-repeat ;height:1px; width:167px; display:block;margin-left:5px;}
 .menu_foot{background:url('../images/menu_foot.png') no-repeat ;height:3px; width:180px; display:block;margin-top:2px}  
