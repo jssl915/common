@@ -12,7 +12,7 @@ html,body{width:100%;height:100%;padding:0;margin:0;}
 .searchTable td input[type='text']:focus{border:1px solid #2966B1;padding-left:2px;}
 .searchTable select{border:1px solid #86A3C4;width:223px;height:22px}
 .searchTable select:focus{border:1px solid #2966B1;}
-.searchTable td input[type='date']{width:75px;}
+.searchTable td input[type='date']{width:76px;}
 .searchTable button{border:1px solid #1e7db9;border-radius:5px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;color:#fff;font-weight:bold;line-height:22px;overflow:hidden;position:relative;text-align:center;text-shadow:1px 1px 1px #333;width:80px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;background:-webkit-linear-gradient(top,#42a4e0,#2e88c0);background:-moz-linear-gradient(top,#42a4e0,#2e88c0);background:linear-gradient(top,#42a4e0,#2e88c0);margin-left:20px;}
 .searchTable button:hover{cursor:pointer;background:-webkit-linear-gradient(top,#70bfef,#4097ce);background:-moz-linear-gradient(top,#70bfef,#4097ce);background:linear-gradient(top,#70bfef,#4097ce);}
 .operate{font-size:12px;position:relative}

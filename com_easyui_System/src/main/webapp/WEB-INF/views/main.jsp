@@ -111,6 +111,14 @@ function change(status) {
 	  	aa.addClass('close');
  	}
  }
+ 
+function changePasWord(){
+	$.dialog.open(ctx+'/index/password', {
+		lock: true,
+		width:600,
+		height:220
+	});
+ }
 </script>
 </body>
 </html>
