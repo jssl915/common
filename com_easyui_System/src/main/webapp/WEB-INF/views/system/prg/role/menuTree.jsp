@@ -8,7 +8,7 @@
 <body>
 <div class="dialogPage">
 	<div class="om-panel-header">绑定菜单</div>
-	<div class="treeDiv" style="width:218px;">
+	<div class="treeDiv" style="width:218px;border:1px solid #86a3c4;">
 		<ul id="navtree"></ul>
 	</div>
 	<form id="form1" action="bindMenu">
@@ -22,23 +22,23 @@
 </div>
 <script>
 $(function(){
-  	$(".treeDiv").css("height","420px");
-  	$(".treeDiv").omScrollbar({thick: 10});
-    $("#navtree").omTree({
-    	dataSource :${resourceTree},
-        showCheckbox: true
-    });
-    var sRoleMenuJson = ${SRoleMenuJson};
-    for(var i=0;i<sRoleMenuJson.length;i++){
-    	node=$('#navtree').omTree('findNode',"id",sRoleMenuJson[i].menuId);
-    	var childrens=node.children;
-       	if(!childrens||childrens.length==0){
-          	$('#navtree').omTree('check',node);
-        }
-    }
+  	$(".treeDiv").css("height","420px");  	
+    $('#navtree').tree({   
+	    url:ctx+'/system/prg/menu/tree',
+	    checkbox:true,
+	    onLoadSuccess:function(){
+	    	var sRoleMenuJson = ${SRoleMenuJson};
+	    	for(var i=0;i<sRoleMenuJson.length;i++){
+	    		var n = $("#navtree").tree('find',sRoleMenuJson[i].menuId);
+	            if(n){
+	                $("#navtree").tree('check',n.target);
+	            }
+	    	}
+	    }
+	}); 
 });
 function doSubmit(){
-	var nodes=$('#navtree').omTree('getChecked',true,true);
+	var nodes = $('#navtree').tree('getChecked');
 	var menuIds=[];
     for(var i=0;i <nodes.length; i++){
     	menuIds.push(nodes[i].id);

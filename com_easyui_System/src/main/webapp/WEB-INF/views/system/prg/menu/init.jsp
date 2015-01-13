@@ -79,7 +79,6 @@ function loadTree(){
 	    	$("#menuId").val(node.id);
       		$("#queryBtn").click();
 		}
-
 	});  
 }
 

@@ -14,8 +14,8 @@
 			<td>角色名称：</td>
 			<td><input type="text" id="roleName" name="roleName"></td>
 			<td>修改时间：</td>
-			<td><input id="updateTimeStart" name="updateTimeStart"  type="date" />
-			至 <input id="updateTimeEnd" name="updateTimeEnd"  type="date"/></td>
+			<td><input id="updateTimeStart" name="updateTimeStart" type="date" class="easyui-datebox"></input>
+				至 <input id="updateTimeEnd" name="updateTimeEnd" type="date" class="easyui-datebox"/>
 			<td><button id="queryBtn" type="button" class="button">查询</button></td>
 			<td><button id="clearBtn" type="button" class="button">清空</button></td>
 		</tr>
