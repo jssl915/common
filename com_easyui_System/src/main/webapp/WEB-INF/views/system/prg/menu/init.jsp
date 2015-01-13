@@ -61,7 +61,7 @@ $(function() {
  	                 {width : '100',title : '菜单URL',field : 'menuUrl'},
  	                 {width : '100',title : '菜单级别',field : 'menuOrder'},
  	                 {width : '100',title : '排序',field : 'menuLevel'},
- 					 {width : '100',title : '状态',field : 'menuStatus'},
+ 					 {width : '100',title : '状态',field : 'menuStatus',formatter:function(v,r){return JSON.parse('${statusMap}')[v]}},
  					 {width : '200',title : '修改时间',field : 'updateTime'}]
  	    		]
  	}); 

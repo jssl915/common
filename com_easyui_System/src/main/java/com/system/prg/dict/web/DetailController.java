@@ -35,7 +35,9 @@ public class DetailController extends BaseController {
 	public String init(HttpServletRequest request){
 		Map<String,String>statusMap = sDictService.getDetailValueMap("状态");
 		request.setAttribute("statusMap", AjaxUtils.toJson(statusMap));
-		return "system/prg/Detail/init";
+		String dictId = request.getParameter("dictId");
+		request.setAttribute("dictId", dictId);
+		return "system/prg/detail/init";
 	}
 	
 	@RequestMapping(value = "list")

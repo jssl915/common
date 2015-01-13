@@ -52,7 +52,7 @@ $(function() {
 	    columns : [[ {width : '50', field : 'ck',checkbox:true},
 	                 {width : '150',title : '系统登录名',field : 'userName'},
 	                 {width : '150',title : '真实姓名',field : 'realName'},
-	                 {width : '100',title : '状态',field : 'userStatus'},
+	                 {width : '100',title : '状态',field : 'userStatus',formatter:function(v,r){return JSON.parse('${statusMap}')[v]}},
 	                 {width : '150',title : '排序',field : 'userOrder'},
 					 {width : '150',title : '创建时间',field : 'createTime'}]
 	    		]
