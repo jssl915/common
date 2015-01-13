@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 </head>
 <body>
 <form id="form1" action="insert">
@@ -26,7 +25,7 @@
 		</tr>
 	   </table>
 	   <div class="editBtn">
-			<button id="aaa" type="submit" class="button">&nbsp;保存&nbsp;</button>
+			<button id ="btnSubmit" type="button" class="button">&nbsp;保存&nbsp;</button>
 			<button type="button" class="button" onclick="javascript:art.dialog.close();">&nbsp;关闭&nbsp;</button>
 		</div>
 	</div>
@@ -35,6 +34,13 @@
 </body>
 <script type="text/javascript">
 $(function(){
-})
+	$('#userName').validatebox({required:true,minLength:2,maxLength:6}); 
+	$('#realName').validatebox({required:true}); 
+	$('#btnSubmit').click(function(){
+		if($('#form1').form('validate')){
+			$('#form1').submit();
+		}
+	})
+});
 </script>
 </html>

@@ -32,7 +32,7 @@
 		</tr>
 	   </table>
 	   <div class="editBtn">
-			<button type="submit" class="button" >&nbsp;保存&nbsp;</button>
+			<button id ="btnSubmit" type="button" class="button" >&nbsp;保存&nbsp;</button>
 			<button type="button" class="button" onclick="javascript:art.dialog.close();">&nbsp;关闭&nbsp;</button>
 		</div>
 	</div>
@@ -41,8 +41,13 @@
 </body>
 <script type="text/javascript">
 $(function(){
-	
-})
-
+	$('#userName').validatebox({required: true}); 
+	$('#realName').validatebox({required: true}); 
+	$('#btnSubmit').click(function(){
+		if($('#form1').form('validate')){
+			$('#form1').submit();
+		}
+	})
+});
 </script>
 </html>
