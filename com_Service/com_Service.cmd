@@ -1,4 +1,4 @@
-f:
-cd F:\myProject\.git\my\com_Service
+c:
+cd C:\Users\lj\Desktop\develop\mySiteWeb\common\com_Service
 mvn clean install 
 
