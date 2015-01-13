@@ -37,6 +37,7 @@ body{background:#2B82D2}
 	background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
 	background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
 	background: linear-gradient(top,#42a4e0,#2e88c0);
+	background:#42a4e0;
 	margin-left:20px; 
 }
 .center_center button:hover{
@@ -44,4 +45,5 @@ body{background:#2B82D2}
 	background: -webkit-linear-gradient(top,#70bfef,#4097ce);
 	background: -moz-linear-gradient(top,#70bfef,#4097ce);
 	background: linear-gradient(top,#70bfef,#4097ce);
+	background:#70bfef
 }
