@@ -9,6 +9,7 @@
 
 	<!-- Enable annotation component scanning and autowiring of web package -->
 	<context:component-scan base-package="com.system" />
+	<context:component-scan base-package="com.cy" />
 	
 	<!--<bean id="logaspectbean" class="com.cykj.system.log.web.LogAspect" />  -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />

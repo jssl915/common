@@ -10,6 +10,7 @@
 						 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
 					     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 	<context:component-scan base-package="com.system.**.service" />
+	<context:component-scan base-package="com.cy.**.service" />
 	
 	<!-- 使用annotation定义事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
@@ -27,7 +28,7 @@
 	</bean> 
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.system.**.mapper" />
+		<property name="basePackage" value="com.**.mapper" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 
