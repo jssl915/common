@@ -1,6 +1,7 @@
 var photowall = function(obj){
 	//初始化
 	var oDiv = document.getElementById(obj.id);
+	oDiv.innerHTML="";
 	var oUl = document.createElement('ul');
 	var iWidth = obj.width||160;
 	var iHight = obj.height||120;
