@@ -36,7 +36,7 @@
 		</tr>
 	   </table>
 	   <div class="editBtn">
-			<button type="submit" class="button">&nbsp;保存&nbsp;</button>
+			<button id ="btnSubmit" type="button" class="button">&nbsp;保存&nbsp;</button>
 			<button type="button" class="button" onclick="javascript:art.dialog.close();">&nbsp;关闭&nbsp;</button>
 		</div>
 	</div>
@@ -45,20 +45,12 @@
 </body>
 <script type="text/javascript">
 $(function(){
-    $('#menuOrder').omNumberField({
-        allowDecimals : false,
-        allowNegative : false
-    });
-   	$("#form1").validate({
-   	    rules:{
-   	    	menuName:{required:true,maxlength:32,remote:{
-	    		url:"checkMenuName",
-    			data:{menuName:function(){return $("#menuName").val()},menuId:'${sMenu.menuId}'}
-        	}}
-   	    },
-   	    errorPlacement:function(error, element) {errorPlacement(error,element);}, 
-   	    showErrors: function(errorMap, errorList){showErrors(errorMap,errorList,this);}
-   	});	
+	$('#menuName').validatebox({required:true}); 
+	$('#btnSubmit').click(function(){
+		if($('#form1').form('validate')){
+			$('#form1').submit();
+		}
+	})
 });
 </script>
 </html>

@@ -26,7 +26,7 @@
 		</tr>
 	   </table>
 	   <div class="editBtn">
-			<button type="button" onclick="save()" class="button">&nbsp;保存&nbsp;</button>
+			<button id ="btnSubmit" type="button" class="button">&nbsp;保存&nbsp;</button>
 			<button type="button" onclick="javascript:art.dialog.close();" class="button">&nbsp;关闭&nbsp;</button>
 		</div>
 	</div>
@@ -35,27 +35,21 @@
 </body>
 <script type="text/javascript">
 $(function(){
-   	$("#form1").validate({
-   	    rules:{
-   	    	detailName:{required:true,maxlength:32}
-   	    },
-   	    errorPlacement:function(error, element) {errorPlacement(error,element);}, 
-   	    showErrors: function(errorMap, errorList){showErrors(errorMap,errorList,this);}
-   	});	
+	$('#detailName').validatebox({required:true}); 
+	$('#btnSubmit').click(function(){
+		if($('#form1').form('validate')){
+			 $.ajax({
+					url: 'insert',
+					data: $('#form1').serialize(),
+					type: "POST",
+					success: function(data)	{
+						var win=art.dialog.open.origin; 
+						win.refreshGrid('grid');
+						art.dialog.close();
+					}
+			  });
+		}
+	})
 });
-function save(){
-	 if($("#form1").validate().form()){
-		 $.ajax({
-				url: 'insert',
-				data: $('#form1').serialize(),
-				type: "POST",
-				success: function(data)	{
-					var win=art.dialog.open.origin; 
-					win.refreshGrid('detailGrid');
-					art.dialog.close();
-				}
-		  });
-	 }
-}
 </script>
 </html>

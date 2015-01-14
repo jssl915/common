@@ -32,7 +32,7 @@
 		</tr>
 	   </table>
 	   <div class="editBtn">
-			<button type="submit" class="button">&nbsp;保存&nbsp;</button>
+			<button id ="btnSubmit" type="button" class="button">&nbsp;保存&nbsp;</button>
 			<button type="button" class="button" onclick="javascript:art.dialog.close();">&nbsp;关闭&nbsp;</button>
 		</div>
 	</div>
@@ -41,16 +41,12 @@
 </body>
 <script type="text/javascript">
 $(function(){
-   	$("#form1").validate({
-   	    rules:{
-   	    	dictName:{required:true,maxlength:32,remote:{
-	    		url:"checkDictName",
-    			data:{dictName:function(){return $("#dictName").val()},dictId:'${sDict.dictId}'}
-        	}}
-   	    },
-   	    errorPlacement:function(error, element) {errorPlacement(error,element);}, 
-   	    showErrors: function(errorMap, errorList){showErrors(errorMap,errorList,this);}
-   	});	
+	$('#dictName').validatebox({required:true}); 
+	$('#btnSubmit').click(function(){
+		if($('#form1').form('validate')){
+			$('#form1').submit();
+		}
+	})
 });
 </script>
 </html>
