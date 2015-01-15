@@ -3,7 +3,6 @@ package com.system.prg.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.omg.CORBA.SystemException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
