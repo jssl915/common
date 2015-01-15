@@ -1,4 +1,4 @@
-package com.cy.img.chart;
+package com.cy.chart;
 
 import javax.servlet.http.HttpServletRequest;
 
