@@ -64,7 +64,7 @@ public class LogController extends BaseController {
 	}
 	
 	@RequestMapping(value = "exportExcel")
-	public void listExcel(HttpServletRequest request, HttpServletResponse response) throws BusinessException {
+	public void listExcel(HttpServletRequest request, HttpServletResponse response) {
 	    HSSFWorkbook workbook = new HSSFWorkbook();// 产生工作簿对象
 		po.setPageSize(5000);
 		List<SLog>list=sLogService.pageList(po); 

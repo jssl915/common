@@ -1,30 +1,13 @@
 package com.system.prg.role.service;
 
 import java.util.List;
-import java.util.Map;
 
 import com.system.prg.role.entity.SRole;
 import com.system.prg.role.entity.SRoleMenu;
 import com.system.prg.role.entity.SUserRole;
-import com.system.prg.util.PageObject;
+import com.system.prg.util.BaseService;
 
-public interface SRoleService {
-
-	public SRole insert(SRole record);
-
-	public void deleteByCondition(Map<String, Object> condition);
-
-	public void updateByCondition(SRole record);
-	
-	public List<SRole> selectByCondition(Map<String, Object> condititon);
-	
-	public Integer countByCondition(Map<String, Object> condititon);
-
-	public List<SRole> pageList(PageObject po);
-
-	public void deleteByPrimaryKey(Long roleId);
-
-	public SRole findByPrimaryKey(Long roleId);
+public interface SRoleService extends BaseService<SRole> {
 	
 	public List<SRoleMenu> selectRoleMenuByCondition(Long roleId);
 	

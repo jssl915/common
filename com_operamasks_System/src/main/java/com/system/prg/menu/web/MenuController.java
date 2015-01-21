@@ -45,7 +45,7 @@ public class MenuController extends BaseController {
 	}
 	
 	@RequestMapping(value = "list")
-	public void list(HttpServletRequest request, HttpServletResponse response,@ModelAttribute SMenu sMenu) throws BusinessException{
+	public void list(HttpServletRequest request, HttpServletResponse response,@ModelAttribute SMenu sMenu){
 		log.debug("method: list() ");
 		try {
 			po = getPageObject(request,"MENU_ORDER asc");

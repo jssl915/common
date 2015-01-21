@@ -30,16 +30,12 @@ public class IndexController extends BaseController {
 		String menuTree = sMenuService.listUserTree(sUser.getUserId(),false);
 		writeToPage(menuTree, response);
 	}
-	@RequestMapping(value = "right")
-	public String right() throws BusinessException {
-		return "right";
-	}
 	@RequestMapping(value = "password")
-	public String password() throws BusinessException{
+	public String password(){
 		return "password";
 	}
 	@RequestMapping(value = "checkUserPwd")
-	public void checkUserPwd(HttpServletRequest request, HttpServletResponse response) throws BusinessException{
+	public void checkUserPwd(HttpServletRequest request, HttpServletResponse response){
 		SUser sUser = (SUser)request.getSession().getAttribute("user");
 		String password = MD5Encoder.encode(request.getParameter("password"));
 		if(password.equals(sUser.getUserPwd())){
@@ -49,7 +45,7 @@ public class IndexController extends BaseController {
 		}
 	}
 	@RequestMapping(value = "update")
-	public String update(HttpServletRequest request) throws BusinessException{
+	public String update(HttpServletRequest request){
 		String userPwd = request.getParameter("newPwd");
 		SUser sUser = (SUser)request.getSession().getAttribute("user");
 		sUser.setUserPwd(userPwd);

@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 import com.system.prg.log.entity.SLog;
+import com.system.prg.menu.entity.SMenu;
+import com.system.prg.util.BaseService;
 import com.system.prg.util.PageObject;
 
-public interface SLogService {
-
+public interface SLogService extends BaseService<SLog>{
+/*
 	public SLog insert(SLog record);
 
 	public void deleteByCondition(Map<String, Object> condition);
@@ -22,6 +24,6 @@ public interface SLogService {
 
 	public void deleteByPrimaryKey(Long logId);
 
-	public SLog findByPrimaryKey(Long logId);
+	public SLog findByPrimaryKey(Long logId);*/
 
 }

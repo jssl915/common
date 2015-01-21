@@ -70,7 +70,7 @@ function showTip() {
 		showType:'slide'
 	}); 
 }
-
+ 
 function showAdd(url,w,h){
 	$.dialog.open(ctx+url, {
 		lock: true,

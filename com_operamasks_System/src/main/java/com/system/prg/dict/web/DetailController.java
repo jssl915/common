@@ -39,7 +39,7 @@ public class DetailController extends BaseController {
 	}
 	
 	@RequestMapping(value = "list")
-	public void list(HttpServletRequest request, HttpServletResponse response,@ModelAttribute SDetail sDetail) throws BusinessException{
+	public void list(HttpServletRequest request, HttpServletResponse response,@ModelAttribute SDetail sDetail){
 		log.debug("method: list() ");
 		try {
 			po = getPageObject(request,"UPDATE_TIME desc");

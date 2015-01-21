@@ -38,6 +38,7 @@
 		<property name="filterChainDefinitions">
 			<value>
 				/system/login = anon
+				/cy/img/uploadDo = anon
 				/static/** = anon
 				/** = authc
 		    </value>

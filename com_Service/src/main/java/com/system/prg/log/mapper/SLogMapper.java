@@ -1,15 +1,10 @@
 package com.system.prg.log.mapper;
 
-import java.util.List;
-import java.util.Map;
-import org.apache.ibatis.annotations.Param;
-
-import org.apache.ibatis.session.RowBounds;
-
 import com.system.prg.log.entity.SLog;
+import com.system.prg.util.BaseMapper;
 
-public interface SLogMapper {
-
+public interface SLogMapper extends BaseMapper<SLog>{
+/*
 	public void insert(SLog  record) ;
 
 	public int deleteByCondition( Map<String,Object> condition) ;
@@ -24,6 +19,6 @@ public interface SLogMapper {
 
 	public int deleteByPrimaryKey(Long  logId);
 
-	public SLog findByPrimaryKey(Long  logId);
+	public SLog findByPrimaryKey(Long  logId);*/
 
 }

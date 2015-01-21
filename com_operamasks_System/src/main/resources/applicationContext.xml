@@ -21,6 +21,7 @@
 
 	<context:annotation-config />
 	<context:component-scan base-package="com.system" />
+	<context:component-scan base-package="com.cy" />
 	 
 	<util:properties id="sysProperties" location="classpath:/sys.properties" />
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">

@@ -34,7 +34,7 @@
 </body>
 <script type="text/javascript">
 $(function(){
-	$('#userName').validatebox({required:true,minLength:2,maxLength:6}); 
+	$('#userName').validatebox({required:true}); 
 	$('#realName').validatebox({required:true}); 
 	$('#btnSubmit').click(function(){
 		if($('#form1').form('validate')){

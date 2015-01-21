@@ -35,7 +35,7 @@ public class UserController extends BaseController {
 	@RequestMapping(value = "init")
 	public String init(HttpServletRequest request){
 		request.setAttribute("statusMap", AjaxUtils.toJson(sDictService.getDetailValueMap("状态")));
-		return "system/prg/user/init"; 
+		return "system/prg/user/init";
 	}
 	
 	@RequestMapping(value = "list")
