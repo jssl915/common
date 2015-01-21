@@ -1,10 +1,8 @@
 package com.system.prg.dict.service;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,20 +10,23 @@ import org.springframework.transaction.annotation.Transactional;
 import com.system.prg.dict.entity.SDict;
 import com.system.prg.dict.mapper.SDetailMapper;
 import com.system.prg.dict.mapper.SDictMapper;
+import com.system.prg.util.BaseServiceImpl;
 import com.system.prg.util.BusinessException;
 import com.system.prg.util.DateUtils;
-import com.system.prg.util.PageObject;
 import com.system.prg.util.SystemCache;
 
 @Service
 @Transactional(rollbackFor = BusinessException.class)
-public class SDictServiceImpl implements SDictService {
+public class SDictServiceImpl extends BaseServiceImpl<SDict> implements SDictService {
 
 	@Autowired
 	SDictMapper mapper;
 	@Autowired
 	SDetailMapper sDetailMapper;
-
+	@Autowired
+	public void setMapper(SDictMapper mapper) {	
+		super.setMapper(mapper);//对base里的mapper进行动态注入
+	}
 	@Override
 	public SDict insert(SDict record) {
 		record.setDictStatus(1l);
@@ -50,33 +51,12 @@ public class SDictServiceImpl implements SDictService {
 	}
 
 	@Override
-	public Integer countByCondition(Map<String, Object> condititon) {
-		return mapper.countByCondition(condititon);
-	}
-
-	@Override
-	public List<SDict> selectByCondition(Map<String, Object> condititon) {
-		return mapper.selectByCondition(condititon);
-	}
-	
-	@Override
-	public List<SDict> pageList(PageObject po) {
-		RowBounds rowBounds = new  RowBounds(po.getStart(),po.getPageSize()) ;
-		return mapper.selectByCondition(po.getCondition(),rowBounds);
-	}
-
-	@Override
 	public void deleteByPrimaryKey(Long dictId) {
 		Map<String, Object> condititon = new HashMap<String, Object>();
 		condititon.put("dictId", dictId);
 		sDetailMapper.deleteByCondition(condititon);
 		mapper.deleteByPrimaryKey(dictId);
 		SystemCache.reCacheDict();
-	}
-
-	@Override
-	public SDict findByPrimaryKey(Long dictId) {
-		return mapper.findByPrimaryKey(dictId);
 	}
 	
 	@Override

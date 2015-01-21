@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,23 +12,27 @@ import org.springframework.transaction.annotation.Transactional;
 import com.system.prg.menu.entity.SMenu;
 import com.system.prg.menu.mapper.SMenuMapper;
 import com.system.prg.util.AjaxUtils;
+import com.system.prg.util.BaseServiceImpl;
 import com.system.prg.util.BusinessException;
 import com.system.prg.util.DateUtils;
-import com.system.prg.util.PageObject;
 
 @Service
 @Transactional(rollbackFor=BusinessException.class)
-public class SMenuServiceImpl implements SMenuService {
+public class SMenuServiceImpl extends BaseServiceImpl<SMenu> implements SMenuService {
     
 	@Autowired
 	SMenuMapper mapper;
-	
+	@Autowired
+	public void setMapper(SMenuMapper mapper) {	
+		super.setMapper(mapper);//对base里的mapper进行动态注入
+	}
 	@Override
-	public void insert(SMenu record){
+	public SMenu insert(SMenu record){
 		record.setMenuStatus(1l);
 		record.setCreateTime(DateUtils.getDateString("yyyy-MM-dd HH:mm:ss"));
 		record.setUpdateTime(DateUtils.getDateString("yyyy-MM-dd HH:mm:ss"));
 		mapper.insert(record);
+		return record;
 	}
 	@Override
 	public void deleteByCondition(Long menuId){
@@ -41,29 +44,6 @@ public class SMenuServiceImpl implements SMenuService {
 	public void updateByCondition(SMenu record){
 		record.setUpdateTime(DateUtils.getDateString("yyyy-MM-dd HH:mm:ss"));
 		mapper.updateByCondition(record);
-	}
-	@Override
-	public Integer countByCondition(Map<String, Object> condititon){
-		return mapper.countByCondition(condititon);
-	}
-	@Override
-	public List<SMenu> selectByCondition(Map<String, Object> condititon){
-		return mapper.selectByCondition(condititon);
-	}
-	
-	@Override
-	public List<SMenu> pageList(PageObject po) {
-		RowBounds rowBounds = new  RowBounds(po.getStart(),po.getPageSize()) ;
-		return mapper.selectByCondition(po.getCondition(),rowBounds);
-	}
-	
-	@Override
-	public void deleteByPrimaryKey(Long menuId){
-		mapper.deleteByPrimaryKey(menuId);
-	}
-	@Override
-	public SMenu findByPrimaryKey(Long menuId){
-		return mapper.findByPrimaryKey(menuId);
 	}
 	
 	@Override
