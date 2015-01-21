@@ -188,14 +188,18 @@
 			<version>3.1</version>
 		</dependency>
 
-		<dependency>
+	<!-- <dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.3</version>
 			<scope>system</scope> 
 			<systemPath>${project.basedir}/lib/ojdbc6-11.2.0.3.jar</systemPath>
-		</dependency>
-		
+		</dependency> -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.1.0</version> 
+		</dependency> 
 		<!--jackson1.9.3 -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
