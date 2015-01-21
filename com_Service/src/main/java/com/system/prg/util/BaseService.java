@@ -6,7 +6,7 @@ import java.util.Map;
 
 public abstract interface BaseService<T>{
 	
-	public abstract Object insert(T paramT);
+	public abstract T insert(T paramT);
 	
 	public void deleteByCondition(Map<String, Object> condition);
 	

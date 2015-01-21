@@ -15,7 +15,7 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 	}
 	
 	@Override
-	public Object insert(T obj) {
+	public T insert(T obj) {
 		this.mapper.insert(obj);
 		return obj;
 	}
