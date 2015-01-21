@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.system.prg.menu.mapper.SMenuMapper" >
+	<resultMap id="BaseResultMap" type="com.system.prg.menu.entity.SMenu" >
+		<id column="MENU_ID" property="menuId" jdbcType="DECIMAL" />
+		<result column="MENU_NAME" property="menuName" jdbcType="NVARCHAR" />
+		<result column="MENU_DESC" property="menuDesc" jdbcType="NVARCHAR" />
+		<result column="MENU_URL" property="menuUrl" jdbcType="NVARCHAR" />
+		<result column="MENU_PID" property="menuPid" jdbcType="DECIMAL" />
+		<result column="MENU_TYPE" property="menuType" jdbcType="DECIMAL" />
+		<result column="MENU_STATUS" property="menuStatus" jdbcType="DECIMAL" />
+		<result column="MENU_LEVEL" property="menuLevel" jdbcType="DECIMAL" />
+		<result column="MENU_ICON" property="menuIcon" jdbcType="NVARCHAR" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="NVARCHAR" />
+		<result column="UPDATE_TIME" property="updateTime" jdbcType="NVARCHAR" />
+		<result column="MENU_ORDER" property="menuOrder" jdbcType="DECIMAL" />
+	</resultMap>
+	<sql id="Example_Where_Clause" >
+		<where>
+			<if test="nodMenuId != null and nodMenuId !=''">
+				  AND MENU_ID != #{nodMenuId}
+			</if>
+			<if  test="pMenuId != null and pMenuId !=''">
+				  AND MENU_ID in (select menu_id from T_S_MENU start with menu_id=#{pMenuId} connect by menu_pid=PRIOR menu_id)
+			</if>
+			<if test="menuId != null and menuId !=''">
+				  AND MENU_ID = #{menuId}
+			</if>
+			<if test="menuName != null and menuName !=''">
+				  AND MENU_NAME = #{menuName}
+			</if>
+			<if test="menuNameLike != null and menuNameLike !=''">
+				  AND MENU_NAME like '%${menuNameLike}%'
+			</if>
+			<if test="menuDesc != null and menuDesc !=''">
+				  AND MENU_DESC = #{menuDesc}
+			</if>
+			<if test="menuUrl != null and menuUrl !=''">
+				  AND MENU_URL = #{menuUrl}
+			</if>
+			<if test="menuPid != null and menuPid !=''">
+				  AND MENU_PID = #{menuPid}
+			</if>
+			<if test="menuType != null and menuType !=''">
+				  AND MENU_TYPE = #{menuType}
+			</if>
+			<if test="menuStatus != null and menuStatus !=''">
+				  AND MENU_STATUS = #{menuStatus}
+			</if>
+			<if test="menuLevel != null and menuLevel !=''">
+				  AND MENU_LEVEL = #{menuLevel}
+			</if>
+			<if test="menuIcon != null and menuIcon !=''">
+				  AND MENU_ICON = #{menuIcon}
+			</if>
+		 	<if test="updateTimeStart != null and updateTimeStart !=''">
+				AND <![CDATA[update_time >= #{updateTimeStart}]]>
+			</if>
+			<if test="updateTimeEnd != null and updateTimeEnd !=''">
+				AND  <![CDATA[update_time <= #{updateTimeEnd}]]> 
+			</if> 
+			<if test="menuOrder != null and menuOrder !=''">
+				  AND MENU_ORDER = #{menuOrder}
+			</if>
+		</where>
+	</sql>
+	<insert id="insert"  parameterType="com.system.prg.menu.entity.SMenu" >
+	  	<selectKey keyProperty="menuId" order="BEFORE" statementType="PREPARED" resultType="java.lang.Long">
+			SELECT SEQ_S_MENU_ID.NEXTVAL FROM DUAL
+		</selectKey>
+		insert into T_S_MENU(MENU_ID,MENU_NAME,MENU_DESC,MENU_URL,
+ 			 MENU_PID,MENU_TYPE,MENU_STATUS,
+ 			 MENU_LEVEL,MENU_ICON,CREATE_TIME,
+ 			 UPDATE_TIME, MENU_ORDER) 
+ 		 values( #{menuId},#{menuName,jdbcType=NVARCHAR},#{menuDesc,jdbcType=NVARCHAR},#{menuUrl,jdbcType=NVARCHAR},
+ 			 #{menuPid,jdbcType=DECIMAL},#{menuType,jdbcType=DECIMAL},#{menuStatus,jdbcType=DECIMAL},
+ 			 #{menuLevel,jdbcType=DECIMAL},#{menuIcon,jdbcType=NVARCHAR},#{createTime,jdbcType=NVARCHAR},
+ 			 #{updateTime,jdbcType=NVARCHAR}, #{menuOrder,jdbcType=DECIMAL}) 
+ 	</insert> 
+	<delete id="deleteByCondition"  parameterType="java.util.Map" >
+		 delete from  T_S_MENU
+		 <include refid="Example_Where_Clause" />
+	</delete> 
+	<update id="updateByCondition"  parameterType="com.system.prg.menu.entity.SMenu"  >
+		 update T_S_MENU
+			<trim prefix="SET" suffixOverrides="," > 
+				<if  test="menuId != null and menuId !=''">
+					MENU_ID = #{menuId} , 
+				</if>
+				<if  test="menuName != null and menuName !=''">
+					MENU_NAME = #{menuName} , 
+				</if>
+				<if  test="menuDesc != null and menuDesc !=''">
+					MENU_DESC = #{menuDesc} , 
+				</if>
+				<if  test="menuUrl != null and menuUrl !=''">
+					MENU_URL = #{menuUrl} , 
+				</if>
+				<if  test="menuPid != null and menuPid !=''">
+					MENU_PID = #{menuPid} , 
+				</if>
+				<if  test="menuType != null and menuType !=''">
+					MENU_TYPE = #{menuType} , 
+				</if>
+				<if  test="menuStatus != null and menuStatus !=''">
+					MENU_STATUS = #{menuStatus} , 
+				</if>
+				<if  test="menuLevel != null and menuLevel !=''">
+					MENU_LEVEL = #{menuLevel} , 
+				</if>
+				<if  test="menuIcon != null and menuIcon !=''">
+					MENU_ICON = #{menuIcon} , 
+				</if>
+				<if  test="createTime != null and createTime !=''">
+					CREATE_TIME = #{createTime} , 
+				</if>
+				<if  test="updateTime != null and updateTime !=''">
+					UPDATE_TIME = #{updateTime} , 
+				</if>
+				<if  test="menuOrder != null and menuOrder !=''">
+					MENU_ORDER = #{menuOrder} , 
+				</if>
+			</trim>
+			 where MENU_ID = #{menuId}
+	</update> 
+	<select id="countByCondition"  parameterType="java.util.Map"  resultType="java.lang.Integer">
+		 select  count(1)  from T_S_MENU
+		 <include refid="Example_Where_Clause" />
+	</select> 
+	<select id="selectByCondition"  parameterType="java.util.Map"  resultMap="BaseResultMap">
+		 select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, 
+ 			 MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, 
+ 			   MENU_ORDER
+		  from T_S_MENU
+		 <include refid="Example_Where_Clause" />
+		 <if  test="orderByClause != null and orderByClause !=''">
+			 order by ${orderByClause}
+		 </if>
+	</select> 
+	<delete id="deleteByPrimaryKey"  >
+		 delete from  T_S_MENU
+			  where MENU_ID = #{menuId}
+	</delete> 
+	<select id="findByPrimaryKey" parameterType="java.util.Map" resultMap="BaseResultMap">
+		 select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, 
+ 			 MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, 
+ 			   MENU_ORDER
+		   from T_S_MENU
+			  where MENU_ID = #{menuId}
+	</select> 
+	<select id="getAllMenus" parameterType="Long" resultMap="BaseResultMap">
+		 select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, 
+ 			 MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, 
+ 			   MENU_ORDER
+		  from T_S_MENU
+		  where menu_status=1 and (menu_id = 0 or menu_id in (select  t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id=#{userId})
+		  or menu_id in
+         (select menu_id from T_S_MENU where menu_id in
+	         (select menu_pid
+	            from T_S_MENU
+	           where menu_id in (select t2.menu_id
+	                               from T_S_USER_ROLE t1
+	                               left join T_S_ROLE_MENU t2
+	                                 on t1.role_id = t2.role_id
+	                              where user_id = #{userId}))) )
+         order by MENU_ORDER asc
+	</select> 
+</mapper>

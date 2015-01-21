@@ -1,0 +1,49 @@
+@charset "utf-8";
+*{padding:0; margin:0;}
+body{background:#2B82D2}
+.login_content{position:fixed;left:0;right:0;top:0;bottom:0;margin:auto;width:651px;height:352px;}
+.top_left{position:absolute;top:0;left:0;background:url(ileft.gif);width:15px;height:43px;}
+.top_center{position:absolute;top:0;left:15px;background:url(i_topbg2.gif);width:620px;height:43px;}
+.top_right{position:absolute;top:0;left:635px;background:url(iright.gif);width:16px;height:43px;}
+.center_left{position:absolute;top:43px;left:0;background:url(ileftbg.gif);width:15px;height:279px;}
+.center_center{position:absolute;top:43px;left:15px;background:url(bg.gif);width:620px;height:279px;}
+.center_right{position:absolute;top:43px;left:635px;background:url(irightbg.gif);width:15px;height:279px;}
+.bottom_left{position:absolute;top:322px;left:0;background:url(i_bottom_left.gif);width:15px;height:29px;}
+.bottom_center{position:absolute;top:322px;left:15px;background:url(i_bottom_bg.gif);width:620px;height:29px;}
+.bottom_right{position:absolute;top:322px;left:635px;background:url(i_bottom_right.gif);width:15px;height:29px;}
+.logo{position:absolute;top:70px;left:120px;background:url(logo.jpg);width:154px;height:140px;}
+.title{position:absolute;top:70px;left:300px;width:200px;height:30px;font-size:20px;font-weight:bold;color:grey}
+.loginTable{position:absolute;top:110px;left:300px;width:200px;}
+.loginTable td{height:30px;}
+.loginTable td input[type='text']{border: 1px solid #86A3C4;width:150px;height:18px}
+.loginTable td input[type='text']:focus{border: 1px solid #2966B1;}
+.loginTable td input[type='password']{border: 1px solid #86A3C4;width:150px;height:18px}
+.loginTable td input[type='password']:focus{border: 1px solid #2966B1;}
+.loginBtn{position:absolute;top:185px;left:280px;width:250px;}
+#errorMessages{position:absolute;top:220px;left:300px;width:250px;color:red}
+.center_center button{
+ 	border: 1px solid #1e7db9;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px #8fcaee inset, 0 -1px 0 #497897 inset, 0 -2px 3px #8fcaee inset;
+    color: #fff;
+    font-weight: bold;
+    line-height: 22px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-shadow: 1px 1px 1px #333;
+    width: 80px;
+	box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+	background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+	background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+	background: linear-gradient(top,#42a4e0,#2e88c0);
+	background:#42a4e0;
+	margin-left:20px; 
+}
+.center_center button:hover{
+	cursor:pointer;
+	background: -webkit-linear-gradient(top,#70bfef,#4097ce);
+	background: -moz-linear-gradient(top,#70bfef,#4097ce);
+	background: linear-gradient(top,#70bfef,#4097ce);
+	background:#70bfef
+}
