@@ -6,6 +6,13 @@ public class ConfigInfo {
 	private String userName;
 	private String password;
 	private String[] tableNameList;
+	private String[] entityNameList;
+	public String[] getEntityNameList() {
+		return entityNameList;
+	}
+	public void setEntityNameList(String[] entityNameList) {
+		this.entityNameList = entityNameList;
+	}
 	private String packageName;
 	
 	public String getDriver() {

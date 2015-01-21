@@ -6,13 +6,15 @@ import codegenerator.*;
 
 public class MainGenerator {
 	public static void main(String[] args) {
-		TableInfoReader  reader = new TableInfoReader();
+		TableInfoReader reader = new TableInfoReader();
 		ConfigInfo config = reader.loadConfigInfo();
 		String packageName = config.getPackageName(); //包名
 		String[] tableNameList = config.getTableNameList();//表名
+		String[] entityNameList = config.getEntityNameList();//实体类名
 		EntityGenerator entityGen = new EntityGenerator();//获取生成实体类实例
-        for(String tableName : tableNameList){
-        	String entityName = CommonUtil.getEntityName(tableName);//得到实体类名        	
+		for(int i=0;i<tableNameList.length;i++){
+			String tableName = tableNameList[i];
+        	String entityName = entityNameList[i];//得到实体类名      
         	List<ColumnDto>list = reader.readTableColumnInfo(config, tableName);//得到列集合
         	if(list==null || list.size()==0){
         		System.out.println("===================load table info  fail , error !");

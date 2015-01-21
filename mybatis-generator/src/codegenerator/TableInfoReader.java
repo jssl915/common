@@ -35,11 +35,15 @@ public class TableInfoReader {
 			if(packageName!=null){
 				config.setPackageName(packageName.trim());
 			}
+			String entityNames = PropertiesUtil.getProperty("entityNameList");
 			String tableNames = PropertiesUtil.getProperty("tableNameList");
 			if(tableNames!=null){
 				tableNames = tableNames.trim();
 				String[] tableList = tableNames.split(",");
 				config.setTableNameList(tableList);
+				entityNames = entityNames.trim();
+				String[] entityList = entityNames.split(",");
+				config.setEntityNameList(entityList);
 			}
 			return config;
 		} catch (Exception e) {
