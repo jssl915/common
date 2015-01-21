@@ -44,7 +44,7 @@ public class RoleController extends BaseController {
 	}
 	
 	@RequestMapping(value = "list")
-	public void list(HttpServletRequest request, HttpServletResponse response) throws BusinessException{
+	public void list(HttpServletRequest request, HttpServletResponse response){
 		log.debug("method: list() ");
 		try {
 			po = getPageObject(request,"ROLE_ORDER asc");

@@ -37,7 +37,7 @@ public class DictController extends BaseController {
 	}
 	
 	@RequestMapping(value = "list")
-	public void list(HttpServletRequest request, HttpServletResponse response,@ModelAttribute SDict sDict) throws BusinessException{
+	public void list(HttpServletRequest request, HttpServletResponse response,@ModelAttribute SDict sDict){
 		log.debug("method: list() ");
 		try {
 			po = getPageObject(request,"UPDATE_TIME desc");
