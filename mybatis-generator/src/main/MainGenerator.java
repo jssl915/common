@@ -14,7 +14,11 @@ public class MainGenerator {
 		EntityGenerator entityGen = new EntityGenerator();//获取生成实体类实例
 		for(int i=0;i<tableNameList.length;i++){
 			String tableName = tableNameList[i];
-        	String entityName = entityNameList[i];//得到实体类名      
+			if(entityNameList.length<=i){
+				System.out.println("该实体类不存在，请确定实体类的个数与table的个数是否相同");
+				return;
+			}
+        	String entityName=entityNameList[i];
         	List<ColumnDto>list = reader.readTableColumnInfo(config, tableName);//得到列集合
         	if(list==null || list.size()==0){
         		System.out.println("===================load table info  fail , error !");
