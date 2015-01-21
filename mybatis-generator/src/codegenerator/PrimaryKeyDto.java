@@ -37,6 +37,4 @@ public class PrimaryKeyDto {
 	public void setDataLength(int dataLength) {
 		this.dataLength = dataLength;
 	}
-	
-	
 }

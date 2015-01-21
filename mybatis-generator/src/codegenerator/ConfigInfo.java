@@ -1,7 +1,6 @@
 package codegenerator;
 
 public class ConfigInfo {
-
 	private String driver;
 	private String url;
 	private String userName;
@@ -46,6 +45,4 @@ public class ConfigInfo {
 	public void setTableNameList(String[] tableNameList) {
 		this.tableNameList = tableNameList;
 	}
-	
-	
 }

@@ -12,18 +12,15 @@ public class CommonUtil {
 		if (sqlType.equalsIgnoreCase("varchar2") || sqlType.equalsIgnoreCase("nvarchar2")
 			 || sqlType.equalsIgnoreCase("CHAR") || sqlType.equalsIgnoreCase("CLOB")) {
 			return "String";
-		} else if (sqlType.equalsIgnoreCase("number")) {
+		}else if (sqlType.equalsIgnoreCase("number")) {
 			if(colLength>=10){
 				return "Long";
-			}
-			else{
+			}else{
 				return "Integer";
 			}
-			
-		} else if (sqlType.equalsIgnoreCase("DATE")) {
+		}else if (sqlType.equalsIgnoreCase("DATE")) {
 			return "Date";
-		}
-		else if (sqlType.equalsIgnoreCase("blob")) {
+		}else if (sqlType.equalsIgnoreCase("blob")) {
 			return "byte[]";
 		}
 		return null;
@@ -33,26 +30,20 @@ public class CommonUtil {
 	public static String getJdbcType(String sqlType){
 		if("varchar2".equalsIgnoreCase(sqlType)){
 			return "VARCHAR";
-		}
-		else if("nvarchar2".equalsIgnoreCase(sqlType)){
+		}else if("nvarchar2".equalsIgnoreCase(sqlType)){
 			return "NVARCHAR";
-		}
-		else if("char".equalsIgnoreCase(sqlType)){
+		}else if("char".equalsIgnoreCase(sqlType)){
 			return "CHAR";
-		}
-		else if("number".equalsIgnoreCase(sqlType)){
+		}else if("number".equalsIgnoreCase(sqlType)){
 			return "DECIMAL";
-		}
-		else if("DATE".equalsIgnoreCase(sqlType)){
+		}else if("DATE".equalsIgnoreCase(sqlType)){
 			return "TIMESTAMP";
-		}
-		else if("CLOB".equalsIgnoreCase(sqlType)){
+		}else if("CLOB".equalsIgnoreCase(sqlType)){
 			return "CLOB";
-		}
-		else if("BLOB".equalsIgnoreCase(sqlType)){
+		}else if("BLOB".equalsIgnoreCase(sqlType)){
 			return "BLOB";
 		}
-         return null;
+        return null;
 	}
 	
 	public static String getEntityName(String tableName){
@@ -67,8 +58,6 @@ public class CommonUtil {
 		}
 		return name;
 	}
-	
-
 	
 	public static String columnName2Property(String columnName) {
 		StringBuilder sb = new StringBuilder();
@@ -89,8 +78,7 @@ public class CommonUtil {
 	
 	
 	public static String getRootDirPath(){
-		String  binPath = CommonUtil.class.getProtectionDomain()
-    			.getCodeSource().getLocation().getPath();
+		String binPath = CommonUtil.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 		try { //解决中文路径的问题
 			binPath = java.net.URLDecoder.decode(binPath, "utf-8");
 		} catch (UnsupportedEncodingException e1) {
@@ -109,7 +97,6 @@ public class CommonUtil {
     	}
     	return rootPath;
 	}
-	
 	
 	public static boolean generateFile(String dir,String fileName,String content){
 		BufferedWriter bw = null;

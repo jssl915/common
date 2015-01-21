@@ -50,7 +50,7 @@ public class TableInfoReader {
 	}
 	
 	
-	public List<ColumnDto>  readTableColumnInfo(ConfigInfo config, String tableName){
+	public List<ColumnDto>readTableColumnInfo(ConfigInfo config, String tableName){
 		List<ColumnDto> list = new ArrayList<ColumnDto>();
 		Connection conn = null;
 		try {
@@ -62,7 +62,6 @@ public class TableInfoReader {
 			                   + "and t.table_name = '" + tableName.toUpperCase() + "' ";
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery(strsql);
-			
 			while (rs.next()) {
 				ColumnDto dto = new ColumnDto();				
 				dto.setColName(rs.getString("column_name"));
@@ -86,7 +85,7 @@ public class TableInfoReader {
 		return list;
 	}
 	
-	public List<PrimaryKeyDto>  getPrimaryKey(ConfigInfo config, String tableName ){
+	public List<PrimaryKeyDto>getPrimaryKey(ConfigInfo config, String tableName ){
 		List<PrimaryKeyDto> list = new ArrayList<PrimaryKeyDto>();
 		Connection conn = null;
 		try {
@@ -121,7 +120,5 @@ public class TableInfoReader {
 		}	
 		return list;
 	}
-	
-
 }
 

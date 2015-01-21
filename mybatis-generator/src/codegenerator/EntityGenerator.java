@@ -6,58 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 public class EntityGenerator {	
-	
-
-	public void importPackage(List<ColumnDto> list, StringBuilder sb, int len) {
-		Set<String> set = new HashSet<String>();
-		for (Iterator<ColumnDto> iterator = list.iterator(); iterator.hasNext();) {
-			ColumnDto dto = iterator.next();
-			String type = CommonUtil.sqlType2JavaType(dto.getColType(),dto.getColSize());
-			if (!set.contains("Date") && "Date".equals(type) ) {
-				sb.insert(len, "import java.util.Date;\r\n");
-				set.add("Date");
-			} 
-		}
-	}
-	
-	private void generateProperty(StringBuilder sb, List<ColumnDto> list) {
-		for (Iterator<ColumnDto> iterator = list.iterator(); iterator.hasNext();) {
-			ColumnDto dto = iterator.next();
-			String type = CommonUtil.sqlType2JavaType(dto.getColType(),dto.getColSize());
-			String property =  CommonUtil.columnName2Property(dto.getColName());
-			sb.append("\r\n\t//").append(dto.getColComment()+ "\r\n");
-			sb.append("\tprivate " + type + " " + property + "; \r\n");
-		}
-	}
-	
-	/**
-	 * 生成get和set方法
-	 * 
-	 * @param sb
-	 */
-	private void generateSetterAndGetter(StringBuilder sb, List<ColumnDto> list) {
-		for (Iterator<ColumnDto> iterator = list.iterator(); iterator.hasNext();) {
-			ColumnDto dto = iterator.next();	
-			String property =  CommonUtil.columnName2Property(dto.getColName());
-			String type = CommonUtil.sqlType2JavaType(dto.getColType(),dto.getColSize());
-			sb.append("\r\n\tpublic " +type  ); 
-			sb.append("  get" + CommonUtil.firstChar2UpperCase(property));		
-			sb.append("(){\r\n\t\treturn this." + property+";\r\n");
-			sb.append("\t}\r\n");
-			
-			
-			sb.append("\r\n\tpublic void set" + CommonUtil.firstChar2UpperCase(property)) ;
-			sb.append("("+type+" "+property+"){\r\n");					
-			if (!"String".equals(type) ) {
-				sb.append("\t\tthis." + property + "=" + property + ";\r\n");
-			}else{
-				sb.append("\t\tthis." + property + " = " + property + " == null ? null : " + property + ".trim();\r\n");
-			}
-			sb.append("\t}\r\n");
-		}
-	}
-	
-	
 	/**
 	 * 生成实体类主体代码
 	 */
@@ -72,10 +20,57 @@ public class EntityGenerator {
 		generateProperty(sb, list);
 		generateSetterAndGetter(sb, list);
 		sb.append("}\r\n");
-
 		return sb.toString();
-
 	}
+	//添加包
+	public void importPackage(List<ColumnDto> list, StringBuilder sb, int len) {
+		Set<String> set = new HashSet<String>();
+		for (Iterator<ColumnDto> iterator = list.iterator(); iterator.hasNext();) {
+			ColumnDto dto = iterator.next();
+			String type = CommonUtil.sqlType2JavaType(dto.getColType(),dto.getColSize());
+			if (!set.contains("Date") && "Date".equals(type) ) {
+				sb.insert(len, "import java.util.Date;\r\n");
+				set.add("Date");
+			} 
+		}
+	}
+	//添加实体申明
+	private void generateProperty(StringBuilder sb, List<ColumnDto> list) {
+		for (Iterator<ColumnDto> iterator = list.iterator(); iterator.hasNext();) {
+			ColumnDto dto = iterator.next();
+			String type = CommonUtil.sqlType2JavaType(dto.getColType(),dto.getColSize());
+			String property =  CommonUtil.columnName2Property(dto.getColName());
+			if(dto.getColComment()!=null){
+				sb.append("\r\n\t//").append(dto.getColComment()+ "\r\n");
+			}
+			sb.append("\tprivate " + type + " " + property + "; \r\n");
+		}
+	}
+	
+	//添加get和set方法
+	private void generateSetterAndGetter(StringBuilder sb, List<ColumnDto> list) {
+		for (Iterator<ColumnDto> iterator = list.iterator(); iterator.hasNext();) {
+			ColumnDto dto = iterator.next();	
+			String property =  CommonUtil.columnName2Property(dto.getColName());
+			String type = CommonUtil.sqlType2JavaType(dto.getColType(),dto.getColSize());
+			sb.append("\r\n\tpublic " +type  ); 
+			sb.append("  get" + CommonUtil.firstChar2UpperCase(property));		
+			sb.append("(){\r\n\t\treturn this." + property+";\r\n");
+			sb.append("\t}\r\n");
+			
+			sb.append("\r\n\tpublic void set" + CommonUtil.firstChar2UpperCase(property)) ;
+			sb.append("("+type+" "+property+"){\r\n");					
+			if (!"String".equals(type) ) {
+				sb.append("\t\tthis." + property + "=" + property + ";\r\n");
+			}else{
+				sb.append("\t\tthis." + property + " = " + property + " == null ? null : " + property + ".trim();\r\n");
+			}
+			sb.append("\t}\r\n");
+		}
+	}
+	
+	
+
 
 	
 }
