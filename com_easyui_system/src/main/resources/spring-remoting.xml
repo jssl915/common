@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd" 
+	default-lazy-init="true" >	
+ 
+	<context:property-placeholder ignore-resource-not-found="true" ignore-unresolvable="true" location="classpath:httpInvoker.properties" />
+ 	<bean id="sUserService"	class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl"	value="${httpInvoker.url}/sUserService" />
+		<property name="serviceInterface" value="com.system.prg.user.service.SUserService" />
+	</bean> 
+	<bean id="sMenuService"	class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl"	value="${httpInvoker.url}/sMenuService" />
+		<property name="serviceInterface" value="com.system.prg.menu.service.SMenuService" />
+	</bean>
+	<bean id="sRoleService"	class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl"	value="${httpInvoker.url}/sRoleService" />
+		<property name="serviceInterface" value="com.system.prg.role.service.SRoleService" />
+	</bean>
+	<bean id="sDictService"	class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl"	value="${httpInvoker.url}/sDictService" />
+		<property name="serviceInterface" value="com.system.prg.dict.service.SDictService" />
+	</bean>
+	<bean id="sDetailService"	class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl"	value="${httpInvoker.url}/sDetailService" />
+		<property name="serviceInterface" value="com.system.prg.dict.service.SDetailService" />
+	</bean>
+	<bean id="sLogService"	class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl"	value="${httpInvoker.url}/sLogService" />
+		<property name="serviceInterface" value="com.system.prg.log.service.SLogService" />
+	</bean>
+	
+</beans>
