@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.system.prg.user.mapper.SUserMapper" >
+	<resultMap id="BaseResultMap" type="com.system.prg.user.entity.SUser" >
+		<id column="USER_ID" property="userId" jdbcType="DECIMAL" />
+		<result column="USER_NAME" property="userName" jdbcType="NVARCHAR" />
+		<result column="USER_ORDER" property="userOrder" jdbcType="DECIMAL" />
+		<result column="USER_TYPE" property="userType" jdbcType="DECIMAL" />
+		<result column="USER_STATUS" property="userStatus" jdbcType="DECIMAL" />
+		<result column="USER_PWD" property="userPwd" jdbcType="NVARCHAR" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="NVARCHAR" />
+		<result column="UPDATE_TIME" property="updateTime" jdbcType="NVARCHAR" />
+		<result column="REAL_NAME" property="realName" jdbcType="NVARCHAR" />
+	</resultMap>
+	<sql id="Example_Where_Clause" >
+		<where>
+			<if test="userId != null and userId !=''">
+				  AND USER_ID = #{userId}
+			</if>
+			<if test="nodUserId != null and nodUserId !=''">
+				  AND USER_ID != #{nodUserId}
+			</if>
+			<if test="userName != null and userName !=''">
+				  AND USER_NAME = #{userName}
+			</if>
+			<if test="userNameLike != null and userNameLike !=''">
+				  AND USER_NAME like '%${userNameLike}%'
+			</if>
+			<if test="userOrder != null and userOrder !=''">
+				  AND USER_ORDER = #{userOrder}
+			</if>
+			<if test="userType != null and userType !=''">
+				  AND USER_TYPE = #{userType}
+			</if>
+			<if test="userStatus != null and userStatus !=''">
+				  AND USER_STATUS = #{userStatus}
+			</if>
+			<if test="userPwd != null and userPwd !=''">
+				  AND USER_PWD = #{userPwd}
+			</if>
+			<if test="createTimeStart != null and createTimeStart !=''">
+				AND <![CDATA[create_time >= #{createTimeStart}]]>
+			</if>
+			<if test="createTimeEnd != null and createTimeEnd !=''">
+				AND <![CDATA[create_time <= #{createTimeEnd}]]>
+			</if>
+		 	<if test="updateTimeStart != null and updateTimeStart !=''">
+				AND <![CDATA[update_time >= #{updateTimeStart}]]>
+			</if>
+			<if test="updateTimeEnd != null and updateTimeEnd !=''">
+				AND  <![CDATA[update_time <= #{updateTimeEnd}]]> 
+			</if> 
+			<if test="realName != null and realName !=''">
+				  AND REAL_NAME like '%${realName}%'
+			</if>
+		</where>
+	</sql>
+	<insert id="insert"  parameterType="com.system.prg.user.entity.SUser" >
+	  	<selectKey keyProperty="userId" order="BEFORE" statementType="PREPARED" resultType="java.lang.Long">
+			SELECT SEQ_S_USER_ID.NEXTVAL FROM DUAL
+		</selectKey>
+		insert into T_S_USER(USER_ID,USER_NAME,USER_ORDER,USER_TYPE,
+ 			 USER_STATUS,USER_PWD,CREATE_TIME,
+ 			 UPDATE_TIME, REAL_NAME) 
+ 		 values( #{userId},#{userName,jdbcType=NVARCHAR},#{userOrder,jdbcType=DECIMAL},#{userType,jdbcType=DECIMAL},
+ 			 #{userStatus,jdbcType=DECIMAL},#{userPwd,jdbcType=NVARCHAR},#{createTime,jdbcType=NVARCHAR},
+ 			 #{updateTime,jdbcType=NVARCHAR}, #{realName,jdbcType=NVARCHAR}) 
+ 	</insert> 
+	<delete id="deleteByCondition"  parameterType="java.util.Map" >
+		 delete from  T_S_USER
+		 <include refid="Example_Where_Clause" />
+	</delete> 
+	<update id="updateByCondition"  parameterType="com.system.prg.user.entity.SUser"  >
+		 update T_S_USER
+			<trim prefix="SET" suffixOverrides="," > 
+				<if  test="userId != null and userId !=''">
+					USER_ID = #{userId} , 
+				</if>
+				<if  test="userName != null and userName !=''">
+					USER_NAME = #{userName} , 
+				</if>
+				<if  test="userOrder != null and userOrder !=''">
+					USER_ORDER = #{userOrder} , 
+				</if>
+				<if  test="userType != null and userType !=''">
+					USER_TYPE = #{userType} , 
+				</if>
+				<if  test="userStatus != null and userStatus !=''">
+					USER_STATUS = #{userStatus} , 
+				</if>
+				<if  test="userPwd != null and userPwd !=''">
+					USER_PWD = #{userPwd} , 
+				</if>
+				<if  test="createTime != null and createTime !=''">
+					CREATE_TIME = #{createTime} , 
+				</if>
+				<if  test="updateTime != null and updateTime !=''">
+					UPDATE_TIME = #{updateTime} , 
+				</if>
+				<if  test="realName != null and realName !=''">
+					REAL_NAME = #{realName} , 
+				</if>
+			</trim>
+			 where USER_ID = #{userId}
+	</update> 
+	<select id="countByCondition"  parameterType="java.util.Map"  resultType="java.lang.Integer">
+		 select  count(1)  from T_S_USER
+		 <include refid="Example_Where_Clause" />
+	</select> 
+	<select id="selectByCondition"  parameterType="java.util.Map"  resultMap="BaseResultMap">
+		 select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, 
+ 			 CREATE_TIME, UPDATE_TIME,   REAL_NAME
+		  from T_S_USER
+		 <include refid="Example_Where_Clause" />
+		 <if  test="orderByClause != null and orderByClause !=''">
+			 order by ${orderByClause}
+		 </if>
+	</select> 
+	<delete id="deleteByPrimaryKey"  >
+		 delete from  T_S_USER
+			  where USER_ID = #{userId}
+	</delete> 
+	<select id="findByPrimaryKey"   resultMap="BaseResultMap">
+		 select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, 
+ 			 CREATE_TIME, UPDATE_TIME,   REAL_NAME
+		   from T_S_USER
+			  where USER_ID = #{userId}
+	</select> 
+</mapper>
