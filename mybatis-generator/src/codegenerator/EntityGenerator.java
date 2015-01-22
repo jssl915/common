@@ -40,7 +40,7 @@ public class EntityGenerator {
 			ColumnDto dto = iterator.next();
 			String type = CommonUtil.sqlType2JavaType(dto.getColType(),dto.getColSize());
 			String property =  CommonUtil.columnName2Property(dto.getColName());
-			if(dto.getColComment()!=null){
+			if(dto.getColComment()!=null&&dto.getColComment()!=""){
 				sb.append("\r\n\t//").append(dto.getColComment()+ "\r\n");
 			}
 			sb.append("\tprivate " + type + " " + property + "; \r\n");
