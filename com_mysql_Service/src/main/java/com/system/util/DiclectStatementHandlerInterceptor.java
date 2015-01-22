@@ -14,7 +14,7 @@ import org.apache.ibatis.plugin.Plugin;
 import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.session.RowBounds;
 
-@Intercepts( { @Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class }) })
+@Intercepts({@Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class }) })
 public class DiclectStatementHandlerInterceptor implements Interceptor {
 
 	public Object intercept(Invocation invocation) throws Throwable {
