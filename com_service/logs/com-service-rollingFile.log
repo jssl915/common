@@ -1,0 +1,15 @@
+2015-01-22 19:29:09,002 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-01-22 19:29:09,003 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-01-22 19:29:09,003 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-01-22 19:29:09,003 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-01-22 19:29:09,003 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-01-22 19:29:09,167 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@599c7a9b]
+2015-01-22 19:29:09,174 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT 
+2015-01-22 19:29:09,309 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-01-22 19:29:09,429 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@10515062]
+2015-01-22 19:29:09,430 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==>  Preparing: select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DETAIL WHERE DETAIL_STATUS = ? 
+2015-01-22 19:29:09,430 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-01-22 19:29:09,439 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-22 19:29:09,439 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistRetrieve called (key=WFrameOScache_CACHE_DICT)
+2015-01-22 19:29:09,439 DEBUG [com.opensymphony.oscache.base.Cache] - No cache entry exists for key='WFrameOScache_CACHE_DICT', creating
+2015-01-22 19:29:09,440 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistStore called (key=WFrameOScache_CACHE_DICT)
