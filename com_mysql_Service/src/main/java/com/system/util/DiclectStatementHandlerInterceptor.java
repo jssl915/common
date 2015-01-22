@@ -54,7 +54,6 @@ public class DiclectStatementHandlerInterceptor implements Interceptor {
 		if ( isForUpdate ) {
 			pagingSelect.append( " for update" );
 		}
-		System.out.println(pagingSelect.toString());
 		return pagingSelect.toString();
 	}
 }
