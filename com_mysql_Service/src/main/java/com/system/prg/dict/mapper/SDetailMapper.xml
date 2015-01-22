@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.system.prg.dict.mapper.SDetailMapper" >
+	<resultMap id="BaseResultMap" type="com.system.prg.dict.entity.SDetail" >
+		<id column="DETAIL_ID" property="detailId" jdbcType="DECIMAL" />
+		<result column="DICT_ID" property="dictId" jdbcType="DECIMAL" />
+		<result column="DETAIL_NAME" property="detailName" jdbcType="NVARCHAR" />
+		<result column="DETAIL_VALUE" property="detailValue" jdbcType="DECIMAL" />
+		<result column="DETAIL_DESC" property="detailDesc" jdbcType="NVARCHAR" />
+		<result column="DETAIL_STATUS" property="detailStatus" jdbcType="DECIMAL" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="NVARCHAR" />
+		<result column="UPDATE_TIME" property="updateTime" jdbcType="NVARCHAR" />
+	</resultMap>
+	<sql id="Example_Where_Clause" >
+		<where>
+			<if test="detailId != null and detailId !=''">
+				  AND DETAIL_ID = #{detailId}
+			</if>
+			<if test="dictId != null and dictId !=''">
+				  AND DICT_ID = #{dictId}
+			</if>
+			<if test="detailName != null and detailName !=''">
+				  AND DETAIL_NAME = #{detailName}
+			</if>
+			<if test="detailNameLike != null and detailNameLike !=''">
+				  AND DETAIL_NAME like '%${detailNameLike}%'
+			</if>
+			<if test="detailValue != null and detailValue !=''">
+				  AND DETAIL_VALUE = #{detailValue}
+			</if>
+			<if test="detailDesc != null and detailDesc !=''">
+				  AND DETAIL_DESC = #{detailDesc}
+			</if>
+			<if test="detailStatus != null and detailStatus !=''">
+				  AND DETAIL_STATUS = #{detailStatus}
+			</if>
+			<if test="createTimeStart != null and createTimeStart !=''">
+				AND <![CDATA[create_time >= #{createTimeStart}]]>
+			</if>
+			<if test="createTimeEnd != null and createTimeEnd !=''">
+				AND <![CDATA[create_time <= #{createTimeEnd}]]>
+			</if>
+		 	<if test="updateTimeStart != null and updateTimeStart !=''">
+				AND <![CDATA[update_time >= #{updateTimeStart}]]>
+			</if>
+			<if test="updateTimeEnd != null and updateTimeEnd !=''">
+				AND  <![CDATA[update_time <= #{updateTimeEnd}]]> 
+			</if> 
+		</where>
+	</sql>
+	<insert id="insert"  parameterType="com.system.prg.dict.entity.SDetail" >
+		insert into T_S_DETAIL(DICT_ID,DETAIL_NAME,DETAIL_VALUE,
+ 			 DETAIL_DESC,DETAIL_STATUS,CREATE_TIME,
+ 			  UPDATE_TIME) 
+ 		 values(#{dictId,jdbcType=DECIMAL},#{detailName,jdbcType=NVARCHAR},#{detailValue,jdbcType=DECIMAL},
+ 			 #{detailDesc,jdbcType=NVARCHAR},#{detailStatus,jdbcType=DECIMAL},#{createTime,jdbcType=NVARCHAR},
+ 			  #{updateTime,jdbcType=NVARCHAR}) 
+ 	</insert> 
+	<delete id="deleteByCondition"  parameterType="java.util.Map" >
+		 delete from  T_S_DETAIL
+		 <include refid="Example_Where_Clause" />
+	</delete> 
+	<update id="updateByCondition"  parameterType="com.system.prg.dict.entity.SDetail"  >
+		 update T_S_DETAIL
+			<trim prefix="SET" suffixOverrides="," > 
+				<if  test="detailId != null and detailId !=''">
+					DETAIL_ID = #{detailId} , 
+				</if>
+				<if  test="dictId != null and dictId !=''">
+					DICT_ID = #{dictId} , 
+				</if>
+				<if  test="detailName != null and detailName !=''">
+					DETAIL_NAME = #{detailName} , 
+				</if>
+				<if  test="detailValue != null and detailValue !=''">
+					DETAIL_VALUE = #{detailValue} , 
+				</if>
+				<if  test="detailDesc != null and detailDesc !=''">
+					DETAIL_DESC = #{detailDesc} , 
+				</if>
+				<if  test="detailStatus != null and detailStatus !=''">
+					DETAIL_STATUS = #{detailStatus} , 
+				</if>
+				<if  test="createTime != null and createTime !=''">
+					CREATE_TIME = #{createTime} , 
+				</if>
+				<if  test="updateTime != null and updateTime !=''">
+					UPDATE_TIME = #{updateTime} , 
+				</if>
+			</trim>
+			 where DETAIL_ID = #{detailId}
+	</update> 
+	<select id="countByCondition"  parameterType="java.util.Map"  resultType="java.lang.Integer">
+		 select  count(1)  from T_S_DETAIL
+		 <include refid="Example_Where_Clause" />
+	</select> 
+	<select id="selectByCondition"  parameterType="java.util.Map"  resultMap="BaseResultMap">
+		 select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, 
+ 			 CREATE_TIME,   UPDATE_TIME
+		  from T_S_DETAIL
+		 <include refid="Example_Where_Clause" />
+		 <if  test="orderByClause != null and orderByClause !=''">
+			 order by ${orderByClause}
+		 </if>
+	</select> 
+	<delete id="deleteByPrimaryKey"  >
+		 delete from  T_S_DETAIL
+			  where DETAIL_ID = #{detailId}
+	</delete> 
+	<select id="findByPrimaryKey"   resultMap="BaseResultMap">
+		 select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, 
+ 			 CREATE_TIME,   UPDATE_TIME
+		   from T_S_DETAIL
+			  where DETAIL_ID = #{detailId}
+	</select> 
+</mapper>

@@ -1,0 +1,189 @@
+SET NAMES ’utf8’;
+最后使用：
+SHOW VARIABLES LIKE 'character_set_%';
+SHOW VARIABLES LIKE 'collation_%'; 
+可以看到我的编码均是 utf8
+查看表的编码格式
+show create table tablename ; 
+或show full fields from tableName;
+如果查看表的字符集不是: utf8，通过一下方法修改表字符集。
+alter table tablename convert to character set utf8;
+
+alter database orcl character set gbk;
+
+create table T_S_USER
+(
+  user_id     int(16) not null AUTO_INCREMENT,
+  user_name   varchar(32),
+  user_order  int(8),
+  user_type   int(8),
+  user_status int(8),
+  user_pwd    varchar(256),
+  create_time varchar(19),
+  update_time varchar(19),
+  real_name   varchar(32),
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=gbk
+
+create table T_S_LOG
+(
+  log_id     int(16) not null AUTO_INCREMENT,
+  action_url varchar(128),
+  log_time   varchar(19),
+  user_ip    varchar(15),
+  user_id    int(16),
+  log_desc   varchar(128),
+  user_name  varchar(32),
+  PRIMARY KEY (`log_id`)     
+)ENGINE=InnoDB DEFAULT CHARSET=gbk
+
+create table T_S_MENU
+(
+  menu_id     int(16) not null AUTO_INCREMENT,
+  menu_name   varchar(32),
+  menu_desc   varchar(256),
+  menu_url    varchar(128),
+  menu_pid    int(8),
+  menu_type   int(8),
+  menu_status int(8),
+  menu_level  int(8),
+  menu_icon   varchar(128),
+  create_time varchar(19),
+  update_time varchar(19),
+  menu_order  int(8), 
+  PRIMARY KEY (`menu_id`)     
+)ENGINE=InnoDB DEFAULT CHARSET=gbk
+create table T_S_ROLE
+(
+  role_id     int(16) not null AUTO_INCREMENT,
+  role_name   varchar(32),
+  role_desc   varchar(256),
+  role_order  int(8),
+  role_type   int(8),
+  role_status int(8),
+  create_time varchar(19),
+  update_time varchar(19), 
+  PRIMARY KEY (`role_id`)     
+)ENGINE=InnoDB DEFAULT CHARSET=gbk
+
+create table T_S_ROLE_MENU
+(
+  role_id int(16),
+  menu_id int(16)
+)ENGINE=InnoDB DEFAULT CHARSET=gbk
+
+create table T_S_USER_ROLE
+(
+  user_id int(16),
+  role_id int(16)
+)ENGINE=InnoDB DEFAULT CHARSET=gbk
+
+create table T_S_DICT
+(
+  dict_id     int(16) not null AUTO_INCREMENT,
+  dict_name   varchar(32),
+  dict_desc   varchar(256),
+  dict_status int(8),
+  create_time varchar(19),
+  update_time varchar(19),
+  PRIMARY KEY (dict_id)     
+)ENGINE=InnoDB DEFAULT CHARSET=gbk
+
+create table T_S_DETAIL
+(
+  detail_id     int(16) not null AUTO_INCREMENT,
+  dict_id       int(16),
+  detail_name   varchar(32),
+  detail_value  int(16),
+  detail_desc   varchar(256),
+  detail_status int(16),
+  create_time   varchar(19),
+  update_time   varchar(19),
+  PRIMARY KEY (detail_id)     
+)ENGINE=InnoDB DEFAULT CHARSET=gbk
+
+
+insert into T_S_USER (user_id, user_name, user_order, user_type, user_status, user_pwd, create_time, update_time, real_name)
+values (42, 'lj', 1, 1, 1, 'FBADE9E36A3F36D3D676C1B808451DD7', '2014-12-29 10:45:46', '2015-01-04 17:14:12', '李晶');
+insert into T_S_USER (user_id, user_name, user_order, user_type, user_status, user_pwd, create_time, update_time, real_name)
+values (121, 'abc', 2, 1, 1, '900150983CD24FB0D6963F7D28E17F72', '2015-01-06 13:07:05', '2015-01-13 16:10:03', 'abc');
+insert into T_S_USER (user_id, user_name, user_order, user_type, user_status, user_pwd, create_time, update_time, real_name)
+values (161, 'ff', 1, 1, 1, '21218CCA77804D2BA1922C33E0151105', '2015-01-12 15:25:30', '2015-01-13 15:39:59', 'ff');
+
+insert into T_S_DICT (dict_id, dict_name, dict_desc, dict_status, create_time, update_time)
+values (1, '状态', '1启用2禁止', 1, '2015-01-04 11:07:56', '2015-01-13 14:07:08');
+
+insert into T_S_DETAIL (detail_id, dict_id, detail_name, detail_value, detail_desc, detail_status, create_time, update_time)
+values (8, 1, '启用', 1, '启用状态', 1, '2015-01-04 14:04:28', '2015-01-06 11:02:33');
+insert into T_S_DETAIL (detail_id, dict_id, detail_name, detail_value, detail_desc, detail_status, create_time, update_time)
+values (9, 1, '禁止', 2, '禁止状态', 1, '2015-01-04 14:04:39', '2015-01-04 14:04:39');
+
+insert into T_S_ROLE (role_id, role_name, role_desc, role_order, role_type, role_status, create_time, update_time)
+values (3, '用户管理员', '用户管理员', 2, null, null, '2014-12-30 13:31:30', '2014-12-30 13:31:30');
+insert into T_S_ROLE (role_id, role_name, role_desc, role_order, role_type, role_status, create_time, update_time)
+values (1, '超级管理员', '最高权限管理员', 1, null, 1, '2014-12-30 13:22:52', '2014-12-30 13:22:52');
+
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (3, 3);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (3, 90);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (3, 4);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 90);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 130);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 131);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 190);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 192);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 1);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 6);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 4);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 60);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 170);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 132);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 191);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 0);
+insert into T_S_ROLE_MENU (role_id, menu_id)
+values (1, 3);
+
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (60, '系统日志管理', null, '/system/prg/log/init', 1, null, 1, 2, null, '2014-12-30 13:37:07', '2015-01-04 10:11:37', 5);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (6, '系统菜单管理', '菜单管理', '/system/prg/menu/init', 1, 1, 1, 2, null, null, '2015-01-04 10:11:16', 2);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (130, '图片组件', null, null, 0, null, 1, 1, null, '2015-01-08 09:43:05', '2015-01-14 09:03:46', 2);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (131, '图片上传功能', null, 'cy/img/upload', 130, null, 1, 2, null, '2015-01-08 09:44:16', '2015-01-14 09:06:21', 1);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (132, '图表组件', null, null, 0, null, 1, 1, null, '2015-01-08 09:44:47', '2015-01-14 15:11:31', 3);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (190, '基本折线图', null, 'cy/chart/baseline', 132, null, 1, 2, null, '2015-01-14 15:26:28', '2015-01-14 15:26:47', 1);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (191, '基本饼图', null, 'cy/chart/basepie', 132, null, 1, 2, null, '2015-01-14 15:29:03', '2015-01-14 15:29:25', 2);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (170, '图片拖拽示例', null, 'cy/img/photowall', 130, null, 1, 2, null, '2015-01-14 09:05:58', '2015-01-14 09:18:42', 1);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (192, '基本柱状图', null, 'cy/chart/basecolumn', 132, null, 1, 2, null, '2015-01-14 15:33:34', '2015-01-14 15:33:34', 3);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (0, '资源树', '资源树', null, -1, 1, 1, 0, null, '2014-12-30 12:38:14', '2014-12-30 12:38:14', 1);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (1, '系统管理', '系统管理', null, 0, 1, 1, 1, null, null, '2014-12-30 13:07:08', 1);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (90, '系统参数管理', null, '/system/prg/dict/init', 1, null, 1, 2, null, '2015-01-04 10:11:48', '2015-01-06 11:10:46', 4);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (3, '系统管理员管理', '用户管理', '/system/prg/user/init', 1, 1, 1, 2, null, null, '2014-12-30 13:36:00', 1);
+insert into T_S_MENU (menu_id, menu_name, menu_desc, menu_url, menu_pid, menu_type, menu_status, menu_level, menu_icon, create_time, update_time, menu_order)
+values (4, '系统角色管理', '角色管理', '/system/prg/role/init', 1, 1, 1, 2, null, null, '2014-12-30 13:36:42', 3);
+

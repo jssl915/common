@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.system.prg.role.mapper.SRoleMapper" >
+	<resultMap id="BaseResultMap" type="com.system.prg.role.entity.SRole" >
+		<id column="ROLE_ID" property="roleId" jdbcType="DECIMAL" />
+		<result column="ROLE_NAME" property="roleName" jdbcType="NVARCHAR" />
+		<result column="ROLE_DESC" property="roleDesc" jdbcType="NVARCHAR" />
+		<result column="ROLE_ORDER" property="roleOrder" jdbcType="DECIMAL" />
+		<result column="ROLE_TYPE" property="roleType" jdbcType="DECIMAL" />
+		<result column="ROLE_STATUS" property="roleStatus" jdbcType="DECIMAL" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="NVARCHAR" />
+		<result column="UPDATE_TIME" property="updateTime" jdbcType="NVARCHAR" />
+	</resultMap>
+	<sql id="Example_Where_Clause" >
+		<where>
+			<if test="nodRoleId != null and nodRoleId !=''">
+				  AND ROLE_ID != #{nodRoleId}
+			</if>
+			<if test="roleId != null and roleId !=''">
+				  AND ROLE_ID = #{roleId}
+			</if>
+			<if test="roleName != null and roleName !=''">
+				  AND ROLE_NAME = #{roleName}
+			</if>
+			<if test="roleNameLike != null and roleNameLike !=''">
+				  AND ROLE_NAME like '%${roleNameLike}%'
+			</if>
+			<if test="roleDesc != null and roleDesc !=''">
+				  AND ROLE_DESC = #{roleDesc}
+			</if>
+			<if test="roleOrder != null and roleOrder !=''">
+				  AND ROLE_ORDER = #{roleOrder}
+			</if>
+			<if test="roleType != null and roleType !=''">
+				  AND ROLE_TYPE = #{roleType}
+			</if>
+			<if test="roleStatus != null and roleStatus !=''">
+				  AND ROLE_STATUS = #{roleStatus}
+			</if>
+			<if test="createTimeStart != null and createTimeStart !=''">
+				AND <![CDATA[create_time >= #{createTimeStart}]]>
+			</if>
+			<if test="createTimeEnd != null and createTimeEnd !=''">
+				AND <![CDATA[create_time <= #{createTimeEnd}]]>
+			</if>
+		 	<if test="updateTimeStart != null and updateTimeStart !=''">
+				AND <![CDATA[update_time >= #{updateTimeStart}]]>
+			</if>
+			<if test="updateTimeEnd != null and updateTimeEnd !=''">
+				AND  <![CDATA[update_time <= #{updateTimeEnd}]]> 
+			</if> 
+		</where>
+	</sql>
+	<insert id="insert"  parameterType="com.system.prg.role.entity.SRole" >
+		insert into T_S_ROLE(ROLE_ID,ROLE_NAME,ROLE_DESC,ROLE_ORDER,
+ 			 ROLE_TYPE,ROLE_STATUS,CREATE_TIME,
+ 			  UPDATE_TIME) 
+ 		 values( #{roleId},#{roleName,jdbcType=NVARCHAR},#{roleDesc,jdbcType=NVARCHAR},#{roleOrder,jdbcType=DECIMAL},
+ 			 #{roleType,jdbcType=DECIMAL},#{roleStatus,jdbcType=DECIMAL},#{createTime,jdbcType=NVARCHAR},
+ 			  #{updateTime,jdbcType=NVARCHAR}) 
+ 	</insert> 
+	<delete id="deleteByCondition"  parameterType="java.util.Map" >
+		 delete from  T_S_ROLE
+		 <include refid="Example_Where_Clause" />
+	</delete> 
+	<update id="updateByCondition"  parameterType="com.system.prg.role.entity.SRole"  >
+		 update T_S_ROLE
+			<trim prefix="SET" suffixOverrides="," > 
+				<if  test="roleId != null and roleId !=''">
+					ROLE_ID = #{roleId} , 
+				</if>
+				<if  test="roleName != null and roleName !=''">
+					ROLE_NAME = #{roleName} , 
+				</if>
+				<if  test="roleDesc != null and roleDesc !=''">
+					ROLE_DESC = #{roleDesc} , 
+				</if>
+				<if  test="roleOrder != null and roleOrder !=''">
+					ROLE_ORDER = #{roleOrder} , 
+				</if>
+				<if  test="roleType != null and roleType !=''">
+					ROLE_TYPE = #{roleType} , 
+				</if>
+				<if  test="roleStatus != null and roleStatus !=''">
+					ROLE_STATUS = #{roleStatus} , 
+				</if>
+				<if  test="createTime != null and createTime !=''">
+					CREATE_TIME = #{createTime} , 
+				</if>
+				<if  test="updateTime != null and updateTime !=''">
+					UPDATE_TIME = #{updateTime} , 
+				</if>
+			</trim>
+			 where ROLE_ID = #{roleId}
+	</update> 
+	<select id="countByCondition"  parameterType="java.util.Map"  resultType="java.lang.Integer">
+		 select  count(1)  from T_S_ROLE
+		 <include refid="Example_Where_Clause" />
+	</select> 
+	<select id="selectByCondition"  parameterType="java.util.Map"  resultMap="BaseResultMap">
+		 select ROLE_ID, ROLE_NAME, ROLE_DESC, ROLE_ORDER, ROLE_TYPE, ROLE_STATUS, 
+ 			 CREATE_TIME,   UPDATE_TIME
+		  from T_S_ROLE
+		 <include refid="Example_Where_Clause" />
+		 <if  test="orderByClause != null and orderByClause !=''">
+			 order by ${orderByClause}
+		 </if>
+	</select> 
+	<delete id="deleteByPrimaryKey"  >
+		 delete from  T_S_ROLE
+			  where ROLE_ID = #{roleId}
+	</delete> 
+	<select id="findByPrimaryKey"   resultMap="BaseResultMap">
+		 select ROLE_ID, ROLE_NAME, ROLE_DESC, ROLE_ORDER, ROLE_TYPE, ROLE_STATUS, 
+ 			 CREATE_TIME,   UPDATE_TIME
+		   from T_S_ROLE
+			  where ROLE_ID = #{roleId}
+	</select> 
+</mapper>
