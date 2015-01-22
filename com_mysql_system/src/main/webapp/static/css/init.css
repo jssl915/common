@@ -1,0 +1,120 @@
+@charset "utf-8";*{padding:0;margin:0;}
+html,body{width:100%;height:100%;padding:0;margin:0;}
+.search{font-size:12px;}
+.search .om-panel-header{position:relative;padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;}
+.search .om-panel-header:hover{cursor:pointer;}
+.search .om-panel-header .up{position:absolute;right:5px;bottom:0;top:0;height:18px;margin:auto 0;width:20px;background:url("../js/operamasks/2.0/css/default/images/ui-toolbar-btn.png") no-repeat scroll -22px 0 transparent;}
+.search .om-panel-header .down{position:absolute;right:5px;bottom:0;top:0;height:18px;margin:auto 0;width:20px;background:url("../js/operamasks/2.0/css/default/images/ui-toolbar-btn.png") no-repeat scroll -2px 0 transparent;}
+.search .searchDiv{border-left:1px solid #86a3c4;border-right:1px solid #86a3c4;background:#fff;padding:6px 0;}
+.searchTable td{height:30px;}
+.searchTable td:nth-child(2n-1){text-align:right;width:80px;}
+.searchTable td input[type='text']{border:1px solid #86A3C4;width:218px;height:18px;padding-left:2px;}
+.searchTable td input[type='text']:focus{border:1px solid #2966B1;padding-left:2px;}
+.searchTable select{border:1px solid #86A3C4;width:223px;height:22px}
+.searchTable select:focus{border:1px solid #2966B1;}
+.searchTable td input[type='date']{width:76px;}
+.searchTable button{border:1px solid #1e7db9;border-radius:5px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;color:#fff;font-weight:bold;line-height:22px;overflow:hidden;position:relative;text-align:center;text-shadow:1px 1px 1px #333;width:80px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;background:-webkit-linear-gradient(top,#42a4e0,#2e88c0);background:-moz-linear-gradient(top,#42a4e0,#2e88c0);background:linear-gradient(top,#42a4e0,#2e88c0);background:#42a4e0;margin-left:20px;}
+.searchTable button:hover{cursor:pointer;background:-webkit-linear-gradient(top,#70bfef,#4097ce);background:-moz-linear-gradient(top,#70bfef,#4097ce);background:linear-gradient(top,#70bfef,#4097ce);background:#70bfef}
+.operate{font-size:12px;position:relative}
+.operate .om-panel-header{padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:0}
+.om-widget-content{border-top:0}
+.om-grid div.hDiv{border-top:1px solid #c8c4bf;}
+.dialogPage{height:100%;font-size:14px;}
+.dialogPage .om-panel-header{padding:6px;height:auto;line-height:auto;color:#15428b;font-weight:bold;border-bottom:0;}
+.editDiv{border:1px solid #86a3c4;background:#fff;}
+.editTable{margin:20px auto;text-align:center}
+.editTable td{height:30px;}
+.editTable td:nth-child(2n-1){text-align:right;width:100px;}
+.editTable td:nth-child(2n){text-align:left;width:180px;}
+.editTable td .error{border:1px solid red !important;}
+.editTable td input[type='text']{border:1px solid #86A3C4; border-radius:3px;width:150px;height:22px;padding-left:2px;}
+.editTable td input[type='text']:focus{border:1px solid #2966B1;width:150px;padding-left:2px;}
+.editTable td input[type='password']{border:1px solid #86A3C4;border-radius:3px;width:150px;height:22px;padding-left:2px;}
+.editTable td input[type='password']:focus{border:1px solid #2966B1;width:150px;padding-left:2px;}
+.editTable td textarea{border:1px solid #86A3C4;border-radius:3px;font-size:14px;padding-left:2px;}
+.editTable td textarea:focus{border:1px solid #2966B1;padding-left:2px;}
+.editTable select{border:1px solid #86A3C4;width:155px;height:22px}
+.editTable select:focus{border:1px solid #86A3C4;width:155px;height:22px}
+.dialogPage button{border:1px solid #1e7db9;border-radius:5px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;color:#fff;font-weight:bold;line-height:22px;overflow:hidden;position:relative;text-align:center;text-shadow:1px 1px 1px #333;width:80px;box-shadow:0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;background:-webkit-linear-gradient(top,#42a4e0,#2e88c0);background:-moz-linear-gradient(top,#42a4e0,#2e88c0);background:linear-gradient(top,#42a4e0,#2e88c0);background:#42a4e0;margin-left:20px;}
+.dialogPage button:hover{cursor:pointer;background:-webkit-linear-gradient(top,#70bfef,#4097ce);background:-moz-linear-gradient(top,#70bfef,#4097ce);background:linear-gradient(top,#70bfef,#4097ce);background:#70bfef}
+.editBtn{text-align:center;margin:0 auto 20px;}
+.treeDiv{width:199px;border-width:1px;position:absolute;background:#fff;border:1px solid #86a3c4;}
+.required{color:red}
+ol,ul,li{list-style:none;}
+.clearfix{overflow:hidden;zoom:1;}
+.icon{position:absolute;top:1px;right:0px;padding:1px 0 0 0;}
+.icon ul{}
+.icon li{float:left;margin-right:12px;}
+.icon li a{line-height:24px;color:#15428b;text-decoration:none;}
+.icon li a:hover{color:red;}
+.menu1{background:url(../images/icon.png) no-repeat 0 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu2{background:url(../images/icon.png) no-repeat -16px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu3{background:url(../images/icon.png) no-repeat -32px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu4{background:url(../images/icon.png) no-repeat -48px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu5{background:url(../images/icon.png) no-repeat -64px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu6{background:url(../images/icon.png) no-repeat -80px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu7{background:url(../images/icon.png) no-repeat -96px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu8{background:url(../images/icon.png) no-repeat -112px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu9{background:url(../images/icon.png) no-repeat -128px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu10{background:url(../images/icon.png) no-repeat -144px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu11{background:url(../images/icon.png) no-repeat -160px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu12{background:url(../images/icon.png) no-repeat -176px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu13{background:url(../images/icon.png) no-repeat -192px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu14{background:url(../images/icon.png) no-repeat -208px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu15{background:url(../images/icon.png) no-repeat -224px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu16{background:url(../images/icon.png) no-repeat -240px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu17{background:url(../images/icon.png) no-repeat -256px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu18{background:url(../images/icon.png) no-repeat -272px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu19{background:url(../images/icon.png) no-repeat -288px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu20{background:url(../images/icon.png) no-repeat -304px 0px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu21{background:url(../images/icon.png) no-repeat 0px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu22{background:url(../images/icon.png) no-repeat -16px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu23{background:url(../images/icon.png) no-repeat -32px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu24{background:url(../images/icon.png) no-repeat -48px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu25{background:url(../images/icon.png) no-repeat -64px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu26{background:url(../images/icon.png) no-repeat -80px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu27{background:url(../images/icon.png) no-repeat -96px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu28{background:url(../images/icon.png) no-repeat -112px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu29{background:url(../images/icon.png) no-repeat -128px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu30{background:url(../images/icon.png) no-repeat -144px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu31{background:url(../images/icon.png) no-repeat -160px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu32{background:url(../images/icon.png) no-repeat -176px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu33{background:url(../images/icon.png) no-repeat -192px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu34{background:url(../images/icon.png) no-repeat -208px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu35{background:url(../images/icon.png) no-repeat -224px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu36{background:url(../images/icon.png) no-repeat -240px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu37{background:url(../images/icon.png) no-repeat -256px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu38{background:url(../images/icon.png) no-repeat -272px -16px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+/*备用*/
+.menu39{background:url(../images/icon.png) no-repeat 0px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu40{background:url(../images/icon.png) no-repeat -16px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu41{background:url(../images/icon.png) no-repeat -32px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu42{background:url(../images/icon.png) no-repeat -48px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu43{background:url(../images/icon.png) no-repeat -64px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu44{background:url(../images/icon.png) no-repeat -80px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu45{background:url(../images/icon.png) no-repeat -96px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu46{background:url(../images/icon.png) no-repeat -112px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu47{background:url(../images/icon.png) no-repeat -128px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu48{background:url(../images/icon.png) no-repeat -144px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu49{background:url(../images/icon.png) no-repeat -160px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu50{background:url(../images/icon.png) no-repeat -176px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu51{background:url(../images/icon.png) no-repeat -192px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu52{background:url(../images/icon.png) no-repeat -208px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu53{background:url(../images/icon.png) no-repeat -224px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu54{background:url(../images/icon.png) no-repeat -240px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu55{background:url(../images/icon.png) no-repeat -256px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu56{background:url(../images/icon.png) no-repeat -272px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu57{background:url(../images/icon.png) no-repeat -288px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu58{background:url(../images/icon.png) no-repeat -304px -32px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu59{background:url(../images/icon.png) no-repeat 0px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu60{background:url(../images/icon.png) no-repeat -16px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu61{background:url(../images/icon.png) no-repeat -32px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu62{background:url(../images/icon.png) no-repeat -48px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu63{background:url(../images/icon.png) no-repeat -64px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu64{background:url(../images/icon.png) no-repeat -80px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu65{background:url(../images/icon.png) no-repeat -96px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu66{background:url(../images/icon.png) no-repeat -112px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu67{background:url(../images/icon.png) no-repeat -128px -48px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu68{background:url(../images/icon.png) no-repeat 0px -64px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu69{background:url(../images/icon.png) no-repeat -16px -64px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
+.menu70{background:url(../images/icon.png) no-repeat -32px -64px;height:16px;width:16px;display:block;margin:5px 2px 4px 0;float:left;}
