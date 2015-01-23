@@ -1,0 +1,154 @@
+2015-01-23 08:36:07,629 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-01-23 08:36:07,630 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-01-23 08:36:07,630 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-01-23 08:36:07,630 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-01-23 08:36:07,630 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-01-23 08:36:07,748 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@972141f]
+2015-01-23 08:36:07,771 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT 
+2015-01-23 08:36:07,872 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:36:08,035 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@1cd459c4]
+2015-01-23 08:36:08,035 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==>  Preparing: select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DETAIL WHERE DETAIL_STATUS = ? 
+2015-01-23 08:36:08,036 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-01-23 08:36:08,070 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:36:08,070 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistRetrieve called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:36:08,070 DEBUG [com.opensymphony.oscache.base.Cache] - No cache entry exists for key='WFrameOScache_CACHE_DICT', creating
+2015-01-23 08:36:08,071 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistStore called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:37:05,395 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@4ca33902]
+2015-01-23 08:37:05,395 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? AND USER_STATUS = ? 
+2015-01-23 08:37:05,395 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String), 1(Integer)
+2015-01-23 08:37:05,473 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@4e4ce55b]
+2015-01-23 08:37:05,473 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? 
+2015-01-23 08:37:05,473 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String)
+2015-01-23 08:37:05,586 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@52d1151a]
+2015-01-23 08:37:05,587 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:37:05,587 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:37:05,612 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@52d1151a]
+2015-01-23 08:37:05,612 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:37:05,612 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8901(Long), null, /com_operamasks_system/system/login(String), 2015-01-23 08:37:05(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:37:08,963 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@371d6be8]
+2015-01-23 08:37:08,963 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:37:08,964 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 0(Long)
+2015-01-23 08:37:09,020 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@371d6be8]
+2015-01-23 08:37:09,020 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where menu_status=1 and (menu_id = 0 or menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id=?) or menu_id in (select menu_id from T_S_MENU where menu_id in (select menu_pid from T_S_MENU where menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id = ?))) ) order by MENU_ORDER asc 
+2015-01-23 08:37:09,021 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==> Parameters: 42(Long), 42(Long)
+2015-01-23 08:37:09,440 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@6684851c]
+2015-01-23 08:37:09,441 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:37:09,441 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:37:09,443 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@6684851c]
+2015-01-23 08:37:09,443 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:37:09,444 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8902(Long), null, /com_operamasks_system/index/tree(String), 2015-01-23 08:37:09(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:37:10,393 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@11b30a69]
+2015-01-23 08:37:10,393 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:37:10,393 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-01-23 08:37:10,531 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:37:10,598 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@558ef8ff]
+2015-01-23 08:37:10,599 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:37:10,599 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:37:10,600 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@558ef8ff]
+2015-01-23 08:37:10,600 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:37:10,600 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8903(Long), null, /system/prg/user/init(String), 2015-01-23 08:37:10(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:37:11,363 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@1f4905b0]
+2015-01-23 08:37:11,364 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select * from ( select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc ) where rownum <= 30 
+2015-01-23 08:37:11,364 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:37:11,414 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@1ea84074]
+2015-01-23 08:37:11,414 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-01-23 08:37:11,414 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:37:13,169 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@63e4f703]
+2015-01-23 08:37:13,169 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:37:13,170 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 60(Long)
+2015-01-23 08:37:13,362 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3a0b1dd4]
+2015-01-23 08:37:13,362 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:37:13,362 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:37:13,364 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3a0b1dd4]
+2015-01-23 08:37:13,364 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:37:13,365 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8904(Long), null, /system/prg/log/init(String), 2015-01-23 08:37:13(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:37:13,940 DEBUG [com.system.prg.log.mapper.SLogMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@546ca120]
+2015-01-23 08:37:13,940 DEBUG [com.system.prg.log.mapper.SLogMapper.selectByCondition] - ==>  Preparing: select * from ( select LOG_ID, LOG_DESC, ACTION_URL, LOG_TIME, USER_IP, USER_ID, USER_NAME from T_S_LOG order by LOG_TIME desc ) where rownum <= 30 
+2015-01-23 08:37:13,940 DEBUG [com.system.prg.log.mapper.SLogMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:37:14,005 DEBUG [com.system.prg.log.mapper.SLogMapper.countByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@7a7c9934]
+2015-01-23 08:37:14,005 DEBUG [com.system.prg.log.mapper.SLogMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_LOG 
+2015-01-23 08:37:14,006 DEBUG [com.system.prg.log.mapper.SLogMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:38:24,287 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@e9c495e]
+2015-01-23 08:38:24,287 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? AND USER_STATUS = ? 
+2015-01-23 08:38:24,288 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String), 1(Integer)
+2015-01-23 08:38:24,330 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@468638fd]
+2015-01-23 08:38:24,330 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? 
+2015-01-23 08:38:24,330 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String)
+2015-01-23 08:38:24,406 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@5fa6885b]
+2015-01-23 08:38:24,406 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:38:24,406 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:38:24,407 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@5fa6885b]
+2015-01-23 08:38:24,408 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:38:24,408 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8905(Long), null, /com_easyui_system/system/login(String), 2015-01-23 08:38:24(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:38:25,311 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@5febd2b9]
+2015-01-23 08:38:25,311 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:38:25,312 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 0(Long)
+2015-01-23 08:38:25,314 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@5febd2b9]
+2015-01-23 08:38:25,314 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where menu_status=1 and (menu_id = 0 or menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id=?) or menu_id in (select menu_id from T_S_MENU where menu_id in (select menu_pid from T_S_MENU where menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id = ?))) ) order by MENU_ORDER asc 
+2015-01-23 08:38:25,314 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==> Parameters: 42(Long), 42(Long)
+2015-01-23 08:38:25,355 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@17afe1f5]
+2015-01-23 08:38:25,355 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:38:25,355 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:38:25,356 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@17afe1f5]
+2015-01-23 08:38:25,356 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:38:25,356 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8906(Long), null, /com_easyui_system/index/tree(String), 2015-01-23 08:38:25(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:38:26,256 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@57bb246f]
+2015-01-23 08:38:26,256 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:38:26,256 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-01-23 08:38:26,377 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:38:26,417 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@6f02c249]
+2015-01-23 08:38:26,418 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:38:26,418 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:38:26,419 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@6f02c249]
+2015-01-23 08:38:26,419 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:38:26,420 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8907(Long), null, /system/prg/user/init(String), 2015-01-23 08:38:26(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:38:26,969 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3c6463d9]
+2015-01-23 08:38:26,969 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select * from ( select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc ) where rownum <= 10 
+2015-01-23 08:38:26,970 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:38:27,020 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@4491da8d]
+2015-01-23 08:38:27,021 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-01-23 08:38:27,021 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:38:27,598 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@23b5af7b]
+2015-01-23 08:38:27,598 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:38:27,599 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 6(Long)
+2015-01-23 08:38:27,666 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:38:27,740 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@190e09c4]
+2015-01-23 08:38:27,740 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:38:27,740 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:38:27,742 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@190e09c4]
+2015-01-23 08:38:27,742 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:38:27,742 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8908(Long), null, /system/prg/menu/init(String), 2015-01-23 08:38:27(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:38:28,261 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@7962f71a]
+2015-01-23 08:38:28,261 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:38:28,261 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 0(Long)
+2015-01-23 08:38:28,268 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@7962f71a]
+2015-01-23 08:38:28,268 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU WHERE MENU_STATUS = ? order by MENU_ORDER asc 
+2015-01-23 08:38:28,269 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-01-23 08:38:28,312 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@578aca63]
+2015-01-23 08:38:28,312 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ==>  Preparing: select * from ( select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU order by MENU_ORDER asc ) where rownum <= 10 
+2015-01-23 08:38:28,313 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:38:28,313 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@7e27a0b3]
+2015-01-23 08:38:28,313 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:38:28,313 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:38:28,314 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@7e27a0b3]
+2015-01-23 08:38:28,314 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:38:28,314 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8909(Long), null, /system/prg/menu/tree(String), 2015-01-23 08:38:28(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:38:28,362 DEBUG [com.system.prg.menu.mapper.SMenuMapper.countByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@ccdd340]
+2015-01-23 08:38:28,362 DEBUG [com.system.prg.menu.mapper.SMenuMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_MENU 
+2015-01-23 08:38:28,362 DEBUG [com.system.prg.menu.mapper.SMenuMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:38:29,055 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@dd90c3]
+2015-01-23 08:38:29,055 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:38:29,055 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-01-23 08:38:29,310 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:38:29,338 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3c9e8cbb]
+2015-01-23 08:38:29,338 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-01-23 08:38:29,338 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-01-23 08:38:29,339 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3c9e8cbb]
+2015-01-23 08:38:29,339 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-01-23 08:38:29,339 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 8910(Long), null, /system/prg/user/init(String), 2015-01-23 08:38:29(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:38:29,911 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3585443]
+2015-01-23 08:38:29,911 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select * from ( select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc ) where rownum <= 10 
+2015-01-23 08:38:29,911 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:38:30,085 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@3308f3f1]
+2015-01-23 08:38:30,085 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-01-23 08:38:30,085 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 

@@ -1,0 +1,161 @@
+2015-01-23 08:49:13,451 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-01-23 08:49:13,452 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-01-23 08:49:13,452 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-01-23 08:49:13,452 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-01-23 08:49:13,452 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-01-23 08:49:13,538 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@665c572]
+2015-01-23 08:49:13,544 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT 
+2015-01-23 08:49:13,566 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:49:13,679 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@25693b9b]
+2015-01-23 08:49:13,679 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==>  Preparing: select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DETAIL WHERE DETAIL_STATUS = ? 
+2015-01-23 08:49:13,680 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-01-23 08:49:13,703 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:49:13,703 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistRetrieve called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:49:13,703 DEBUG [com.opensymphony.oscache.base.Cache] - No cache entry exists for key='WFrameOScache_CACHE_DICT', creating
+2015-01-23 08:49:13,704 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistStore called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:52:33,930 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-01-23 08:52:33,930 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-01-23 08:52:33,930 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-01-23 08:52:33,930 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-01-23 08:52:33,930 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-01-23 08:52:34,012 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@1c51d6c1]
+2015-01-23 08:52:34,018 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT 
+2015-01-23 08:52:34,040 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:52:34,070 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@724523e0]
+2015-01-23 08:52:34,070 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==>  Preparing: select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DETAIL WHERE DETAIL_STATUS = ? 
+2015-01-23 08:52:34,070 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-01-23 08:52:34,072 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:52:34,072 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistRetrieve called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:52:34,072 DEBUG [com.opensymphony.oscache.base.Cache] - No cache entry exists for key='WFrameOScache_CACHE_DICT', creating
+2015-01-23 08:52:34,073 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistStore called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:53:59,575 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-01-23 08:53:59,576 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-01-23 08:53:59,576 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-01-23 08:53:59,576 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-01-23 08:53:59,576 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-01-23 08:53:59,660 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@524db33c]
+2015-01-23 08:53:59,666 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT 
+2015-01-23 08:53:59,688 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:53:59,718 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@3fd66596]
+2015-01-23 08:53:59,718 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==>  Preparing: select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DETAIL WHERE DETAIL_STATUS = ? 
+2015-01-23 08:53:59,718 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-01-23 08:53:59,720 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:53:59,721 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistRetrieve called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:53:59,721 DEBUG [com.opensymphony.oscache.base.Cache] - No cache entry exists for key='WFrameOScache_CACHE_DICT', creating
+2015-01-23 08:53:59,722 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistStore called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:54:09,983 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@3f01e218]
+2015-01-23 08:54:09,984 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? AND USER_STATUS = ? 
+2015-01-23 08:54:09,984 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String), 1(Integer)
+2015-01-23 08:54:10,015 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@19b4e418]
+2015-01-23 08:54:10,015 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? 
+2015-01-23 08:54:10,016 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String)
+2015-01-23 08:54:10,070 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@ed57bbe]
+2015-01-23 08:54:10,070 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:10,071 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /com_mysql_system/system/login(String), 2015-01-23 08:54:10(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:11,303 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2df8e5e4]
+2015-01-23 08:54:11,303 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:11,303 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 0(Long)
+2015-01-23 08:54:11,350 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2df8e5e4]
+2015-01-23 08:54:11,350 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where menu_status=1 and (menu_id = 0 or menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id=?) or menu_id in (select menu_id from T_S_MENU where menu_id in (select menu_pid from T_S_MENU where menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id = ?))) ) order by MENU_ORDER asc 
+2015-01-23 08:54:11,351 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==> Parameters: 42(Long), 42(Long)
+2015-01-23 08:54:11,704 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@7ec98afc]
+2015-01-23 08:54:11,704 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:11,704 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /com_mysql_system/index/tree(String), 2015-01-23 08:54:11(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:12,480 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@398574c8]
+2015-01-23 08:54:12,480 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:12,480 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-01-23 08:54:12,594 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:54:12,621 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@30c89de5]
+2015-01-23 08:54:12,621 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:12,622 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /system/prg/user/init(String), 2015-01-23 08:54:12(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:13,181 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@168ef985]
+2015-01-23 08:54:13,181 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc limit 0,10 
+2015-01-23 08:54:13,182 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:54:13,200 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@4f8d28e7]
+2015-01-23 08:54:13,201 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-01-23 08:54:13,201 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:54:13,727 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@6aab809]
+2015-01-23 08:54:13,727 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:13,727 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 131(Long)
+2015-01-23 08:54:13,855 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@63c58252]
+2015-01-23 08:54:13,855 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:13,856 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /com_mysql_system/cy/img/upload(String), 2015-01-23 08:54:13(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:17,530 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@313314a]
+2015-01-23 08:54:17,530 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:17,531 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 170(Long)
+2015-01-23 08:54:17,593 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@2ef9335]
+2015-01-23 08:54:17,594 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:17,595 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /com_mysql_system/cy/img/photowall(String), 2015-01-23 08:54:17(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:18,859 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@7bb434bd]
+2015-01-23 08:54:18,859 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:18,860 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 6(Long)
+2015-01-23 08:54:18,918 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:54:18,934 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@4b38d375]
+2015-01-23 08:54:18,934 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:18,934 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /system/prg/menu/init(String), 2015-01-23 08:54:18(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:19,408 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@16b4417b]
+2015-01-23 08:54:19,409 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:19,409 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 0(Long)
+2015-01-23 08:54:19,414 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@16b4417b]
+2015-01-23 08:54:19,414 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU WHERE MENU_STATUS = ? order by MENU_ORDER asc 
+2015-01-23 08:54:19,415 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-01-23 08:54:19,430 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@52598d7c]
+2015-01-23 08:54:19,430 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU order by MENU_ORDER asc limit 0,10 
+2015-01-23 08:54:19,431 DEBUG [com.system.prg.menu.mapper.SMenuMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:54:19,451 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@3517a21e]
+2015-01-23 08:54:19,451 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:19,452 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /system/prg/menu/tree(String), 2015-01-23 08:54:19(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:19,453 DEBUG [com.system.prg.menu.mapper.SMenuMapper.countByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@5509ced8]
+2015-01-23 08:54:19,453 DEBUG [com.system.prg.menu.mapper.SMenuMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_MENU 
+2015-01-23 08:54:19,454 DEBUG [com.system.prg.menu.mapper.SMenuMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:54:20,152 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@736338c8]
+2015-01-23 08:54:20,152 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:20,153 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-01-23 08:54:20,247 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:54:20,265 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@493cd362]
+2015-01-23 08:54:20,266 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:20,266 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /system/prg/user/init(String), 2015-01-23 08:54:20(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:20,727 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@6b7f1316]
+2015-01-23 08:54:20,727 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc limit 0,10 
+2015-01-23 08:54:20,728 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:54:20,751 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@210e215c]
+2015-01-23 08:54:20,751 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-01-23 08:54:20,751 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:54:21,229 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@6b9af6e6]
+2015-01-23 08:54:21,230 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:21,230 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 90(Long)
+2015-01-23 08:54:21,328 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:54:21,344 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@7824edc2]
+2015-01-23 08:54:21,344 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:21,344 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /system/prg/dict/init(String), 2015-01-23 08:54:21(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:21,743 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@36b40cd6]
+2015-01-23 08:54:21,744 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT order by UPDATE_TIME desc limit 0,10 
+2015-01-23 08:54:21,744 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:54:21,761 DEBUG [com.system.prg.dict.mapper.SDictMapper.countByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@1d194c1a]
+2015-01-23 08:54:21,762 DEBUG [com.system.prg.dict.mapper.SDictMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_DICT 
+2015-01-23 08:54:21,762 DEBUG [com.system.prg.dict.mapper.SDictMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:54:22,142 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@5b99719b]
+2015-01-23 08:54:22,142 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:22,143 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 60(Long)
+2015-01-23 08:54:22,221 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@60516af2]
+2015-01-23 08:54:22,221 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:22,222 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /system/prg/log/init(String), 2015-01-23 08:54:22(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:22,680 DEBUG [com.system.prg.log.mapper.SLogMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@615db116]
+2015-01-23 08:54:22,680 DEBUG [com.system.prg.log.mapper.SLogMapper.selectByCondition] - ==>  Preparing: select LOG_ID, LOG_DESC, ACTION_URL, LOG_TIME, USER_IP, USER_ID, USER_NAME from T_S_LOG order by LOG_TIME desc limit 0,10 
+2015-01-23 08:54:22,681 DEBUG [com.system.prg.log.mapper.SLogMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:54:22,698 DEBUG [com.system.prg.log.mapper.SLogMapper.countByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@52faa05b]
+2015-01-23 08:54:22,698 DEBUG [com.system.prg.log.mapper.SLogMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_LOG 
+2015-01-23 08:54:22,698 DEBUG [com.system.prg.log.mapper.SLogMapper.countByCondition] - ==> Parameters: 
+2015-01-23 08:54:22,915 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@64e62601]
+2015-01-23 08:54:22,915 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-01-23 08:54:22,916 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-01-23 08:54:22,978 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-01-23 08:54:22,994 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@7864dae9]
+2015-01-23 08:54:22,995 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values(?,?,?, ?,?, ? ) 
+2015-01-23 08:54:22,995 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: null, /system/prg/user/init(String), 2015-01-23 08:54:22(String), 0:0:0:0:0:0:0:1(String), 42(Long), lj(String)
+2015-01-23 08:54:23,405 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@165b95ba]
+2015-01-23 08:54:23,405 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc limit 0,10 
+2015-01-23 08:54:23,406 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-01-23 08:54:23,421 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [com.mysql.jdbc.JDBC4Connection@687c58d9]
+2015-01-23 08:54:23,421 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-01-23 08:54:23,421 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 
