@@ -21,7 +21,9 @@
 				  AND MENU_ID != #{nodMenuId}
 			</if>
 			<if  test="pMenuId != null and pMenuId !=''">
-				  AND MENU_ID in (select menu_id from T_S_MENU start with menu_id=#{pMenuId} connect by menu_pid=PRIOR menu_id)
+				  and MENU_ID = #{pMenuId}
+       				or menu_pid = #{pMenuId} 
+         			 or menu_pid In (select MENU_ID from T_S_MENU Where menu_pid=#{pMenuId})
 			</if>
 			<if test="menuId != null and menuId !=''">
 				  AND MENU_ID = #{menuId}
@@ -65,14 +67,11 @@
 		</where>
 	</sql>
 	<insert id="insert"  parameterType="com.system.prg.menu.entity.SMenu" >
-	  	<selectKey keyProperty="menuId" order="BEFORE" statementType="PREPARED" resultType="java.lang.Long">
-			SELECT SEQ_S_MENU_ID.NEXTVAL FROM DUAL
-		</selectKey>
-		insert into T_S_MENU(MENU_ID,MENU_NAME,MENU_DESC,MENU_URL,
+		insert into T_S_MENU(MENU_NAME,MENU_DESC,MENU_URL,
  			 MENU_PID,MENU_TYPE,MENU_STATUS,
  			 MENU_LEVEL,MENU_ICON,CREATE_TIME,
  			 UPDATE_TIME, MENU_ORDER) 
- 		 values( #{menuId},#{menuName,jdbcType=NVARCHAR},#{menuDesc,jdbcType=NVARCHAR},#{menuUrl,jdbcType=NVARCHAR},
+ 		 values(#{menuName,jdbcType=NVARCHAR},#{menuDesc,jdbcType=NVARCHAR},#{menuUrl,jdbcType=NVARCHAR},
  			 #{menuPid,jdbcType=DECIMAL},#{menuType,jdbcType=DECIMAL},#{menuStatus,jdbcType=DECIMAL},
  			 #{menuLevel,jdbcType=DECIMAL},#{menuIcon,jdbcType=NVARCHAR},#{createTime,jdbcType=NVARCHAR},
  			 #{updateTime,jdbcType=NVARCHAR}, #{menuOrder,jdbcType=DECIMAL}) 

@@ -2,45 +2,45 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.system.prg.log.mapper.SLogMapper">
 	<resultMap id="BaseResultMap" type="com.system.prg.log.entity.SLog" >
-		<id column="LOG_ID" property="logId" jdbcType="DECIMAL" />
-		<result column="LOG_DESC" property="logDesc" jdbcType="NVARCHAR" />
-		<result column="ACTION_URL" property="actionUrl" jdbcType="NVARCHAR" />
-		<result column="LOG_TIME" property="logTime" jdbcType="NVARCHAR" />
-		<result column="USER_IP" property="userIp" jdbcType="NVARCHAR" />
-		<result column="USER_ID" property="userId" jdbcType="DECIMAL" />
-		<result column="USER_NAME" property="userName" jdbcType="NVARCHAR" />
+		<id column="log_id" property="logId" jdbcType="DECIMAL" />
+		<result column="action_url" property="actionUrl" jdbcType="NVARCHAR" />
+		<result column="log_time" property="logTime" jdbcType="NVARCHAR" />
+		<result column="user_ip" property="userIp" jdbcType="NVARCHAR" />
+		<result column="user_id" property="userId" jdbcType="DECIMAL" />
+		<result column="log_desc" property="logDesc" jdbcType="NVARCHAR" />
+		<result column="user_name" property="userName" jdbcType="NVARCHAR" />
 	</resultMap>
 	<sql id="Example_Where_Clause">
 		<where>
 			<if test="logId != null and logId !=''">
-				 AND LOG_ID = #{logId}
-			</if>
-			<if test="logDesc != null and logDesc !=''">
-				 AND LOG_DESC = #{logDesc}
+				 AND log_id = #{logId}
 			</if>
 			<if test="actionUrl != null and actionUrl !=''">
-				 AND ACTION_URL = #{actionUrl}
+				 AND action_url = #{actionUrl}
 			</if>
 			<if test="logTime != null and logTime !=''">
-				 AND LOG_TIME = #{logTime}
+				 AND log_time = #{logTime}
 			</if>
 			<if test="userIp != null and userIp !=''">
-				 AND USER_IP = #{userIp}
+				 AND user_ip = #{userIp}
 			</if>
 			<if test="userId != null and userId !=''">
-				 AND USER_ID = #{userId}
+				 AND user_id = #{userId}
+			</if>
+			<if test="logDesc != null and logDesc !=''">
+				 AND log_desc = #{logDesc}
 			</if>
 			<if test="userName != null and userName !=''">
-				 AND USER_NAME = #{userName}
+				 AND user_name = #{userName}
 			</if>
 		</where>
 	</sql>
-	<insert id="insert"  parameterType="com.system.prg.log.entity.SLog">
-		insert into T_S_LOG(LOG_DESC,ACTION_URL,LOG_TIME,
- 			 USER_IP,USER_ID, USER_NAME
+	<insert id="insert"  parameterType="com.system.prg.log.entity.SLog" >
+		insert into T_S_LOG(log_id,action_url,log_time,user_ip,
+ 			 user_id,log_desc, user_name
  			 ) 
- 		 values(#{logDesc,jdbcType=NVARCHAR},#{actionUrl,jdbcType=NVARCHAR},#{logTime,jdbcType=NVARCHAR},
- 			 #{userIp,jdbcType=NVARCHAR},#{userId,jdbcType=DECIMAL}, #{userName,jdbcType=NVARCHAR}
+ 		 values( #{logId,jdbcType=DECIMAL},#{actionUrl,jdbcType=NVARCHAR},#{logTime,jdbcType=NVARCHAR},#{userIp,jdbcType=NVARCHAR},
+ 			 #{userId,jdbcType=DECIMAL},#{logDesc,jdbcType=NVARCHAR}, #{userName,jdbcType=NVARCHAR}
  			 ) 
  	</insert> 
 	<delete id="deleteByCondition"  parameterType="java.util.Map" >
@@ -51,36 +51,36 @@
 		 update T_S_LOG
 			<trim prefix="SET" suffixOverrides="," > 
 				<if test="logId != null and logId !=''">
-					LOG_ID = #{logId}, 
-				</if>
-				<if test="logDesc != null and logDesc !=''">
-					LOG_DESC = #{logDesc}, 
+					log_id = #{logId}, 
 				</if>
 				<if test="actionUrl != null and actionUrl !=''">
-					ACTION_URL = #{actionUrl}, 
+					action_url = #{actionUrl}, 
 				</if>
 				<if test="logTime != null and logTime !=''">
-					LOG_TIME = #{logTime}, 
+					log_time = #{logTime}, 
 				</if>
 				<if test="userIp != null and userIp !=''">
-					USER_IP = #{userIp}, 
+					user_ip = #{userIp}, 
 				</if>
 				<if test="userId != null and userId !=''">
-					USER_ID = #{userId}, 
+					user_id = #{userId}, 
+				</if>
+				<if test="logDesc != null and logDesc !=''">
+					log_desc = #{logDesc}, 
 				</if>
 				<if test="userName != null and userName !=''">
-					USER_NAME = #{userName}, 
+					user_name = #{userName}, 
 				</if>
 			</trim>
-			 where LOG_ID = #{logId}
+			 where log_id = #{logId}
 	</update> 
 	<select id="countByCondition" parameterType="java.util.Map" resultType="java.lang.Integer">
 		 select count(1) from T_S_LOG
 		 <include refid="Example_Where_Clause"/>
 	</select>
 	<select id="selectByCondition" parameterType="java.util.Map" resultMap="BaseResultMap">
-		 select LOG_ID, LOG_DESC, ACTION_URL, LOG_TIME, USER_IP, USER_ID, 
- 			   USER_NAME
+		 select log_id, action_url, log_time, user_ip, user_id, log_desc, 
+ 			   user_name
 		  from T_S_LOG
 		 <include refid="Example_Where_Clause"/>
 		 <if test="orderByClause != null and orderByClause !=''">
@@ -89,12 +89,12 @@
 	</select>
 	<delete id="deleteByPrimaryKey"  >
 		 delete from T_S_LOG
-			 where LOG_ID = #{logId}
+			 where log_id = #{logId}
 	</delete>
 	<select id="findByPrimaryKey" resultMap="BaseResultMap">
-		 select LOG_ID, LOG_DESC, ACTION_URL, LOG_TIME, USER_IP, USER_ID, 
- 			   USER_NAME
+		 select log_id, action_url, log_time, user_ip, user_id, log_desc, 
+ 			   user_name
 		   from T_S_LOG
-			  where LOG_ID = #{logId}
+			  where log_id = #{logId}
 	</select> 
 </mapper>

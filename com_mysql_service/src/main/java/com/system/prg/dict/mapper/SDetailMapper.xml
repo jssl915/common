@@ -49,13 +49,10 @@
 		</where>
 	</sql>
 	<insert id="insert"  parameterType="com.system.prg.dict.entity.SDetail" >
-		<selectKey keyProperty="detailId" order="BEFORE" statementType="PREPARED" resultType="java.lang.Long">
-			SELECT SEQ_S_DETAIL_ID.NEXTVAL FROM DUAL
-		</selectKey>
-		insert into T_S_DETAIL(DETAIL_ID,DICT_ID,DETAIL_NAME,DETAIL_VALUE,
+		insert into T_S_DETAIL(DICT_ID,DETAIL_NAME,DETAIL_VALUE,
  			 DETAIL_DESC,DETAIL_STATUS,CREATE_TIME,
  			  UPDATE_TIME) 
- 		 values( #{detailId},#{dictId,jdbcType=DECIMAL},#{detailName,jdbcType=NVARCHAR},#{detailValue,jdbcType=DECIMAL},
+ 		 values(#{dictId,jdbcType=DECIMAL},#{detailName,jdbcType=NVARCHAR},#{detailValue,jdbcType=DECIMAL},
  			 #{detailDesc,jdbcType=NVARCHAR},#{detailStatus,jdbcType=DECIMAL},#{createTime,jdbcType=NVARCHAR},
  			  #{updateTime,jdbcType=NVARCHAR}) 
  	</insert> 

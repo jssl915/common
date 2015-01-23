@@ -56,13 +56,10 @@
 		</where>
 	</sql>
 	<insert id="insert"  parameterType="com.system.prg.user.entity.SUser" >
-	  	<selectKey keyProperty="userId" order="BEFORE" statementType="PREPARED" resultType="java.lang.Long">
-			SELECT SEQ_S_USER_ID.NEXTVAL FROM DUAL
-		</selectKey>
-		insert into T_S_USER(USER_ID,USER_NAME,USER_ORDER,USER_TYPE,
+		insert into T_S_USER(USER_NAME,USER_ORDER,USER_TYPE,
  			 USER_STATUS,USER_PWD,CREATE_TIME,
  			 UPDATE_TIME, REAL_NAME) 
- 		 values( #{userId},#{userName,jdbcType=NVARCHAR},#{userOrder,jdbcType=DECIMAL},#{userType,jdbcType=DECIMAL},
+ 		 values(#{userName,jdbcType=NVARCHAR},#{userOrder,jdbcType=DECIMAL},#{userType,jdbcType=DECIMAL},
  			 #{userStatus,jdbcType=DECIMAL},#{userPwd,jdbcType=NVARCHAR},#{createTime,jdbcType=NVARCHAR},
  			 #{updateTime,jdbcType=NVARCHAR}, #{realName,jdbcType=NVARCHAR}) 
  	</insert> 

@@ -44,12 +44,9 @@
 		</where>
 	</sql>
 	<insert id="insert"  parameterType="com.system.prg.dict.entity.SDict" >
-		 <selectKey keyProperty="dictId" order="BEFORE" statementType="PREPARED" resultType="java.lang.Long">
-			SELECT SEQ_S_Dict_ID.NEXTVAL FROM DUAL
-		</selectKey>
-		insert into T_S_DICT(DICT_ID,DICT_NAME,DICT_DESC,DICT_STATUS,
+		insert into T_S_DICT(DICT_NAME,DICT_DESC,DICT_STATUS,
  			 CREATE_TIME, UPDATE_TIME) 
- 		 values( #{dictId},#{dictName,jdbcType=NVARCHAR},#{dictDesc,jdbcType=NVARCHAR},#{dictStatus,jdbcType=DECIMAL},
+ 		 values(#{dictName,jdbcType=NVARCHAR},#{dictDesc,jdbcType=NVARCHAR},#{dictStatus,jdbcType=DECIMAL},
  			 #{createTime,jdbcType=NVARCHAR}, #{updateTime,jdbcType=NVARCHAR}) 
  	</insert> 
 	<delete id="deleteByCondition"  parameterType="java.util.Map" >

@@ -20,7 +20,6 @@ public class DiclectStatementHandlerInterceptor implements Interceptor {
 	public Object intercept(Invocation invocation) throws Throwable {
 		RoutingStatementHandler statement = (RoutingStatementHandler) invocation.getTarget();
 		StatementHandler handler = (StatementHandler) ReflectUtil.getClassField(statement, "delegate");
-		//PreparedStatementHandler handler = (PreparedStatementHandler) ReflectUtil.getClassField(statement, "delegate");
 		if (handler instanceof PreparedStatementHandler){
 			RowBounds rowBounds = (RowBounds) ReflectUtil.getSuperClassField(handler, "rowBounds");
 			if (rowBounds.getLimit() > 0 && rowBounds.getLimit() < RowBounds.NO_ROW_LIMIT) {
@@ -49,19 +48,9 @@ public class DiclectStatementHandlerInterceptor implements Interceptor {
 			isForUpdate = true;
 		}
 		StringBuffer pagingSelect = new StringBuffer( sql.length()+100 );
-		if (offset > 0) {
-			pagingSelect.append("select * from ( select row_.*, rownum rownum_ from ( ");
-		}
-		else {
-			pagingSelect.append("select * from ( ");
-		}
 		pagingSelect.append(sql);
-		if (offset > 0) {
-			pagingSelect.append(" ) row_ ) where rownum_ <= " + limit + " and rownum_ > " + offset);
-		}
-		else {
-			pagingSelect.append(" ) where rownum <= " + limit);
-		}
+
+		pagingSelect.append(" limit "+offset+","+limit);
 		if ( isForUpdate ) {
 			pagingSelect.append( " for update" );
 		}

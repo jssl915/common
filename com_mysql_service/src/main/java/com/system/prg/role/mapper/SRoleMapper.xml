@@ -52,13 +52,10 @@
 		</where>
 	</sql>
 	<insert id="insert"  parameterType="com.system.prg.role.entity.SRole" >
-	  	<selectKey keyProperty="roleId" order="BEFORE" statementType="PREPARED" resultType="java.lang.Long">
-			SELECT SEQ_S_ROLE_ID.NEXTVAL FROM DUAL
-		</selectKey>
-		insert into T_S_ROLE(ROLE_ID,ROLE_NAME,ROLE_DESC,ROLE_ORDER,
+		insert into T_S_ROLE(ROLE_NAME,ROLE_DESC,ROLE_ORDER,
  			 ROLE_TYPE,ROLE_STATUS,CREATE_TIME,
  			  UPDATE_TIME) 
- 		 values( #{roleId},#{roleName,jdbcType=NVARCHAR},#{roleDesc,jdbcType=NVARCHAR},#{roleOrder,jdbcType=DECIMAL},
+ 		 values(#{roleName,jdbcType=NVARCHAR},#{roleDesc,jdbcType=NVARCHAR},#{roleOrder,jdbcType=DECIMAL},
  			 #{roleType,jdbcType=DECIMAL},#{roleStatus,jdbcType=DECIMAL},#{createTime,jdbcType=NVARCHAR},
  			  #{updateTime,jdbcType=NVARCHAR}) 
  	</insert> 
