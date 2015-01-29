@@ -6,7 +6,7 @@ import java.util.Map;
 
 public abstract interface BaseService<T>{
 	
-	public abstract T insert(T paramT);
+	public T insert(T paramT);
 	
 	public void deleteByCondition(Map<String, Object> condition);
 	
@@ -16,7 +16,7 @@ public abstract interface BaseService<T>{
 	
 	public Integer countByCondition(Map<String, Object> condititon);
 	
-	public abstract List<T> pageList(PageObject po);
+	public List<T> pageList(PageObject po);
 	
 	public void deleteByPrimaryKey(Long id);
 
