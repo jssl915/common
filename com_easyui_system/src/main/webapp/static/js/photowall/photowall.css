@@ -1,0 +1,6 @@
+*{margin:0;padding:0;}
+.imgUl{position:relative; margin:10px auto;}
+.imgUl li{float:left; list-style:none; margin:10px; z-index:1;}
+.imgUl li:hover{cursor:move}
+.imgUl li img{width:100%;height:100%}
+.imgUl .active {border:1px dashed red;}

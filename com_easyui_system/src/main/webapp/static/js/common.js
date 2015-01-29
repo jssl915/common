@@ -23,7 +23,6 @@ $(function(){
 	},5);
 });
 
-
 function getFormData(form) {
 	var obj = {};
 	//文本框
@@ -77,6 +76,9 @@ function showAdd(url,w,h){
 		width:w,
 		height:h
 	});
+	setTimeout(function(){
+		$('#eTab').css('height','100%');
+	},1000);
 }
 function showEdit(url,updateId,w,h){
 	var selections = $('#grid').datagrid('getSelections');

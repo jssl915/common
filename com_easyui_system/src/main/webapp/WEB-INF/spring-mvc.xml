@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<!-- Enable annotation component scanning and autowiring of web package -->
-	<context:component-scan base-package="com.system" />
+	<context:component-scan base-package="com" />
 	
 	<!--<bean id="logaspectbean" class="com.cykj.system.log.web.LogAspect" />  -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
