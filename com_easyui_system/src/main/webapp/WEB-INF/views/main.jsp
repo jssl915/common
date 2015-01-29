@@ -33,8 +33,8 @@
 var tabH="";
 $(function(){
 	loadWestTree();
-	$('#eTab').height($('#center-panel').height());
-	tabH = $('#eTab').height() - $(".tabs").height();
+	$('#eTab').height($('#center-panel').height());	
+	tabH = $('#eTab').height() - $(".tabs-wrap").height()-4;
 	$('#indexF').height(tabH);
 	$('.panel-body').css('overflow','hidden')
 });
