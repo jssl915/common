@@ -15,18 +15,18 @@
 	<!-- 使用annotation定义事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	
-	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+<!-- 	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 	   <property name="driverClass" value="com.mysql.jdbc.Driver"/>  
 	    <property name="url" value="jdbc:mysql://qdm114430208.my3w.com:3306/qdm114430208_db?characterEncoding=utf8"/>  
 	    <property name="username" value="qdm114430208"/>  
 	    <property name="password" value="861018jsslSBJJJ"/>  
-	</bean>
-<!-- 	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+	</bean> -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
 	   <property name="driverClass" value="com.mysql.jdbc.Driver"/>  
 	    <property name="url" value="jdbc:mysql://127.0.0.1:3306/orcl?characterEncoding=utf8"/>  
 	    <property name="username" value="root"/>  
 	    <property name="password" value="123456"/>  
-	</bean> -->
+	</bean> 
    
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
