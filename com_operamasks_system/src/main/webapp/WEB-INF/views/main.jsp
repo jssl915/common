@@ -113,7 +113,7 @@ function change(status) {
 <div id="north-panel">
 	<div class="logo2">网站后台管理系统</div>
 	<div class="rightbj"><img src="${img}/top_rightbj.png"/></div>
-	<div class="userinfo">管理员：<span><shiro:principal/></span> 您好,欢迎您登录使用</div>
+	<div class="userinfo">管理员：<span><shiro:principal></shiro:principal></span> 您好,欢迎您登录使用</div>
 	<div class ="top_right">
 		<a href="#" onclick="showOmtabs()">返回主页</a>&nbsp;｜&nbsp;
 		<a href="#" onclick="changePasWord()">修改密码</a>&nbsp;|&nbsp;

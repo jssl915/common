@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>用户登录</title>
-<link href="<c:url value="/static/css/login/login.css"/>" rel="stylesheet" type="text/css" />
+<link href="<c:url value='/static/css/login/login.css'/>" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<c:url value='/static/js/operamasks/2.0/js/jquery.min.js'/>"></script>
 </head>
 <body>
