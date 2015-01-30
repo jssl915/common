@@ -1,93 +1,67 @@
-# common
-  该项目为多套后台框架
+后台管理框架
 
-  总体介绍： 
-  
-1 数据库支持mysql和oracle两种
+这套框架主要分为三个部分(项目)
 
-2 后台框架前端UI支持operamasks和easyui
+1 mybatis-generator 代码生成器(工具项目) 支持oracle 和 mysql
 
-3 代码生成器支持mysql和oracle 
+2 com_service 服务端项目，主要提供服务，支持oracle 和 mysql
 
-4 另有一套支持换肤的系统，提供operamasks的多套皮肤，感觉并不好，已废弃。
+3 com_system 客户端项目，主要显示前端页面，有两个版本operamasks 和 easyui
 
-这套后台权限控制系统主要用的springMVC+mybatis实现，采用Spring整合RMI实现客户端与服务端分离，
+框架技术
 
-其中用到缓存Oscache，目前主要对数据字典进行缓存。另外分页同用的mybatis自带的分页插件处理的,
+后台技术主要用到:
 
-由于mybatis自带的分页插件是在内存中进行分页，即先查出所有的数据再进行分页，这里进行扩展，
+框架是用的springMVC+mybatis，远程调用用的是httpInvoker(http协议)，缓存是用的oscache（）目前用于数据字典的缓存）,安全框架用的是shiro，主要用于用户登录，定时器之前的用的是 spring 的 quartz，支持动态修改定时规则。还可以用Spring升级到3后原来已经自带任务调度器Spring task，分页用的是mybatis自带的，只不过针对oracle和mysql进行了相应扩展，将原来在内存中分页改为在数据库中进行分页。
 
-oracle和mysql扩展的分页方法有所不同。
+前台技术主要用到:
 
--------------------------------------------------------------------------------------------------
+主要插件用的是operamasks2.0(包括grid,tree,tab等)和easyui1.4.1,弹出框用的artDialog,表单验证用的是operamasks自带的validator。所用的开源插件基本都是用的最新版本。另外还自
+己封装了一些jquery插件,图表插件用的highcharts-4.0.3。
 
-服务端，即接口项目介绍:
 
-com_service是操作的oracle数据库，可以对com_operamasks_system和com_easyui_system两套系统提供服务。
+框架优势
 
-com_mysql_service是操作mysql数据库的，也可以对com_operamasks_system和com_easyui_system两套系统提供服务。
+一、兼容所有主流浏览器,已测试过的有火狐firefox,谷哥chrome，苹果safari,360，ie9,ie8(稍有不同，css3圆角属性不支持)等，ie6、ie7问题比较大，不过如果需要，我可以做相关方面
+的兼容工作。
 
-上面还有一套命名为com_mysql_system，这套系统采用的是operamasks前台UI框架，和com_operamasks_system基本一样，
+二、针对本套框架实现的代码生成器可以生成大部分代码，对于业务逻辑比较简单的模块即不需要关联多张表查询的模块生成后(entity、mapper\service)直接可以使用，基本不需要做任何
+修改。可以节约大部分开发时间。
 
-就是远程调用服务端的端口配置不一样而已。
 
-服务端com_service和com_mysql_service两者提供的接口基本一样。不同之处主要有两点:
+虽然可以对web即(controller层)和jsb层进行封装，但害怕过度封装，反而增加了程序员的负担。
 
-1 insert方法不同，oracle主要靠序列来实现自增长，mysql建表时就把该字段（主键）设为自增长。
+三、服务端service项目利用多态和泛型将代码生成器生成的八个公共方法写入父类，重新封装了一些公共方法，并且将之前项目中没有用到的，重复的，过于复杂的方法进行整理和重构。
+客户对于公用方法如新增、编辑、删除、导出等方法进行重构，尽可能的使其调用简单。另外对于jsp页面也进行了简化，封装了常用的样式，如search框架，table等。
 
-2 分页查询方式不同，oracle主要在外面嵌套一层，mysql直接limit start,end实现。
+四、这套后台系统系统管理模块数据库表重新设计，将一些没用的表、字段进行了整理和删除。
 
--------------------------------------------------------------------------------------------------
+框架DEMO
 
-代码生成器介绍:
+mysql-operamasks:http://192.168.1.59:8081/com_mysql_system
 
-mybatis-generator 和 mysql-mybatis-generator 是两套代码生成器。
+mysql-easyui: http://192.168.1.59:8082/com_easyui_system
 
-mybatis-generator仅支持oracle数据库代码生成,mysql-mybatis-generator支持oracle和mysql两种数据库。
+oracle-operamasks: http://192.168.1.59:8083/com_operamasks_system
 
-这两个代码生成工具主要生成实体类entity,mapper以及service接口。
+部分代码介绍
 
-在这里由于本人对代码进行扩展，采用了继承和泛型，将mapper 和 service 生成的公共的8个接口写到父类。 
-
-故生成的mapper.java和service.java里面接口为空。但都支持的八个方法分别如下：
+八个公共接口:
 
 public abstract void insert(T paramT); //新增
-	
-public void deleteByCondition(Map<String, Object> condition);//按条件删除
-	
+
+public void deleteByCondition(Map condition);//按条件删除
+
 public void updateByCondition(T record);//按条件修改
-	
-public  List<T> selectByCondition(Map<String,Object> condititon);//按条件查询
-	
-public Integer countByCondition(Map<String, Object> condititon);//按条件查询总数
-	
-public abstract List<T> selectByCondition(Map<String,Object> condititon, RowBounds rowBounds);//按条件查询，支持分页
-	
+
+public List selectByCondition(Map condititon);//按条件查询
+
+public Integer countByCondition(Map condititon);//按条件查询总数
+
+public abstract List selectByCondition(Map condititon, RowBounds rowBounds);//按条件查询分页
+
 public void deleteByPrimaryKey(Long id); //根据主键删除
 
 public T findByPrimaryKey(Long id); //根据主键查询
 
 这八个方法对于单表来说，基本上实现了所有接口，如果需要查询多表或操作多表，需要自己定义接口，实现方法。
-
-当然如果对上面八个接口需要扩展，可以进行重写。
-
--------------------------------------------------------------------------------------------------
-
-客户端，即前端项目介绍:
-
-前端UI组件主要用到了operamasks 和 easyui,这两套组件提供了大部分UI，如Tree,Grid,Tab,Layout,Tip,validate,upload....
-
-弹出层采用的jquery.artDialog,自己封装了add edit delete 以前搜索框里面的查询和清空方法等。
-
-实现了框架左边的菜单树。
-
-定义了表单的样式，按钮的样式等。
-
-扩展了一个图片上传，拖拽排序的组件。
-
-图表组件用的是highcharts-4.0.3
-
--------------------------------------------------------------------------------------------------
-
-
-
