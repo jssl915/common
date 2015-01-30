@@ -3,7 +3,9 @@ package com.system.prg.dict.entity;
 import java.io.Serializable;
 
 public class SDetail implements Serializable{
-
+	
+	private static final long serialVersionUID = 1L;
+	
 	//字典明细ID
 	private Long detailId; 
 

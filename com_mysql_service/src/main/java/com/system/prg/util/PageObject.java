@@ -164,6 +164,7 @@ public class PageObject implements Serializable {
 		return this.condition;
 	}
 
+	@SuppressWarnings("unchecked")
 	public void setCondition(Object obj) {
 		try {
 			getCondition().putAll(PropertyUtils.describe(obj));

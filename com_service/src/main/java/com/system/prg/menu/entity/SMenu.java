@@ -3,7 +3,9 @@ package com.system.prg.menu.entity;
 import java.io.Serializable;
 
 public class SMenu implements Serializable{
-
+	
+	private static final long serialVersionUID = 1L;
+	
 	//资源ID
 	private Long menuId; 
 

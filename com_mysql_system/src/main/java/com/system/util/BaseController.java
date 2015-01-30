@@ -98,14 +98,14 @@ public class BaseController {
 	}
 
 	public <T> void list(List<T> list, HttpServletResponse response)throws BusinessException {
-		GridDataModel model = new GridDataModel();
+		GridDataModel<T> model = new GridDataModel<T>();
 		model.setRows(list);
 		model.setTotal(this.po.getTotalCount());
 		writeToPage(JsonMapper.buildNormalMapper().toJson(model), response);
 	}
 
 	public <T> void list(List<T> list, PageObject po,HttpServletResponse response) throws BusinessException {
-		GridDataModel model = new GridDataModel();
+		GridDataModel<T> model = new GridDataModel<T>();
 		model.setRows(list);
 		model.setTotal(po.getTotalCount());
 		writeToPage(JsonMapper.buildNormalMapper().toJson(model), response);

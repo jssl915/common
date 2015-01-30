@@ -3,6 +3,9 @@ package com.system.prg.log.entity;
 import java.io.Serializable;
 
 public class SLog implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	private Long logId; 
 
 	//日志描述

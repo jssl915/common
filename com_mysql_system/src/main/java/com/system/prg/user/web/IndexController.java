@@ -13,7 +13,6 @@ import com.system.prg.menu.service.SMenuService;
 import com.system.prg.user.entity.SUser;
 import com.system.prg.user.service.SUserService;
 import com.system.prg.util.AjaxUtils;
-import com.system.prg.util.BusinessException;
 import com.system.prg.util.MD5Encoder;
 import com.system.util.BaseController;
 @Controller

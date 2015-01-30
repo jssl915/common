@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class SRoleMenu implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+
 	//角色ID
 	private Long roleId; 
 

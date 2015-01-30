@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class SUser implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+
 	//用户ID
 	private Long userId; 
 

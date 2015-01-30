@@ -22,7 +22,7 @@ public class SysProperties {
 		prop.load(is);
 	}
 
-	public static void initial() throws IOException {
+	public void initial() throws IOException {
 		prop = new Properties();
 		for (Resource r : locations) {
 			InputStream is = r.getInputStream();

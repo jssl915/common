@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class SUserRole implements Serializable{
 
+	private static final long serialVersionUID = 809643693980335763L;
+
 	//用户ID
 	private Long userId; 
 
