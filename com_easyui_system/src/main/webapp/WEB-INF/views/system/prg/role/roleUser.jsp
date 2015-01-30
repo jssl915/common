@@ -22,8 +22,8 @@
 	     <c:forEach items="${sUserList}" var="sUser" varStatus="s">
 				<td>
 				    <input type="checkbox" name="userId" value="${sUser.userId}" 
-				   <c:forEach items="${sUserRoleList}" var="item">
-				    <c:if test="${item.userId==sUser.userId}">checked="checked"</c:if> 
+				    <c:forEach items="${sUserRoleList}" var="item">
+				    	<c:if test="${item.userId==sUser.userId}">checked="checked"</c:if> 
 				  	</c:forEach>/>		
 				  	${sUser.userName}		
 				</td>

@@ -207,4 +207,4 @@ $.validator.messages={
 	max: jQuery.validator.format("最大为 {0}"),
 	min: jQuery.validator.format("最小为{0}"),
 	maxCnLength:jQuery.validator.format("请输入一个长度最多是 {0} 的字符串,一个汉字3个字符")
-}
+};
