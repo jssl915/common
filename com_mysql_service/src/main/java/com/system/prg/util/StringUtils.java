@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 
 public class StringUtils {
 	static Logger log = LoggerFactory.getLogger(StringUtils.class);
-	private static final String ADD_MESSAGE = "...";
 
 	public static String gbToUTF8(String str) {
 		if (str == null)
@@ -20,10 +19,8 @@ public class StringUtils {
 				str = Integer.toHexString(b[n] & 0xFF);
 				if (str.length() == 1)
 					hs = hs + "0" + str;
-				else
+				else{
 					hs = hs + str;
-				if (n < b.length - 1) {
-					hs = hs;
 				}
 			}
 			str = hs.toUpperCase().substring(4);
