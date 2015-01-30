@@ -31,6 +31,5 @@ public class DiclectResultSetHandlerInterceptor implements Interceptor {
 		return Plugin.wrap(target, this);
 	}
 
-	public void setProperties(Properties properties) {
-	}
+	public void setProperties(Properties properties) {}
 }

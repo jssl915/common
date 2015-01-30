@@ -12,12 +12,11 @@
 
 后台技术主要用到:
 
-框架是用的springMVC+mybatis，远程调用用的是httpInvoker(http协议)，缓存是用的oscache（）目前用于数据字典的缓存）,安全框架用的是shiro，主要用于用户登录，定时器之前的用的是 spring 的 quartz，支持动态修改定时规则。还可以用Spring升级到3后原来已经自带任务调度器Spring task，分页用的是mybatis自带的，只不过针对oracle和mysql进行了相应扩展，将原来在内存中分页改为在数据库中进行分页。
+框架是用的springMVC+mybatis，远程调用用的是httpInvoker(http协议)，缓存是用的oscache(目前用于数据字典的缓存）,安全框架用的是shiro，主要用于用户登录，定时器之前的用的是 spring 的 quartz,支持动态修改定时规则。还可以用Spring升级到3.0版本后自带的任务调度器Spring task，分页用的是mybatis自带的，只不过针对oracle和mysql进行了相应扩展，将原来在内存中分页改为在数据库中进行分页。
 
 前台技术主要用到:
 
-主要插件用的是operamasks2.0(包括grid,tree,tab等)和easyui1.4.1,弹出框用的artDialog,表单验证用的是operamasks自带的validator。所用的开源插件基本都是用的最新版本。另外还自
-己封装了一些jquery插件,图表插件用的highcharts-4.0.3。
+主要插件用的是operamasks2.0(包括grid,tree,tab等)和easyui1.4.1,弹出框用的artDialog,表单验证用的是框架自带的validator。所用的开源插件基本都是最新版本，图表插件用的highcharts-4.0.3。另外还自己封装了一些jquery插件，如左边的菜单树，图片上传拖拽排序功能等。
 
 
 框架优势
@@ -26,7 +25,6 @@
 
 二、针对本套框架实现的代码生成器可以生成大部分代码，对于业务逻辑比较简单的模块即不需要关联多张表查询的模块生成后(entity、mapper\service)直接可以使用，基本不需要做任何
 修改。可以节约大部分开发时间。
-
 
 虽然可以对web即(controller层)和jsb层进行封装，但害怕过度封装，反而增加了程序员的负担。
 
@@ -64,3 +62,22 @@ public void deleteByPrimaryKey(Long id); //根据主键删除
 public T findByPrimaryKey(Long id); //根据主键查询
 
 这八个方法对于单表来说，基本上实现了所有接口，如果需要查询多表或操作多表，需要自己定义接口，实现方法。
+
+
+另外这里有架构中一些技术的总结:
+
+shiro 实现拦截功能，并记住拦截前地址，登录后直接跳转到记录地址 
+
+http://www.cnblogs.com/lj915/p/3443590.html
+
+spring+quartz实现动态修改定时规则
+
+http://www.cnblogs.com/lj915/p/3444930.html
+
+mybatis在mysql中的分页扩展
+
+http://www.cnblogs.com/lj915/p/4262732.html
+
+mybatis在oracle中的分页扩展
+
+http://www.cnblogs.com/lj915/p/4262743.html
