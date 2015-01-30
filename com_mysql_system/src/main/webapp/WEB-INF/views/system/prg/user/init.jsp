@@ -43,7 +43,6 @@
 		</ul>
 	</div>
 </div>
-
 <table id="grid"></table>
 </body>
 <script type="text/javascript">
