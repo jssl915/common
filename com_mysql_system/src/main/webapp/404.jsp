@@ -12,9 +12,6 @@ body{background:#f9fee8;margin:0;padding:0;text-align:center;font-family:Arial,H
 a{color:#9caa6d;text-decoration:none;}
 a:hover{color:#9caa6d;text-decoration:underline;}
 </style>
-<script>
-alert(123);
-</script>
 </head>
 <body>
 <div class="error_page">
