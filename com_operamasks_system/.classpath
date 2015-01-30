@@ -22,6 +22,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Administrator/git/common/com_service/target/com-service-api.jar"/>
+	<classpathentry kind="lib" path="F:/workspace_com/common/com_service/target/com-service-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -22,12 +22,12 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Administrator/git/common/com_mysql_service/target/com-mysql-service-api.jar"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="F:/workspace_com/common/com_mysql_service/target/com-mysql-service-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

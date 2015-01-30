@@ -1,4 +1,4 @@
-C:
-cd C:\Users\Administrator\git\common\com_mysql_service
+F:
+cd F:\workspace_com\common\com_mysql_service
 mvn clean install 
 
