@@ -437,42 +437,6 @@
 			<artifactId>versions-maven-plugin</artifactId>
 			<version>1.2</version>
 		</plugin>
-
-		<!-- enforcer插件, 避免被依赖的依赖引入过期的jar包 -->
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-enforcer-plugin</artifactId>
-			<version>1.1.1</version>
-			<executions>
-				<execution>
-					<id>enforce-banned-dependencies</id>
-					<goals>
-						<goal>enforce</goal>
-					</goals>
-					<configuration>
-						<rules>
-							<requireMavenVersion>
-								<version>3.0.3</version>
-							</requireMavenVersion>
-							<requireJavaVersion>
-								<version>1.6</version>
-							</requireJavaVersion>
-							<bannedDependencies>
-								<searchTransitive>true</searchTransitive>
-								<excludes>
-									<exclude>commons-logging</exclude>
-									<exclude>aspectj:aspectj*</exclude>
-									<exclude>org.springframework:2.*</exclude>
-									<exclude>org.springframework:3.0.*</exclude>
-									<exclude>org.apache.geronimo.specs</exclude>
-								</excludes>
-							</bannedDependencies>
-						</rules>
-						<fail>true</fail>
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
 	</plugins>
 </build>
 </project>
