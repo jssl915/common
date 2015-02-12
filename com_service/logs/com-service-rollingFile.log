@@ -1,0 +1,75 @@
+2015-02-12 10:40:47,729 DEBUG [com.system.prg.util.SystemCache] - method: cacheAllDict() 
+2015-02-12 10:40:47,764 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-02-12 10:40:47,765 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-02-12 10:40:47,765 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-02-12 10:40:47,765 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-02-12 10:40:47,767 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-02-12 10:40:47,893 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@1813f3e9]
+2015-02-12 10:40:47,917 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT 
+2015-02-12 10:40:48,099 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-02-12 10:40:48,273 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@4f186450]
+2015-02-12 10:40:48,274 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==>  Preparing: select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DETAIL WHERE DETAIL_STATUS = ? 
+2015-02-12 10:40:48,274 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-02-12 10:40:48,305 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-02-12 10:40:48,305 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistRetrieve called (key=WFrameOScache_CACHE_DICT)
+2015-02-12 10:40:48,305 DEBUG [com.opensymphony.oscache.base.Cache] - No cache entry exists for key='WFrameOScache_CACHE_DICT', creating
+2015-02-12 10:40:48,306 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistStore called (key=WFrameOScache_CACHE_DICT)
+2015-02-12 10:42:26,035 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@403063b]
+2015-02-12 10:42:26,035 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? AND USER_STATUS = ? 
+2015-02-12 10:42:26,035 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: lj(String), 1(Integer)
+2015-02-12 10:42:30,132 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@120d6fce]
+2015-02-12 10:42:30,132 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? AND USER_STATUS = ? 
+2015-02-12 10:42:30,132 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: super(String), 1(Integer)
+2015-02-12 10:42:30,229 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@343df9c7]
+2015-02-12 10:42:30,230 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER WHERE USER_NAME = ? 
+2015-02-12 10:42:30,230 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: super(String)
+2015-02-12 10:42:30,424 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@689563c2]
+2015-02-12 10:42:30,424 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-02-12 10:42:30,424 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-02-12 10:42:30,442 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@689563c2]
+2015-02-12 10:42:30,442 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-02-12 10:42:30,443 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 10221(Long), null, /com_operamasks_system/system/login(String), 2015-02-12 10:42:30(String), 0:0:0:0:0:0:0:1(String), 224(Long), super(String)
+2015-02-12 10:42:34,264 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@174d5a19]
+2015-02-12 10:42:34,264 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-02-12 10:42:34,264 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 0(Long)
+2015-02-12 10:42:34,341 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@174d5a19]
+2015-02-12 10:42:34,342 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where menu_status=1 and (menu_id = 0 or menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id=?) or menu_id in (select menu_id from T_S_MENU where menu_id in (select menu_pid from T_S_MENU where menu_id in (select t2.menu_id from T_S_USER_ROLE t1 left join T_S_ROLE_MENU t2 on t1.role_id = t2.role_id where user_id = ?))) ) order by MENU_ORDER asc 
+2015-02-12 10:42:34,342 DEBUG [com.system.prg.menu.mapper.SMenuMapper.getAllMenus] - ==> Parameters: 224(Long), 224(Long)
+2015-02-12 10:42:34,983 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@332fe4b]
+2015-02-12 10:42:34,984 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-02-12 10:42:34,984 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-02-12 10:42:34,985 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@332fe4b]
+2015-02-12 10:42:34,985 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-02-12 10:42:34,986 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 10222(Long), null, /com_operamasks_system/index/tree(String), 2015-02-12 10:42:34(String), 0:0:0:0:0:0:0:1(String), 224(Long), super(String)
+2015-02-12 10:42:36,302 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@7ff3dae0]
+2015-02-12 10:42:36,302 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==>  Preparing: select MENU_ID, MENU_NAME, MENU_DESC, MENU_URL, MENU_PID, MENU_TYPE, MENU_STATUS, MENU_LEVEL, MENU_ICON, CREATE_TIME, UPDATE_TIME, MENU_ORDER from T_S_MENU where MENU_ID = ? 
+2015-02-12 10:42:36,303 DEBUG [com.system.prg.menu.mapper.SMenuMapper.findByPrimaryKey] - ==> Parameters: 3(Long)
+2015-02-12 10:42:36,695 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-02-12 10:42:36,796 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@65d658da]
+2015-02-12 10:42:36,796 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==>  Preparing: SELECT SEQ_S_LOG_ID.NEXTVAL FROM DUAL 
+2015-02-12 10:42:36,796 DEBUG [com.system.prg.log.mapper.SLogMapper.insert!selectKey] - ==> Parameters: 
+2015-02-12 10:42:36,798 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@65d658da]
+2015-02-12 10:42:36,798 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==>  Preparing: insert into T_S_LOG(LOG_ID,LOG_DESC,ACTION_URL,LOG_TIME, USER_IP,USER_ID, USER_NAME ) values( ?,?,?,?, ?,?, ? ) 
+2015-02-12 10:42:36,799 DEBUG [com.system.prg.log.mapper.SLogMapper.insert] - ==> Parameters: 10223(Long), null, /system/prg/user/init(String), 2015-02-12 10:42:36(String), 0:0:0:0:0:0:0:1(String), 224(Long), super(String)
+2015-02-12 10:42:38,552 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@21b42369]
+2015-02-12 10:42:38,553 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==>  Preparing: select * from ( select USER_ID, USER_NAME, USER_ORDER, USER_TYPE, USER_STATUS, USER_PWD, CREATE_TIME, UPDATE_TIME, REAL_NAME from T_S_USER order by USER_ORDER asc ) where rownum <= 30 
+2015-02-12 10:42:38,553 DEBUG [com.system.prg.user.mapper.SUserMapper.selectByCondition] - ==> Parameters: 
+2015-02-12 10:42:38,604 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@102f9d59]
+2015-02-12 10:42:38,604 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==>  Preparing: select count(1) from T_S_USER 
+2015-02-12 10:42:38,605 DEBUG [com.system.prg.user.mapper.SUserMapper.countByCondition] - ==> Parameters: 
+2015-02-12 10:45:35,651 DEBUG [com.system.prg.util.SystemCache] - method: cacheAllDict() 
+2015-02-12 10:45:35,660 DEBUG [com.opensymphony.oscache.base.Config] - OSCache: Config called
+2015-02-12 10:45:35,660 WARN  [com.opensymphony.oscache.base.Config] - OSCache: No properties file found in the classpath by filename /oscache.properties
+2015-02-12 10:45:35,660 DEBUG [com.opensymphony.oscache.base.AbstractCacheAdministrator] - Constructed AbstractCacheAdministrator()
+2015-02-12 10:45:35,660 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Constructed GeneralCacheAdministrator()
+2015-02-12 10:45:35,660 INFO  [com.opensymphony.oscache.general.GeneralCacheAdministrator] - Creating new cache
+2015-02-12 10:45:35,814 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@4d8539de]
+2015-02-12 10:45:35,821 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==>  Preparing: select DICT_ID, DICT_NAME, DICT_DESC, DICT_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DICT 
+2015-02-12 10:45:36,011 DEBUG [com.system.prg.dict.mapper.SDictMapper.selectByCondition] - ==> Parameters: 
+2015-02-12 10:45:36,115 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ooo Using Connection [oracle.jdbc.driver.T4CConnection@43effd89]
+2015-02-12 10:45:36,115 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==>  Preparing: select DETAIL_ID, DICT_ID, DETAIL_NAME, DETAIL_VALUE, DETAIL_DESC, DETAIL_STATUS, CREATE_TIME, UPDATE_TIME from T_S_DETAIL WHERE DETAIL_STATUS = ? 
+2015-02-12 10:45:36,116 DEBUG [com.system.prg.dict.mapper.SDetailMapper.selectByCondition] - ==> Parameters: 1(Integer)
+2015-02-12 10:45:36,123 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - get called (key=WFrameOScache_CACHE_DICT)
+2015-02-12 10:45:36,123 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistRetrieve called (key=WFrameOScache_CACHE_DICT)
+2015-02-12 10:45:36,123 DEBUG [com.opensymphony.oscache.base.Cache] - No cache entry exists for key='WFrameOScache_CACHE_DICT', creating
+2015-02-12 10:45:36,125 DEBUG [com.opensymphony.oscache.base.algorithm.AbstractConcurrentReadCache] - persistStore called (key=WFrameOScache_CACHE_DICT)
